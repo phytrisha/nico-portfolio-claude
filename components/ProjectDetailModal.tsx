@@ -52,7 +52,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
             transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
             className="fixed inset-0 top-[0vh] z-50 flex overflow-hidden"
           >
-            <div className="w-full h-full flex">
+            <div className="w-full h-full flex flex-col md:flex-row">
               <ColoredAccentBar
                 id={project.id}
                 shortTitle={project.shortTitle}

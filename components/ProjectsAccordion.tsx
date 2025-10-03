@@ -14,6 +14,7 @@ interface ProjectsAccordionProps {
 export default function ProjectsAccordion({ expandedId, setExpandedId, onShowProjectsChange }: ProjectsAccordionProps) {
   const [showProjects, setShowProjects] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -22,10 +23,26 @@ export default function ProjectsAccordion({ expandedId, setExpandedId, onShowPro
   };
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
     onShowProjectsChange(showProjects);
   }, [showProjects, onShowProjectsChange]);
 
   useEffect(() => {
+    // On mobile, always show projects
+    if (isMobile) {
+      setShowProjects(true);
+      return;
+    }
+
     const handleScroll = () => {
       if (isAnimating) return; // Prevent scroll trigger during animation
 
@@ -61,7 +78,7 @@ export default function ProjectsAccordion({ expandedId, setExpandedId, onShowPro
         clearTimeout(timeoutRef.current);
       }
     };
-  }, [showProjects, isAnimating]);
+  }, [isMobile, showProjects, isAnimating]);
 
   // Calculate total animation duration
   const totalAnimationDuration = (projects.length - 1) * 0.1 + 0.6; // Last delay + animation duration
@@ -69,7 +86,7 @@ export default function ProjectsAccordion({ expandedId, setExpandedId, onShowPro
   return (
     <div
       ref={containerRef}
-      className="h-full flex overflow-x-auto"
+      className="h-full flex md:flex-row flex-col md:overflow-x-auto w-full"
     >
       {projects.map((project, index) => {
         // When showing: delay increases with index (0, 0.1, 0.2, ...)
@@ -80,12 +97,17 @@ export default function ProjectsAccordion({ expandedId, setExpandedId, onShowPro
         return (
           <motion.div
             key={project.id}
-            initial={{ y: '100%', opacity: 0 }}
-            animate={{
+            initial={isMobile ? { y: 0, opacity: 1 } : { y: '100%', opacity: 0 }}
+            animate={isMobile ? {
+              y: 0,
+              opacity: 1
+            } : {
               y: showProjects ? 0 : '100%',
               opacity: showProjects ? 1 : 0
             }}
-            transition={{
+            transition={isMobile ? {
+              duration: 0
+            } : {
               duration: 0.6,
               ease: [0.4, 0, 0.2, 1],
               delay: delay
@@ -96,7 +118,7 @@ export default function ProjectsAccordion({ expandedId, setExpandedId, onShowPro
                 setIsAnimating(false);
               }
             }}
-            className="h-full"
+            className="md:h-full w-full md:w-auto"
           >
             <ProjectColumn
               project={project}

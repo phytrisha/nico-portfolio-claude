@@ -8,10 +8,11 @@ interface ColoredAccentBarProps {
 export default function ColoredAccentBar({ id, shortTitle, tags, color }: ColoredAccentBarProps) {
   return (
     <div
-      className="w-16 flex-shrink-0 text-white relative font-mono"
+      className="md:w-16 w-full md:h-full h-20 flex-shrink-0 text-white relative font-mono"
       style={{ backgroundColor: color }}
     >
-      <div className="h-full flex flex-col grow items-center justify-start py-8 px-4">
+      {/* Desktop: vertical layout */}
+      <div className="h-full hidden md:flex flex-col grow items-center justify-start py-8 px-4">
         <div className="text-sm mb-3 font-medium text-center">{id.toString().padStart(2, '0')}</div>
         {/* Rotated content - reads bottom to top */}
         <div
@@ -32,6 +33,22 @@ export default function ColoredAccentBar({ id, shortTitle, tags, color }: Colore
             ))}
           </div>
           <div className="h-px w-8 bg-white"></div>
+        </div>
+      </div>
+
+      {/* Mobile: horizontal layout */}
+      <div className="w-full flex md:hidden flex-row items-center justify-start px-4 py-4 h-20">
+        <div className="flex flex-col gap-1 flex-grow justify-center">
+          <div className="text-xs font-medium lg:whitespace-nowrap">
+            {shortTitle}
+          </div>
+          <div className="flex flex-row gap-2 items-center">
+            {tags.map((tag, i) => (
+              <span key={i} className="text-[10px] lg:text-xs opacity-80 whitespace-nowrap">
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>

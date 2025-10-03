@@ -13,6 +13,7 @@ interface ProjectColumnProps {
 }
 
 const COLLAPSED_WIDTH = 64;
+const COLLAPSED_HEIGHT_MOBILE = 80;
 const ANIMATION_DURATION = 0.5;
 const EASE = [0.4, 0, 0.2, 1] as const; // easeInOut
 
@@ -27,17 +28,30 @@ const getExpandedWidth = () => {
   return 400; // sm and below
 };
 
+// Responsive expanded heights for mobile
+const getExpandedHeight = () => {
+  if (typeof window === 'undefined') return 400; // SSR fallback
+
+  if (window.innerWidth >= 768) return 0; // md and above - not used
+  return 600; // mobile
+};
+
 export default function ProjectColumn({ project, isExpanded, onClick }: ProjectColumnProps) {
   const formatNumber = (num: number) => num.toString().padStart(2, '0');
   const [expandedWidth, setExpandedWidth] = React.useState(getExpandedWidth());
+  const [expandedHeight, setExpandedHeight] = React.useState(getExpandedHeight());
+  const [isMobile, setIsMobile] = React.useState(false);
   const [isScrollable, setIsScrollable] = React.useState(false);
   const scrollContainerRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     const handleResize = () => {
       setExpandedWidth(getExpandedWidth());
+      setExpandedHeight(getExpandedHeight());
+      setIsMobile(window.innerWidth < 768);
     };
 
+    handleResize(); // Initial check
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -57,9 +71,12 @@ export default function ProjectColumn({ project, isExpanded, onClick }: ProjectC
 
   return (
     <motion.div
-      className="h-full relative flex-shrink-0 overflow-hidden"
+      className="relative flex-shrink-0 overflow-hidden md:h-full w-full"
       initial={false}
-      animate={{
+      animate={isMobile ? {
+        height: isExpanded ? expandedHeight : COLLAPSED_HEIGHT_MOBILE,
+        width: '100%'
+      } : {
         width: isExpanded ? expandedWidth : COLLAPSED_WIDTH
       }}
       transition={{
@@ -67,10 +84,10 @@ export default function ProjectColumn({ project, isExpanded, onClick }: ProjectC
         ease: EASE
       }}
     >
-      {/* Collapsed vertical bar (always present) */}
+      {/* Collapsed bar (vertical on desktop, horizontal on mobile) */}
       <motion.div
-        className="absolute flex inset-0 cursor-pointer"
-        style={{ width: COLLAPSED_WIDTH }}
+        className="absolute flex inset-0 cursor-pointer md:w-auto md:h-full w-full"
+        style={isMobile ? { height: COLLAPSED_HEIGHT_MOBILE, width: '100%' } : { width: COLLAPSED_WIDTH }}
         onClick={onClick}
         animate={{ backgroundColor: isExpanded ? project.color : 'black' }}
         transition={{ duration: ANIMATION_DURATION, ease: EASE }}
@@ -88,7 +105,12 @@ export default function ProjectColumn({ project, isExpanded, onClick }: ProjectC
         {isExpanded && (
           <motion.div
             className="absolute bg-nico-cream text-black"
-            style={{
+            style={isMobile ? {
+              left: 0,
+              top: COLLAPSED_HEIGHT_MOBILE,
+              right: 0,
+              height: expandedHeight - COLLAPSED_HEIGHT_MOBILE
+            } : {
               left: COLLAPSED_WIDTH,
               top: 0,
               bottom: 0,
@@ -100,8 +122,8 @@ export default function ProjectColumn({ project, isExpanded, onClick }: ProjectC
             transition={{ duration: ANIMATION_DURATION, ease: EASE }}
           >
             {/* Scrollable content area */}
-            <div ref={scrollContainerRef} className="h-full overflow-y-auto" style={{ scrollbarGutter: 'stable' }}>
-              <div className="p-8 md:p-12 pb-32 min-h-full flex flex-col" style={{ width: expandedWidth - COLLAPSED_WIDTH }}>
+            <div ref={scrollContainerRef} className="h-full overflow-y-auto md:overflow-x-hidden overflow-x-auto" style={{ scrollbarGutter: 'stable' }}>
+              <div className="p-8 md:p-12 pb-32 min-h-full flex flex-col" style={isMobile ? { height: expandedHeight - COLLAPSED_HEIGHT_MOBILE } : { width: expandedWidth - COLLAPSED_WIDTH }}>
                 <div className="flex-grow">
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">{project.title}</h2>
 
