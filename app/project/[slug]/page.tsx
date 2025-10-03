@@ -2,12 +2,10 @@
 
 import { notFound, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import { projects, ContentSection } from '@/data/projects';
 import { use } from 'react';
 import ColoredAccentBar from '@/components/ColoredAccentBar';
 import ProjectMetadata from '@/components/project-sections/ProjectMetadata';
-import ExternalLinks from '@/components/project-sections/ExternalLinks';
 import TextSection from '@/components/project-sections/TextSection';
 import ImageSection from '@/components/project-sections/ImageSection';
 import TwoColumnSection from '@/components/project-sections/TwoColumnSection';

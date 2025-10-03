@@ -37,7 +37,6 @@ const getExpandedHeight = () => {
 };
 
 export default function ProjectColumn({ project, isExpanded, onClick }: ProjectColumnProps) {
-  const formatNumber = (num: number) => num.toString().padStart(2, '0');
   const [expandedWidth, setExpandedWidth] = React.useState(getExpandedWidth());
   const [expandedHeight, setExpandedHeight] = React.useState(getExpandedHeight());
   const [isMobile, setIsMobile] = React.useState(false);

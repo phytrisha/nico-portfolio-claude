@@ -80,9 +80,6 @@ export default function ProjectsAccordion({ expandedId, setExpandedId, onShowPro
     };
   }, [isMobile, showProjects, isAnimating]);
 
-  // Calculate total animation duration
-  const totalAnimationDuration = (projects.length - 1) * 0.1 + 0.6; // Last delay + animation duration
-
   return (
     <div
       ref={containerRef}

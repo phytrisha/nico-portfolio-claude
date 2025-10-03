@@ -1,4 +1,4 @@
-import type { Project, ExternalLink } from '@/data/projects';
+import type { ExternalLink } from '@/data/projects';
 
 interface ExternalLinksProps {
   links: ExternalLink[];

@@ -1,9 +1,6 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
-import Link from 'next/link';
 import type { Project, ContentSection } from '@/data/projects';
 import TextSection from './project-sections/TextSection';
 import ImageSection from './project-sections/ImageSection';
@@ -24,8 +21,6 @@ interface ProjectDetailModalProps {
 }
 
 export default function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailModalProps) {
-  const router = useRouter();
-
   const handleClose = () => {
     onClose();
   };
