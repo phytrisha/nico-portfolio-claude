@@ -5,6 +5,17 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { projects, ContentSection } from '@/data/projects';
 import { use } from 'react';
+import ColoredAccentBar from '@/components/ColoredAccentBar';
+import ProjectMetadata from '@/components/project-sections/ProjectMetadata';
+import ExternalLinks from '@/components/project-sections/ExternalLinks';
+import TextSection from '@/components/project-sections/TextSection';
+import ImageSection from '@/components/project-sections/ImageSection';
+import TwoColumnSection from '@/components/project-sections/TwoColumnSection';
+import QuoteSection from '@/components/project-sections/QuoteSection';
+import TwoThirdsLayoutSection from '@/components/project-sections/TwoThirdsLayoutSection';
+import OneThirdLayoutSection from '@/components/project-sections/OneThirdLayoutSection';
+import SubheadlineSection from '@/components/project-sections/SubheadlineSection';
+import LinksSection from '@/components/project-sections/LinksSection';
 
 export default function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
   const router = useRouter();
@@ -23,36 +34,12 @@ export default function ProjectDetail({ params }: { params: Promise<{ slug: stri
 
   return (
     <div className="min-h-screen flex">
-      {/* Colored accent bar on the left */}
-      <div
-        className="w-16 flex-shrink-0 text-white relative"
-        style={{ backgroundColor: project.color }}
-      >
-        <div className="h-full flex flex-col grow items-center justify-start py-8 px-4">
-          <div className="text-sm font-medium text-center">{project.id.toString().padStart(2, '0')}</div>
-          {/* Rotated content - reads bottom to top */}
-          <div
-            className="flex flex-row grow py-4 items-center gap-4"
-            style={{
-              writingMode: 'vertical-rl',
-              transform: 'rotate(180deg)',
-            }}
-          >
-
-            <div className="text-xs grow font-medium mt-4 text-left whitespace-nowrap">
-              {project.shortTitle}
-            </div>
-            <div className="flex flex-row gap-2 items-center">
-              {project.tags.map((tag, i) => (
-                <span key={i} className="text-xs whitespace-nowrap">
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <div className="h-px w-8 bg-white"></div>
-          </div>
-        </div>
-      </div>
+      <ColoredAccentBar
+        id={project.id}
+        shortTitle={project.shortTitle}
+        tags={project.tags}
+        color={project.color}
+      />
 
       {/* Main content area */}
       <div className="flex-1 bg-nico-cream text-black relative">
@@ -79,261 +66,40 @@ export default function ProjectDetail({ params }: { params: Promise<{ slug: stri
             {project.title}
           </h1>
 
-          {/* Metadata table */}
-          <div className="border-2 border-black mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 border-b-2 border-black">
-              <div className="p-4 border-b md:border-b-0 md:border-r-2 border-black">
-                <p className="text-sm font-medium">Strategic Design, 2019</p>
-              </div>
-              <div className="p-4">
-                <p className="text-sm font-medium">{project.metadata.topics}</p>
-              </div>
-            </div>
-            <div className="p-4">
-              <p className="text-sm">Master Thesis, M.A.</p>
-            </div>
-          </div>
+          <ProjectMetadata project={project} />
 
           {/* Main content */}
           <div className="space-y-8 mb-16">
-            {project.contentSections && project.contentSections.length > 0 ? (
-              project.contentSections.map((section: ContentSection, index: number) => {
-                switch (section.type) {
-                  case 'text':
-                    return (
-                      <div key={index}>
-                        <p className="text-base leading-relaxed">{section.content}</p>
-                      </div>
-                    );
+            {project.contentSections?.map((section: ContentSection, index: number) => {
+              switch (section.type) {
+                case 'text':
+                  return <TextSection key={index} section={section} />;
 
-                  case 'image':
-                    return (
-                      <div key={index} className="bg-gray-200 h-96 flex items-center justify-center rounded-lg">
-                        {section.image ? (
-                          <Image
-                            src={section.image}
-                            alt="Project image"
-                            width={1200}
-                            height={600}
-                            className="w-full h-full object-cover rounded-lg"
-                          />
-                        ) : (
-                          <p className="text-gray-500 text-lg">Project Image Placeholder</p>
-                        )}
-                      </div>
-                    );
+                case 'image':
+                  return <ImageSection key={index} section={section} />;
 
-                  case 'two-column':
-                    return (
-                      <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                          {section.leftContent ? (
-                            <p className="text-base leading-relaxed">{section.leftContent}</p>
-                          ) : section.leftImage ? (
-                            <div className="bg-gray-200 h-64 flex items-center justify-center rounded-lg">
-                              <Image
-                                src={section.leftImage}
-                                alt="Project detail"
-                                width={600}
-                                height={400}
-                                className="w-full h-full object-cover rounded-lg"
-                              />
-                            </div>
-                          ) : null}
-                        </div>
-                        <div>
-                          {section.rightContent ? (
-                            <p className="text-base leading-relaxed">{section.rightContent}</p>
-                          ) : section.rightImage ? (
-                            <div className="bg-gray-200 h-64 flex items-center justify-center rounded-lg">
-                              <Image
-                                src={section.rightImage}
-                                alt="Project detail"
-                                width={600}
-                                height={400}
-                                className="w-full h-full object-cover rounded-lg"
-                              />
-                            </div>
-                          ) : null}
-                        </div>
-                      </div>
-                    );
+                case 'two-column':
+                  return <TwoColumnSection key={index} section={section} />;
 
-                  case 'quote':
-                    return (
-                      <div key={index}>
-                        <p className="text-base leading-relaxed italic border-l-4 border-black pl-6 py-2">
-                          "{section.content}"
-                        </p>
-                      </div>
-                    );
+                case 'quote':
+                  return <QuoteSection key={index} section={section} />;
 
-                  case 'two-thirds-layout':
-                    return (
-                      <div key={index} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="md:col-span-2">
-                          {section.leftContent ? (
-                            <p className="text-base leading-relaxed">{section.leftContent}</p>
-                          ) : section.leftImage ? (
-                            <div className="bg-gray-200 h-96 flex items-center justify-center rounded-lg">
-                              <Image
-                                src={section.leftImage}
-                                alt="Project detail"
-                                width={800}
-                                height={600}
-                                className="w-full h-full object-cover rounded-lg"
-                              />
-                            </div>
-                          ) : null}
-                        </div>
-                        <div className="md:col-span-1">
-                          {section.rightContent ? (
-                            <p className="text-base leading-relaxed">{section.rightContent}</p>
-                          ) : section.rightImage ? (
-                            <div className="bg-gray-200 h-96 flex items-center justify-center rounded-lg">
-                              <Image
-                                src={section.rightImage}
-                                alt="Project detail"
-                                width={400}
-                                height={600}
-                                className="w-full h-full object-cover rounded-lg"
-                              />
-                            </div>
-                          ) : null}
-                        </div>
-                      </div>
-                    );
+                case 'two-thirds-layout':
+                  return <TwoThirdsLayoutSection key={index} section={section} />;
 
-                  case 'one-third-layout':
-                    return (
-                      <div key={index} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="md:col-span-1">
-                          {section.leftContent ? (
-                            <p className="text-base leading-relaxed">{section.leftContent}</p>
-                          ) : section.leftImage ? (
-                            <div className="bg-gray-200 h-96 flex items-center justify-center rounded-lg">
-                              <Image
-                                src={section.leftImage}
-                                alt="Project detail"
-                                width={400}
-                                height={600}
-                                className="w-full h-full object-cover rounded-lg"
-                              />
-                            </div>
-                          ) : null}
-                        </div>
-                        <div className="md:col-span-2">
-                          {section.rightContent ? (
-                            <p className="text-base leading-relaxed">{section.rightContent}</p>
-                          ) : section.rightImage ? (
-                            <div className="bg-gray-200 h-96 flex items-center justify-center rounded-lg">
-                              <Image
-                                src={section.rightImage}
-                                alt="Project detail"
-                                width={800}
-                                height={600}
-                                className="w-full h-full object-cover rounded-lg"
-                              />
-                            </div>
-                          ) : null}
-                        </div>
-                      </div>
-                    );
+                case 'one-third-layout':
+                  return <OneThirdLayoutSection key={index} section={section} />;
 
-                  case 'subheadline':
-                    return (
-                      <div key={index} className="my-8">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-4">{section.title}</h2>
-                        {section.content && (
-                          <p className="text-base leading-relaxed text-gray-700">{section.content}</p>
-                        )}
-                      </div>
-                    );
+                case 'subheadline':
+                  return <SubheadlineSection key={index} section={section} />;
 
-                  case 'links':
-                    return (
-                      <div key={index} className="my-8">
-                        {section.title && (
-                          <h3 className="text-xl font-bold mb-4">{section.title}</h3>
-                        )}
-                        <div className="space-y-3">
-                          {section.links?.map((link, linkIndex) => (
-                            <a
-                              key={linkIndex}
-                              href={link.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-2 text-black hover:underline group"
-                            >
-                              <span className="text-base font-medium">{link.title}</span>
-                              <svg
-                                width="16"
-                                height="16"
-                                viewBox="0 0 16 16"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M3 13L13 3M13 3H6M13 3V10"
-                                  stroke="currentColor"
-                                  strokeWidth="2"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                />
-                              </svg>
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                    );
+                case 'links':
+                  return <LinksSection key={index} section={section} />;
 
-                  default:
-                    return null;
-                }
-              })
-            ) : (
-              // Fallback to default content if no contentSections
-              <>
-                <div>
-                  <p className="text-base leading-relaxed mb-4">{project.description}</p>
-                  <p className="text-base leading-relaxed mb-4">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                    eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                    takimata sanctus est Lorem ipsum dolor sit amet.
-                  </p>
-                </div>
-
-                <div className="bg-gray-200 h-96 flex items-center justify-center rounded-lg">
-                  <p className="text-gray-500 text-lg">Project Image Placeholder</p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <p className="text-base leading-relaxed">
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                      tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                    </p>
-                  </div>
-                  <div className="bg-gray-200 h-64 flex items-center justify-center rounded-lg">
-                    <p className="text-gray-500">Image</p>
-                  </div>
-                </div>
-
-                <div className="bg-gray-200 h-96 flex items-center justify-center rounded-lg">
-                  <p className="text-gray-500 text-lg">Project Image Placeholder</p>
-                </div>
-
-                <div>
-                  <p className="text-base leading-relaxed italic border-l-4 border-black pl-6 py-2">
-                    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                    eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                    takimata sanctus est."
-                  </p>
-                </div>
-              </>
-            )}
+                default:
+                  return null;
+              }
+            })}
           </div>
 
           {/* Related projects navigation */}

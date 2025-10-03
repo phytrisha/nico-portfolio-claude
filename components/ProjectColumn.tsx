@@ -4,6 +4,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Project } from '@/data/projects';
 import Link from 'next/link';
+import ColoredAccentBar from './ColoredAccentBar';
 
 interface ProjectColumnProps {
   project: Project;
@@ -68,38 +69,18 @@ export default function ProjectColumn({ project, isExpanded, onClick }: ProjectC
     >
       {/* Collapsed vertical bar (always present) */}
       <motion.div
-        className="absolute inset-0 text-white cursor-pointer"
-        style={{
-          backgroundColor: isExpanded ? project.color : 'black',
-          width: COLLAPSED_WIDTH
-        }}
+        className="absolute flex inset-0 cursor-pointer"
+        style={{ width: COLLAPSED_WIDTH }}
         onClick={onClick}
         animate={{ backgroundColor: isExpanded ? project.color : 'black' }}
         transition={{ duration: ANIMATION_DURATION, ease: EASE }}
       >
-        <div className="h-full flex flex-col grow items-center justify-start py-4 px-4 font-mono">
-          <div className="text-sm font-medium text-center">{formatNumber(project.id)}</div>
-          {/* Rotated content - reads bottom to top */}
-          <div
-            className="flex flex-row grow py-4 items-center gap-4"
-            style={{
-              writingMode: 'vertical-rl',
-              transform: 'rotate(180deg)',
-            }}
-          >
-            <div className="text-xs grow font-medium mt-4 text-left whitespace-nowrap">
-              {project.shortTitle}
-            </div>
-            <div className="flex flex-row gap-2 items-center">
-              {project.tags.map((tag, i) => (
-                <span key={i} className="text-xs whitespace-nowrap">
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <div className="h-px w-8 mb-2 bg-white"></div>
-          </div>
-        </div>
+        <ColoredAccentBar
+          id={project.id}
+          shortTitle={project.shortTitle}
+          tags={project.tags}
+          color={isExpanded ? project.color : 'black'}
+        />
       </motion.div>
 
       {/* Expanded content area */}
