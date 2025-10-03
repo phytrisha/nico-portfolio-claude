@@ -127,7 +127,7 @@ export default function ProjectColumn({ project, isExpanded, onClick }: ProjectC
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">{project.title}</h2>
 
                   {/* Metadata table */}
-                  <div className="border border-black mb-48">
+                  <div className="border border-black mb-64 lg:mb-48">
                     <div className="border-b border-black p-4">
                       <p className="text-sm">{project.metadata.type}</p>
                     </div>

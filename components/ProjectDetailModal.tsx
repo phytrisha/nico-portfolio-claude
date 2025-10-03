@@ -60,7 +60,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                 {/* Close button */}
                 <button
                   onClick={handleClose}
-                  className="fixed top-8 right-8 z-50 bg-black text-white w-12 h-12 flex items-center justify-center cursor-pointer transition-transform"
+                  className="fixed top-4 right-4 z-50 bg-black text-white w-12 h-12 flex items-center justify-center cursor-pointer transition-transform"
                 >
                   <svg
                     width="24"

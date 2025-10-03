@@ -83,7 +83,7 @@ export default function ProjectsAccordion({ expandedId, setExpandedId, onShowPro
   return (
     <div
       ref={containerRef}
-      className="h-full flex md:flex-row flex-col md:overflow-x-auto w-full"
+      className="h-full flex md:flex-row flex-col md:overflow-x-auto w-full mt-32 lg:mt-0"
     >
       {projects.map((project, index) => {
         // When showing: delay increases with index (0, 0.1, 0.2, ...)

@@ -37,7 +37,7 @@ export default function ColoredAccentBar({ id, shortTitle, tags, color }: Colore
       </div>
 
       {/* Mobile: horizontal layout */}
-      <div className="w-full flex md:hidden flex-row items-center justify-start px-4 py-4 h-20">
+      <div className="w-full flex md:hidden flex-row items-center justify-start px-10 pr-20 py-4 h-20">
         <div className="flex flex-col gap-1 flex-grow justify-center">
           <div className="text-xs font-medium lg:whitespace-nowrap">
             {shortTitle}
