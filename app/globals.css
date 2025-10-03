@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Inter, sans-serif;
+  background: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.bg-nico-cream {
+  background-color: #f5f5dc;
+}
+
+.text-nico-orange {
+  color: #FF6D01;
+}
+
+.text-nico-purple {
+  color: #F290EE;
+}
+
+.text-nico-green {
+  color: #259918;
+}
+
+
+/* Custom dotted text outline effect */
+.dotted-text {
+  position: relative;
+  display: inline-block;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 5px,
+      currentColor 5px,
+      currentColor 6px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 5px,
+      currentColor 5px,
+      currentColor 6px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      transparent,
+      transparent 5px,
+      currentColor 5px,
+      currentColor 6px
+    ),
+    repeating-linear-gradient(
+      270deg,
+      transparent,
+      transparent 5px,
+      currentColor 5px,
+      currentColor 6px
+    );
+  background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
