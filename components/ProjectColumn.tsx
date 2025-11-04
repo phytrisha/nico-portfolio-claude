@@ -174,7 +174,7 @@ export default function ProjectColumn({ project, isExpanded, onClick }: ProjectC
                     </div>
                     <div className="p-6">
                       <p className="text-sm font-medium mb-4">Description</p>
-                      <p className="text-xs leading-normal">{renderDescription(project.description)}</p>
+                      <div className="text-xs leading-normal">{renderDescription(project.description)}</div>
                     </div>
                   </div>
                 </div>
