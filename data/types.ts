@@ -45,4 +45,5 @@ export interface Project {
   description: string | DescriptionBlock[];
   contentSections?: ContentSection[];
   externalLinks?: ExternalLink[];
+  externalUrl?: string; // If provided, arrow button links to external URL instead of detail page
 }

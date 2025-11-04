@@ -28,4 +28,5 @@ export const bankingPurpose = {
       rightImage: '/images/projects/banking-purpose/detail-1.jpg',
     },
   ] as ContentSection[],
+  externalUrl: "https://example.com"
 };

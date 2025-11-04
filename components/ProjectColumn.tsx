@@ -182,7 +182,11 @@ export default function ProjectColumn({ project, isExpanded, onClick }: ProjectC
                 {/* Arrow button - pushed to bottom, hidden when content is scrollable */}
                 {!isScrollable && (
                   <div className="flex justify-end mt-auto">
-                    <Link href={`/project/${project.slug}`}>
+                    <Link
+                      href={project.externalUrl || `/project/${project.slug}`}
+                      target={project.externalUrl ? '_blank' : undefined}
+                      rel={project.externalUrl ? 'noopener noreferrer' : undefined}
+                    >
                       <div className="bg-black p-8 cursor-pointer transition-transform">
                         <svg
                           width="100"
@@ -209,7 +213,12 @@ export default function ProjectColumn({ project, isExpanded, onClick }: ProjectC
             {/* Sticky overlay arrow - visible when content needs scrolling */}
             {isScrollable && (
               <div className="absolute right-8 md:right-12 bottom-12 pointer-events-none z-10">
-                <Link href={`/project/${project.slug}`} className="pointer-events-auto block sticky bottom-12">
+                <Link
+                  href={project.externalUrl || `/project/${project.slug}`}
+                  target={project.externalUrl ? '_blank' : undefined}
+                  rel={project.externalUrl ? 'noopener noreferrer' : undefined}
+                  className="pointer-events-auto block sticky bottom-12"
+                >
                   <div className="bg-black p-8 cursor-pointer transition-transform">
                     <svg
                       width="100"

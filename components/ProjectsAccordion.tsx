@@ -99,7 +99,9 @@ export default function ProjectsAccordion({ expandedId, setExpandedId, onShowPro
   return (
     <div
       ref={containerRef}
-      className="h-full flex md:flex-row flex-col md:overflow-x-auto w-full mt-32 lg:mt-0"
+      className={`h-full flex md:flex-row flex-col w-full mt-32 lg:mt-0 ${
+        expandedId !== null ? 'md:overflow-x-auto' : 'md:overflow-x-hidden'
+      }`}
     >
       {/* Back button column - only visible when accordion is expanded */}
       {expandedId !== null && (
