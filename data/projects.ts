@@ -1,12 +1,15 @@
 import { beneficialAI } from './projects/beneficial-ai';
 import { socialObjectivity } from './projects/social-objectivity';
-import { socialAccountObjectivity } from './projects/social-account-objectivity';
+import { transformativeExperiences } from './projects/transformative-experiences';
 import { autismEmotions } from './projects/autism-emotions';
-import { discursiveHygiene } from './projects/discursive-hygiene';
 import { bankingPurpose } from './projects/banking-purpose';
 import { conceptLearning } from './projects/concept-learning';
-import { consumerGoods } from './projects/consumer-goods';
 import { mentalHealth } from './projects/mental-health';
+import { darwinProject } from './projects/darwin-project';
+import { flows } from './projects/flows';
+import { zasta } from './projects/zasta';
+import { zalando } from './projects/zalando';
+import { taxfix } from './projects/taxfix';
 import { Project } from './types';
 
 export * from './types';
@@ -14,11 +17,14 @@ export * from './types';
 export const projects: Project[] = [
   beneficialAI,
   socialObjectivity,
-  socialAccountObjectivity,
   autismEmotions,
-  discursiveHygiene,
   bankingPurpose,
   conceptLearning,
-  consumerGoods,
+  transformativeExperiences,
   mentalHealth,
+  darwinProject,
+  flows,
+  zasta,
+  zalando,
+  taxfix,
 ];

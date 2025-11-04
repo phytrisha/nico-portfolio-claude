@@ -12,11 +12,11 @@ export default function ColoredAccentBar({ id, shortTitle, tags, color }: Colore
       style={{ backgroundColor: color }}
     >
       {/* Desktop: vertical layout */}
-      <div className="h-full hidden md:flex flex-col grow items-center justify-start py-8 px-4">
-        <div className="text-sm mb-3 font-medium text-center">{id.toString().padStart(2, '0')}</div>
+      <div className="h-full hidden md:flex flex-col grow items-center justify-start py-4 px-4">
+        <div className="text-sm mb-4 font-medium text-center">{id.toString().padStart(2, '0')}</div>
         {/* Rotated content - reads bottom to top */}
         <div
-          className="flex flex-row grow py-4 items-center gap-4"
+          className="flex flex-row grow py-4 items-center gap-6"
           style={{
             writingMode: 'vertical-rl',
             transform: 'rotate(180deg)',

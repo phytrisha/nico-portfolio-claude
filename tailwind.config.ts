@@ -9,11 +9,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'nico-orange': '#FF6B00',
-        'nico-purple': '#B24BF3',
-        'nico-pink': '#FF66CC',
-        'nico-green': '#00E676',
-        'nico-cream': '#F5F5F0',
+        'nico-orange': '#FF6D01',
+        'nico-purple': '#4433FF',
+        'nico-pink': '#F290EE',
+        'nico-green': '#259918',
+        'nico-cream': '#EEEFEB',
         'nico-black': '#000000',
       },
       fontFamily: {

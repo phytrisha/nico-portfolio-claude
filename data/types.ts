@@ -9,12 +9,26 @@ export interface ContentSection {
   layout?: 'image-text' | 'image-image' | 'text-image' | 'text-text';
   title?: string;
   links?: ExternalLink[];
+  listType?: 'bullet' | 'numbered';
+  items?: string[];
 }
 
 export interface ExternalLink {
   title: string;
   url: string;
 }
+
+export interface DescriptionTextBlock {
+  type: 'text';
+  content: string;
+}
+
+export interface DescriptionListBlock {
+  type: 'bullet' | 'numbered';
+  items: string[];
+}
+
+export type DescriptionBlock = DescriptionTextBlock | DescriptionListBlock;
 
 export interface Project {
   id: number;
@@ -28,7 +42,7 @@ export interface Project {
     type: string;
     topics: string;
   };
-  description: string;
+  description: string | DescriptionBlock[];
   contentSections?: ContentSection[];
   externalLinks?: ExternalLink[];
 }

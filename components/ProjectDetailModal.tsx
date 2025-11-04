@@ -60,23 +60,23 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                 {/* Close button */}
                 <button
                   onClick={handleClose}
-                  className="fixed top-4 right-4 z-50 bg-black text-white w-12 h-12 flex items-center justify-center cursor-pointer transition-transform"
+                  className="fixed top-0 right-0 z-50 bg-black text-white w-24 h-24 flex items-center justify-center cursor-pointer transition-transform"
                 >
                   <svg
-                    width="24"
-                    height="24"
+                    width="50"
+                    height="50"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="none"
                   >
                     <path d="M18 6L6 18M6 6l12 12" />
                   </svg>
                 </button>
 
                 <div className="max-w-5xl mx-auto p-8 md:p-12 lg:p-16">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+                  <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-16 mt-8 leading-tight">
                     {project.title}
                   </h1>
 
