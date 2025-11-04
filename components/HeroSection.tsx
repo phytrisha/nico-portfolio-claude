@@ -53,7 +53,7 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen bg-black flex items-center justify-center">
       <div className="max-w-[80%] mt-64">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+        <h1 className="text-5xl md:text-6xl lg:text-[86px] font-bold leading-tight">
           <div className="text-white mb-24 min-h-[1.2em]">{displayedText}</div>
 
           <motion.div
@@ -93,7 +93,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
           >
             <div className="mt-32 leading-relaxed">
-              With a polyoriginal lens informed by design & philosophy I specialize in translating abstract ideas into tangible product designs.
+              With a polyoriginal <br /> lens informed by <br /> design & philosophy <br /> I specialize in <br /> translating abstract <br /> ideas into tangible product designs.
             </div>
           </motion.div>
         </h1>

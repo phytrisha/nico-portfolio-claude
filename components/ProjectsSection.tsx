@@ -12,7 +12,7 @@ export default function ProjectsSection() {
     <section className="min-h-screen flex flex-col mt-32 lg:mt-0 lg:flex-row relative">
       {/* Left side - Intro (sticky) */}
       <div
-        className={`lg:w-[65%] lg:h-screen lg:sticky lg:top-0 transition-transform duration-500 ease-in-out ${
+        className={`lg:w-[75%] lg:h-screen lg:sticky lg:top-0 transition-transform duration-500 ease-in-out ${
           expandedId !== null ? 'lg:translate-x-[-50%]' : 'lg:translate-x-0'
         }`}
       >
@@ -22,7 +22,7 @@ export default function ProjectsSection() {
       {/* Right side - Horizontal accordion */}
       <div
         className={`lg:h-screen bg-black transition-all duration-500 ease-in-out lg:absolute lg:top-0 ${
-          expandedId !== null ? 'lg:left-0 lg:w-full' : 'lg:left-[65%] lg:w-[35%]'
+          expandedId !== null ? 'lg:left-0 lg:w-full' : 'lg:left-[75%] lg:w-[25%]'
         }`}
         style={{ pointerEvents: showProjects ? 'auto' : 'none' }}
       >
