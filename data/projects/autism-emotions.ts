@@ -7,6 +7,7 @@ export const autismEmotions = {
   shortTitle: 'AEMOTE – SUPPORTING PEOPLE WITH AUTISM IN UNDERSTANDING EMOTIONS',
   category: 'strategic-design' as const,
   tags: ['#STRATEGIC-DESIGN'],
+  year: '2019',
   color: '#FF6B00',
   metadata: {
     type: 'Strategic Design, 2019',

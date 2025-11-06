@@ -7,6 +7,7 @@ export const taxfix = {
   shortTitle: 'TAXFIX WORKBENCH',
   category: 'freelance' as const,
   tags: ['#FREELANCE'],
+  year: '2020',
   color: '#259918',
   metadata: {
     type: 'UX Design, Freelance, 2020',

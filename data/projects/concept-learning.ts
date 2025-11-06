@@ -7,6 +7,7 @@ export const conceptLearning = {
   shortTitle: 'APPROACHING MECHANISMS OF CONCEPT LEARNING',
   category: 'philosophy' as const,
   tags: ['#PHILOSOPHY'],
+  year: '2024',
   color: '#CF73CA',
   metadata: {
     type: 'Philosophy, End of term paper, 2024',

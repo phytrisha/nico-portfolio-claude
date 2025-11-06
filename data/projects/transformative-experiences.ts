@@ -7,6 +7,7 @@ export const transformativeExperiences = {
   shortTitle: 'WILL BASED COMMITMENT & TRANSFORMATIVE EXPERIENCES',
   category: 'philosophy' as const,
   tags: ['#PHILOSOPHY'],
+  year: '2023',
   color: '#CF73CA',
   metadata: {
     type: 'Philosophy, HU Berlin, B.A., 2023',

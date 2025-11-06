@@ -7,6 +7,7 @@ export const socialObjectivity = {
   shortTitle: 'ON THE PSYCHOLOGICAL UNDERPINNINGS OF SOCIAL OBJECTIVITY',
   category: 'philosophy' as const,
   tags: ['#PHILOSOPHY'],
+  year: '2025',
   color: '#CF73CA',
   metadata: {
     type: 'Philosophy, HU Berlin, B.A., 2025',

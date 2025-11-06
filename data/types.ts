@@ -44,6 +44,7 @@ export interface Project {
   shortTitle: string;
   category: 'strategic-design' | 'philosophy' | 'freelance';
   tags: string[];
+  year?: string; // Optional year field for projects
   color: string;
   metadata: {
     type: string;

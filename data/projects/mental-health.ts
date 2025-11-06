@@ -7,6 +7,7 @@ export const mentalHealth = {
   shortTitle: 'SELFAPY',
   category: 'freelance' as const,
   tags: ['#FREELANCE'],
+  year: '2021',
   color: '#259918',
   metadata: {
     type: 'UX Concept & Design, 2021',

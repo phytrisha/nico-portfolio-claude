@@ -7,6 +7,7 @@ export const flows = {
   shortTitle: 'FLOWS',
   category: 'strategic design' as const,
   tags: ['#INTERACTION DESIGN'],
+  year: '2017',
   color: '#FF6B00',
   metadata: {
     type: 'Interaction Design, HfG Schwäbisch Gmünd, B.A. Thesis, 2017',

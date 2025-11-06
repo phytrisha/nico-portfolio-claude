@@ -8,10 +8,12 @@ export default function HeroSection() {
   const [isTypewriterComplete, setIsTypewriterComplete] = useState(false);
   const [showFirstSection, setShowFirstSection] = useState(false);
   const [showSecondSection, setShowSecondSection] = useState(false);
+  const [showProjectsIntro, setShowProjectsIntro] = useState(false);
   const fullText = 'Hi, I am Nico,';
 
   const firstSectionRef = useRef<HTMLDivElement>(null);
   const secondSectionRef = useRef<HTMLDivElement>(null);
+  const projectsIntroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (displayedText.length < fullText.length) {
@@ -42,6 +44,14 @@ export default function HeroSection() {
         const sectionTop = rect.top + scrollY; // Absolute position of section top
         const triggerPoint = sectionTop - 400; // Trigger 200px before section top
         setShowSecondSection(scrollY >= triggerPoint);
+      }
+
+      // Check if projects intro should be visible
+      if (projectsIntroRef.current) {
+        const rect = projectsIntroRef.current.getBoundingClientRect();
+        const sectionTop = rect.top + scrollY;
+        const triggerPoint = sectionTop - 800; // Trigger 800px before section top
+        setShowProjectsIntro(scrollY >= triggerPoint);
       }
     };
 
@@ -94,6 +104,22 @@ export default function HeroSection() {
           >
             <div className="mt-32 leading-relaxed">
               With a polyoriginal <br /> lens informed by <br /> design & philosophy <br /> I specialize in <br /> translating abstract <br /> ideas into tangible product designs.
+            </div>
+          </motion.div>
+
+          {/* Projects Intro Section */}
+          <motion.div
+            ref={projectsIntroRef}
+            className="text-white"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{
+              opacity: showProjectsIntro ? 1 : 0,
+              y: showProjectsIntro ? 0 : 40
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="mt-32 leading-relaxed">
+              Explore some<br /><span className="bg-gradient-to-r from-[#683D20] via-[#A278A7] to-[#285122] bg-clip-text text-transparent">projects & writings</span><br />dear to my heart...
             </div>
           </motion.div>
         </h1>

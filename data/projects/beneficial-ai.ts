@@ -7,6 +7,7 @@ export const beneficialAI = {
   shortTitle: 'APPROACHING BENEFICIAL AI IN THE CONTEXT OF [...]',
   category: 'strategic-design' as const,
   tags: ['#MA-THESIS', '#STRATEGIC-DESIGN'],
+  year: '2019',
   color: '#FF6D01',
   metadata: {
     type: 'Strategic Design, Master Thesis, M.A., 2019',

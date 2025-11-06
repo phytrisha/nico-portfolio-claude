@@ -7,6 +7,7 @@ export const darwinProject = {
   shortTitle: 'THE [DARWIN] PROJECT',
   category: 'strategic design' as const,
   tags: ['#STRATEGIC DESIGN'],
+  year: '2018',
   color: '#FF6B00',
   metadata: {
     type: 'Strategic Design, HfG Schwäbisch Gmünd, 2018',
