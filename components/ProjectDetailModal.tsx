@@ -56,7 +56,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
               />
 
               {/* Main content area */}
-              <div className="flex-1 bg-nico-cream text-black relative overflow-y-auto">
+              <div className="flex-1 bg-[#EEEFEB] text-black relative overflow-y-auto">
                 {/* Close button */}
                 <button
                   onClick={handleClose}

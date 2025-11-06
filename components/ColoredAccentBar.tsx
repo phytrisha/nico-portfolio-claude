@@ -8,12 +8,12 @@ interface ColoredAccentBarProps {
 export default function ColoredAccentBar({ id, shortTitle, tags, color }: ColoredAccentBarProps) {
   return (
     <div
-      className="md:w-16 w-full md:h-full h-20 flex-shrink-0 text-white relative font-mono"
+      className="md:w-19 w-full md:h-full h-20 flex-shrink-0 text-white relative font-mono"
       style={{ backgroundColor: color }}
     >
       {/* Desktop: vertical layout */}
-      <div className="h-full hidden md:flex flex-col grow items-center justify-start py-4 px-4">
-        <div className="text-sm mb-4 font-medium text-center">{id.toString().padStart(2, '0')}</div>
+      <div className="h-full hidden md:flex flex-col grow items-center justify-start py-6 px-5">
+        <div className="text-sm mb-5 font-medium text-center">{id.toString().padStart(2, '0')}</div>
         {/* Rotated content - reads bottom to top */}
         <div
           className="flex flex-row grow py-4 items-center gap-6"
@@ -22,7 +22,7 @@ export default function ColoredAccentBar({ id, shortTitle, tags, color }: Colore
             transform: 'rotate(180deg)',
           }}
         >
-          <div className="text-xs grow font-medium mt-4 text-left whitespace-nowrap">
+          <div className="text-xs grow font-medium mt-2 text-left whitespace-nowrap">
             {shortTitle}
           </div>
           <div className="flex flex-row gap-2 items-center">

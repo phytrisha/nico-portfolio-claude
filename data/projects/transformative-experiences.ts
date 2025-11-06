@@ -28,4 +28,5 @@ export const transformativeExperiences = {
       rightImage: '/images/projects/social-objectivity/detail-1.jpg',
     },
   ] as ContentSection[],
+    externalUrl: "https://drive.google.com/file/d/166oKoGiU9_g-3a3QcPXpVeJIR2ODGsZT/view?usp=share_link"
 };

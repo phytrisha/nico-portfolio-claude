@@ -28,4 +28,5 @@ export const socialObjectivity = {
       rightImage: '/images/projects/social-objectivity/detail-1.jpg',
     },
   ] as ContentSection[],
+    externalUrl: "https://drive.google.com/file/d/1FIuVr8Xizz92yOdOF8TGY6yABcJ9nQ92/view?usp=share_link"
 };

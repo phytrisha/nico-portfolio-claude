@@ -7,13 +7,13 @@ interface ImageSectionProps {
 
 export default function ImageSection({ section }: ImageSectionProps) {
   return (
-    <div className="bg-gray-200 h-96 flex items-center justify-center">
+    <div className="bg-[#EEEFEB] h-220 flex items-center justify-center">
       {section.image ? (
         <Image
           src={section.image}
           alt="Project image"
           width={1200}
-          height={600}
+          height={100}
           className="w-full h-full object-cover"
         />
       ) : (

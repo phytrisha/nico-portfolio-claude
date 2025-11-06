@@ -13,7 +13,7 @@ interface ProjectColumnProps {
   onClick: () => void;
 }
 
-const COLLAPSED_WIDTH = 64;
+const COLLAPSED_WIDTH = 74;
 const COLLAPSED_HEIGHT_MOBILE = 80;
 const ANIMATION_DURATION = 0.5;
 const EASE = [0.4, 0, 0.2, 1] as const; // easeInOut
@@ -59,7 +59,7 @@ const renderDescription = (description: string | DescriptionBlock[]) => {
 const getExpandedWidth = () => {
   if (typeof window === 'undefined') return 600; // SSR fallback
 
-  if (window.innerWidth >= 1536) return 700; // 2xl
+  if (window.innerWidth >= 1536) return 720; // 2xl
   if (window.innerWidth >= 1280) return 650; // xl
   if (window.innerWidth >= 1024) return 600; // lg
   if (window.innerWidth >= 768) return 500;  // md
@@ -141,7 +141,7 @@ export default function ProjectColumn({ project, isExpanded, onClick }: ProjectC
       <AnimatePresence>
         {isExpanded && (
           <motion.div
-            className="absolute bg-nico-cream text-black"
+            className="absolute bg-[#EEEFEB] text-black"
             style={isMobile ? {
               left: 0,
               top: COLLAPSED_HEIGHT_MOBILE,
@@ -162,7 +162,7 @@ export default function ProjectColumn({ project, isExpanded, onClick }: ProjectC
             <div ref={scrollContainerRef} className="h-full overflow-y-auto md:overflow-x-hidden overflow-x-auto" style={{ scrollbarGutter: 'stable' }}>
               <div className="p-8 md:p-12 pb-32 min-h-full flex flex-col" style={isMobile ? { height: expandedHeight - COLLAPSED_HEIGHT_MOBILE } : { width: expandedWidth - COLLAPSED_WIDTH }}>
                 <div className="flex-grow">
-                  <h2 className="text3xl md:text-5xl font-bold mb-6 leading-tight mb-16 mt-6">{project.title}</h2>
+                  <h2 className="text3xl md:text-[56px] font-bold mb-6 leading-tight mb-16 mt-6">{project.title}</h2>
 
                   {/* Metadata table */}
                   <div className="border border-black mb-64 lg:mb-48">
