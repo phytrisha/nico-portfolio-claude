@@ -28,6 +28,11 @@ export const conceptLearning = {
     type: 'text',
     content:'… So how do concepts change as concept learning takes place? The following will analyze and substantiate these premises and explore their implications with respect to concept learning under conditions of ideology. I will draw on Sally Haslanger’s account of ideology and Lisa Feldman Barrett’s work on how a predictive brain constructs mental phenomena. I will then explore relevant conceptual intersections between both frameworks with respect to the subject of interest: dismantling ideologies.',
     },
+    { 
+      type: 'image', 
+      src: '/images/project-screenshot.jpg',
+      alt: 'Project screenshot'
+    },
   ] as DescriptionBlock[],
 
   contentSections: [

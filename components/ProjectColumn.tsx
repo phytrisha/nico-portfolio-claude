@@ -4,6 +4,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Project } from '@/data/projects';
 import Link from 'next/link';
+import Image from 'next/image';
 import ColoredAccentBar from './ColoredAccentBar';
 import type { DescriptionBlock } from '@/data/types';
 
@@ -22,14 +23,32 @@ const EASE = [0.4, 0, 0.2, 1] as const; // easeInOut
 // Helper function to render a single description block
 const renderDescriptionBlock = (block: DescriptionBlock, index: number) => {
   if (block.type === 'text') {
-    return <p key={index} className="text-sm mb-4 last:mb-0">{block.content}</p>;
+    return <p key={index} className="text-sm mb-4 last:mb-0 p-6">{block.content}</p>;
+  }
+
+  if (block.type === 'image') {
+    return (
+      <div key={index} className="mb-4 last:mb-0">
+        <div className="relative w-full aspect-video">
+          <Image
+            src={block.src}
+            alt={block.alt || ''}
+            fill
+            className="object-cover"
+          />
+        </div>
+        {block.caption && (
+          <p className="text-xs mt-2 px-6 text-gray-600 italic">{block.caption}</p>
+        )}
+      </div>
+    );
   }
 
   // Handle bullet or numbered lists
   const ListTag = block.type === 'numbered' ? 'ol' : 'ul';
   const listClassName = block.type === 'numbered'
-    ? 'text-sm list-decimal list-inside space-y-2 mb-4 last:mb-0'
-    : 'text-sm list-disc list-inside space-y-2 mb-4 last:mb-0';
+    ? 'text-sm list-decimal list-inside space-y-2 mb-4 last:mb-0 p-6'
+    : 'text-sm list-disc list-inside space-y-2 mb-4 last:mb-0 p-6';
 
   return (
     <ListTag key={index} className={listClassName}>
@@ -43,7 +62,7 @@ const renderDescriptionBlock = (block: DescriptionBlock, index: number) => {
 // Helper function to render description (supports string or array of blocks)
 const renderDescription = (description: string | DescriptionBlock[]) => {
   if (typeof description === 'string') {
-    return <p className="text-sm">{description}</p>;
+    return <p className="text-sm p-6">{description}</p>;
   }
 
   // Render array of mixed content blocks
@@ -172,8 +191,8 @@ export default function ProjectColumn({ project, isExpanded, onClick }: ProjectC
                     <div className="border-b border-black p-6">
                       <p className="text-sm font-medium">{project.metadata.topics}</p>
                     </div>
-                    <div className="p-6">
-                      <p className="text-sm font-medium mb-4">Description</p>
+                    <div>
+                      <p className="text-sm font-medium mb-4 p-6 pb-0">Description</p>
                       <div className="text-xs leading-normal">{renderDescription(project.description)}</div>
                     </div>
                   </div>

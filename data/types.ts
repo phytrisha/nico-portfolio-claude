@@ -28,7 +28,14 @@ export interface DescriptionListBlock {
   items: string[];
 }
 
-export type DescriptionBlock = DescriptionTextBlock | DescriptionListBlock;
+export interface DescriptionImageBlock {
+  type: 'image';
+  src: string;
+  alt?: string;
+  caption?: string;
+}
+
+export type DescriptionBlock = DescriptionTextBlock | DescriptionListBlock | DescriptionImageBlock;
 
 export interface Project {
   id: number;
