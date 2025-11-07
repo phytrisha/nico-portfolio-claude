@@ -1,8 +1,14 @@
+export interface Collaborator {
+  name: string;
+  url?: string;
+  role?: 'with' | 'supervision';
+}
+
 export interface ContentSection {
   type: 'text' | 'image' | 'quote' | 'two-column' | 'two-thirds-layout' | 'one-third-layout' | 'subheadline' | 'links';
   content?: string;
   image?: string;
-  leftContent?: string;
+  leftContent?: string | string[];
   rightContent?: string;
   rightImage?: string;
   leftImage?: string;
@@ -11,6 +17,7 @@ export interface ContentSection {
   links?: ExternalLink[];
   listType?: 'bullet' | 'numbered';
   items?: string[];
+  collaborators?: Collaborator[];
 }
 
 export interface ExternalLink {

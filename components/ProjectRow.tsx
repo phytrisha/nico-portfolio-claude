@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import type { Project } from '@/data/projects';
 import ProjectRowHeader from './ProjectRowHeader';
 import ProjectRowContent from './ProjectRowContent';
@@ -12,48 +12,37 @@ interface ProjectRowProps {
   onClick: () => void;
 }
 
-const COLLAPSED_HEIGHT = 160;
 const ANIMATION_DURATION = 0.5;
 const EASE = [0.4, 0, 0.2, 1] as const;
 
 export default function ProjectRow({ project, isExpanded, onClick }: ProjectRowProps) {
   return (
-    <motion.div
+    <div
       className="w-full"
       style={{
         backgroundColor: isExpanded ? project.color : '#EEEFEB',
         borderBottom: '1px solid #000000',
-        position: 'relative',
         overflow: 'hidden'
       }}
-      initial={false}
-      animate={{
-        height: isExpanded ? 'auto' : COLLAPSED_HEIGHT
-      }}
-      transition={{
-        height: {
-          duration: ANIMATION_DURATION,
-          ease: EASE
-        }
-      }}
     >
-      <ProjectRowHeader
-        project={project}
-        isExpanded={isExpanded}
-        onClick={onClick}
-        height={COLLAPSED_HEIGHT}
-      />
+      <div className='max-w-[80%] m-auto'>
+        <ProjectRowHeader
+          project={project}
+          isExpanded={isExpanded}
+          onClick={onClick}
+        />
 
-      <AnimatePresence>
-        {isExpanded && (
-          <ProjectRowContent
-            project={project}
-            marginTop={COLLAPSED_HEIGHT}
-            animationDuration={ANIMATION_DURATION}
-            ease={EASE}
-          />
-        )}
-      </AnimatePresence>
-    </motion.div>
+        <AnimatePresence>
+          {isExpanded && (
+            <ProjectRowContent
+              project={project}
+              animationDuration={ANIMATION_DURATION}
+              ease={EASE}
+            />
+          )}
+        </AnimatePresence>
+      </div>
+
+    </div>
   );
 }

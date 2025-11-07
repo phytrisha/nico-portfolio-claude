@@ -31,12 +31,16 @@ export const beneficialAI = {
   contentSections: [
     {
       type: 'two-thirds-layout',
-      leftContent: 
+      leftContent:
       [
-        'The following is concerned with the topic of beneficial artificial intelligence. “Beneficial”, in this context, means that systems that use AI act in a way that is desired by humans. Therefore two models will be suggested: the first approaches a classification for aspects of beneficiality in artificially intelligent systems. The second one explores methods to capture and counter ethical problem spaces. The defined models will be explored in three speculative use cases to exemplify and refine them. The impact areas of AI are growing constantly as agents advance in capabilities.',
+        'The following is concerned with the topic of beneficial artificial intelligence. "Beneficial", in this context, means that systems that use AI act in a way that is desired by humans. Therefore two models will be suggested: the first approaches a classification for aspects of beneficiality in artificially intelligent systems. The second one explores methods to capture and counter ethical problem spaces. The defined models will be explored in three speculative use cases to exemplify and refine them. The impact areas of AI are growing constantly as agents advance in capabilities.',
         'As soon as AI systems influence our daily life – and in many ways they already do – it becomes essential to design them to act in a beneficial way: now and looking forward. Establishing ethics as an integral part of design, economics, engineering and development will take time and lots of dedicated work. The constant increase in intelligence makes work on ethical systems a relevant issue long before artificial superintelligence has been attained. A system does not need to be superintelligent to cause serious issues. For example, as the autonomy in the operation of those agents increases, entirely new questions, for example, in the area of accountability for action, will arise.',
       ],
-      rightContent: 'With: Mark F. Meyer, Supervision: Prof. David Osswald, Prof. Dr. Ulrich Barnhöfer',
+      collaborators: [
+        { name: 'Mark F. Meyer', url: 'https://markfmeyer.com', role: 'with' },
+        { name: 'Prof. David Osswald', url: 'https://www.hfg-gmuend.de/david-osswald', role: 'supervision' },
+        { name: 'Prof. Dr. Ulrich Barnhöfer', url: 'https://www.hfg-gmuend.de/ulrich-barnhoefer', role: 'supervision' },
+      ],
     },
     {
       type: 'image',

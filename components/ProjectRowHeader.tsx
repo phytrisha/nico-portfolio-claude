@@ -7,25 +7,22 @@ interface ProjectRowHeaderProps {
   project: Project;
   isExpanded: boolean;
   onClick: () => void;
-  height: number;
 }
 
 export default function ProjectRowHeader({
   project,
   isExpanded,
-  onClick,
-  height
+  onClick
 }: ProjectRowHeaderProps) {
   return (
     <div
-      className="absolute left-0 right-0 top-0 cursor-pointer w-full"
+      className="cursor-pointer w-full"
       style={{
-        height,
         backgroundColor: isExpanded ? project.color : '#EEEFEB'
       }}
       onClick={onClick}
     >
-      <div className="h-full flex flex-col justify-center font-sans text-black px-12">
+      <div className="flex flex-col justify-center font-sans text-black px-0 py-8">
 
         {/* First line - Title and expand button */}
         <div className="flex items-center justify-between mb-6">

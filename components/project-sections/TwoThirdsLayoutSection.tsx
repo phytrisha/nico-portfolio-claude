@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { ContentSection } from '@/data/types';
+import CollaboratorsSection from './CollaboratorsSection';
 
 interface TwoThirdsLayoutSectionProps {
   section: ContentSection;
@@ -10,7 +11,15 @@ export default function TwoThirdsLayoutSection({ section }: TwoThirdsLayoutSecti
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div className="md:col-span-2">
         {section.leftContent ? (
-          <p className="text-base leading-relaxed">{section.leftContent}</p>
+          Array.isArray(section.leftContent) ? (
+            <div className="space-y-4">
+              {section.leftContent.map((paragraph, i) => (
+                <p key={i} className="text-base leading-relaxed">{paragraph}</p>
+              ))}
+            </div>
+          ) : (
+            <p className="text-base leading-relaxed">{section.leftContent}</p>
+          )
         ) : section.leftImage ? (
           <div className="bg-gray-200 h-96 flex items-center justify-center">
             <Image
@@ -24,7 +33,9 @@ export default function TwoThirdsLayoutSection({ section }: TwoThirdsLayoutSecti
         ) : null}
       </div>
       <div className="md:col-span-1">
-        {section.rightContent ? (
+        {section.collaborators ? (
+          <CollaboratorsSection collaborators={section.collaborators} />
+        ) : section.rightContent ? (
           <p className="text-base leading-relaxed">{section.rightContent}</p>
         ) : section.rightImage ? (
           <div className="bg-gray-200 h-96 flex items-center justify-center">

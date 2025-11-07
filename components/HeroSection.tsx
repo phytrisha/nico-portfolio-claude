@@ -118,7 +118,7 @@ export default function HeroSection() {
             }}
             transition={{ duration: 0.5 }}
           >
-            <div className="mt-32 leading-relaxed">
+            <div className="mt-32 mb-32 leading-relaxed">
               Explore some<br /><span className="bg-gradient-to-r from-[#683D20] via-[#A278A7] to-[#285122] bg-clip-text text-transparent">projects & writings</span><br />dear to my heart...
             </div>
           </motion.div>

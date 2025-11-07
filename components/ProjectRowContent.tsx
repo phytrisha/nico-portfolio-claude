@@ -8,32 +8,26 @@ import { renderDescription } from './utils/descriptionRenderer';
 
 interface ProjectRowContentProps {
   project: Project;
-  marginTop: number;
   animationDuration: number;
   ease: readonly number[];
 }
 
 export default function ProjectRowContent({
   project,
-  marginTop,
   animationDuration,
   ease
 }: ProjectRowContentProps) {
   return (
     <motion.div
       className="text-black"
-      style={{
-        marginTop,
-        backgroundColor: project.color
-      }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ height: 0, backgroundColor: 'transparent' }}
+      animate={{ height: 'auto', backgroundColor: project.color }}
+      exit={{ height: 0, backgroundColor: 'transparent' }}
       transition={{ duration: animationDuration, ease }}
     >
-      <div className="pl-12 pt-2 pb-12 grid grid-cols-2 gap-12">
+      <div className="pl-0 pt-2 grid grid-cols-3 gap-12">
         {/* Left column - Title and metadata */}
-        <div>
+        <div className='col-span-2 pb-12'>
             <div className="text-xs leading-normal">{renderDescription(project.description)}</div>
 
           {/*<div style={{ border: '0px solid black' }}>
@@ -47,13 +41,13 @@ export default function ProjectRowContent({
         </div>
 
         {/* Right column - Action button */}
-        <div className="flex items-start justify-end">
+        <div className="flex items-end justify-end col-span-1">
           <Link
             href={project.externalUrl || `/project/${project.slug}`}
             target={project.externalUrl ? '_blank' : undefined}
             rel={project.externalUrl ? 'noopener noreferrer' : undefined}
           >
-            <div className="bg-black p-8 cursor-pointer transition-transform hover:scale-105">
+            <div className="bg-black p-8 cursor-pointer">
               <svg
                 width="100"
                 height="100"

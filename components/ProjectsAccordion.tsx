@@ -14,7 +14,7 @@ export default function ProjectsAccordion({ expandedId, setExpandedId }: Project
   };
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col bg-nico-cream">
       {projects.map((project) => (
         <ProjectRow
           key={project.id}
