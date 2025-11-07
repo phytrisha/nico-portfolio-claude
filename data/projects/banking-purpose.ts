@@ -4,7 +4,7 @@ export const bankingPurpose = {
   id: 6,
   slug: 'banking-purpose',
   title: 'Remagine - Banking Meets Purpose',
-  shortTitle: 'REMAGINE - BANKING MEETS PURPOSE',
+  shortTitle: 'Remagine - Banking Meets Purpose',
   category: 'freelance' as const,
   tags: ['#FREELANCE'],
   year: '2020',

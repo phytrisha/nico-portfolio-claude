@@ -4,7 +4,7 @@ export const transformativeExperiences = {
   id: 15,
   slug: 'transformative-experiences',
   title: 'On the admissibility of will based commitment facing transformative experiences.',
-  shortTitle: 'WILL BASED COMMITMENT & TRANSFORMATIVE EXPERIENCES',
+  shortTitle: 'On the admissibility of will based commitment facing transformative experiences.',
   category: 'philosophy' as const,
   tags: ['#PHILOSOPHY'],
   year: '2023',

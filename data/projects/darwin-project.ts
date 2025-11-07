@@ -1,10 +1,10 @@
 import { ContentSection } from '../types';
 
 export const darwinProject = {
-  id: 10,
+  id: 20,
   slug: 'darwin-project',
   title: 'The [Darwin] Project: A scenario based analysis of individualising consumer goods',
-  shortTitle: 'THE [DARWIN] PROJECT',
+  shortTitle: 'The [Darwin] Project: A scenario based analysis of individualising consumer goods',
   category: 'strategic design' as const,
   tags: ['#STRATEGIC DESIGN'],
   year: '2018',

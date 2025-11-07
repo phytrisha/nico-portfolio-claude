@@ -3,8 +3,8 @@ import { ContentSection, ExternalLink } from '../types';
 export const beneficialAI = {
   id: 1,
   slug: 'beneficial-ai',
-  title: 'Approaching Beneficial Artificial Intelligence in the Context of [...]',
-  shortTitle: 'APPROACHING BENEFICIAL AI IN THE CONTEXT OF [...]',
+  title:'Approaching Beneficial Artificial Intelligence in the Context of [...]',
+  shortTitle:'Approaching Beneficial Artificial Intelligence in the Context of [...]',
   category: 'strategic-design' as const,
   tags: ['#MA-THESIS', '#STRATEGIC-DESIGN'],
   year: '2019',

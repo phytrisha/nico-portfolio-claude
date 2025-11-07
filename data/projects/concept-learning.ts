@@ -4,7 +4,7 @@ export const conceptLearning = {
   id: 7,
   slug: 'concept-learning',
   title: 'Approaching mechanisms of concept learning in the context of transforming ideologies',
-  shortTitle: 'APPROACHING MECHANISMS OF CONCEPT LEARNING',
+  shortTitle: 'Approaching mechanisms of concept learning in the context of transforming ideologies',
   category: 'philosophy' as const,
   tags: ['#PHILOSOPHY'],
   year: '2024',

@@ -43,7 +43,7 @@ export const renderDescriptionBlock = (block: DescriptionBlock, index: number) =
 // Helper function to render description
 export const renderDescription = (description: string | DescriptionBlock[]) => {
   if (typeof description === 'string') {
-    return <p className="text-sm">{description}</p>;
+    return <p className="text-[26px]">{description}</p>;
   }
 
   return (

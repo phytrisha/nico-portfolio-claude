@@ -25,16 +25,17 @@ export default function ProjectRowHeader({
       }}
       onClick={onClick}
     >
-      <div className="h-full flex flex-col justify-center font-mono text-black px-8">
+      <div className="h-full flex flex-col justify-center font-sans text-black px-12">
+
         {/* First line - Title and expand button */}
-        <div className="flex items-center justify-between mb-2">
-          <div className="text-base font-medium">{project.shortTitle}</div>
+        <div className="flex items-center justify-between mb-6">
+          <div className="text-[28px] font-medium">{project.shortTitle}</div>
           <div className="text-2xl">{isExpanded ? '−' : '+'}</div>
         </div>
 
         {/* Second line - Table format with ID, Tags, and Year */}
         <div
-          className="flex items-center gap-0 text-xs"
+          className="flex items-center gap-0 text-xs font-mono mb-2"
           style={{ border: '1px solid black' }}
         >
           <div
@@ -43,20 +44,22 @@ export default function ProjectRowHeader({
           >
             {project.id.toString().padStart(2, '0')}
           </div>
+          {project.year && (
+            <div 
+              className="px-4 py-2 font-medium"
+              style={{ borderRight: '1px solid black' }}>
+              {project.year}
+            </div>
+          )}
           {project.tags.map((tag, i) => (
             <div
               key={i}
               className="px-4 py-2"
-              style={{ borderRight: '1px solid black' }}
+              //style={{ borderRight: '1px solid black' }}
             >
               {tag}
             </div>
           ))}
-          {project.year && (
-            <div className="px-4 py-2 font-medium">
-              {project.year}
-            </div>
-          )}
         </div>
       </div>
     </div>

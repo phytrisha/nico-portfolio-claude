@@ -4,7 +4,7 @@ export const autismEmotions = {
   id: 4,
   slug: 'autism-emotions',
   title: 'æ:mote – Supporting People with Autism in Understanding Emotions',
-  shortTitle: 'AEMOTE – SUPPORTING PEOPLE WITH AUTISM IN UNDERSTANDING EMOTIONS',
+  shortTitle: 'æ:mote – Supporting People with Autism in Understanding Emotions',
   category: 'strategic-design' as const,
   tags: ['#STRATEGIC-DESIGN'],
   year: '2019',

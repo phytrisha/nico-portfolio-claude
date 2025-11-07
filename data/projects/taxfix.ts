@@ -3,8 +3,8 @@ import { ContentSection } from '../types';
 export const taxfix = {
   id: 12,
   slug: 'taxfix',
-  title: 'Taxfix Workbench',
-  shortTitle: 'TAXFIX WORKBENCH',
+  title: 'Taxfix Project Workhorse',
+  shortTitle: 'Taxfix Project Workhorse',
   category: 'freelance' as const,
   tags: ['#FREELANCE'],
   year: '2020',

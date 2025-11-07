@@ -4,7 +4,7 @@ export const zalando = {
   id: 13,
   slug: 'zalando',
   title: 'Zalando-Zonar: Internal HR-Performance & Feedback tooling',
-  shortTitle: 'ZALANDO ZONAR',
+  shortTitle: 'Zalando-Zonar: Internal HR-Performance & Feedback tooling',
   category: 'freelance' as const,
   tags: ['#FREELANCE'],
   year: '2020',

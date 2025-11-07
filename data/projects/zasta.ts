@@ -4,7 +4,7 @@ export const zasta = {
   id: 14,
   slug: 'zasta',
   title: 'Zasta',
-  shortTitle: 'ZASTA',
+  shortTitle: 'Zasta',
   category: 'freelance' as const,
   tags: ['#FREELANCE'],
   year: '2020',

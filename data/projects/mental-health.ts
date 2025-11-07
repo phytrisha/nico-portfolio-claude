@@ -4,7 +4,7 @@ export const mentalHealth = {
   id: 9,
   slug: 'mental-health',
   title: 'Selfapy - Online therapy by prescription',
-  shortTitle: 'SELFAPY',
+  shortTitle: 'Selfapy - Online therapy by prescription',
   category: 'freelance' as const,
   tags: ['#FREELANCE'],
   year: '2021',

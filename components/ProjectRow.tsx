@@ -12,7 +12,7 @@ interface ProjectRowProps {
   onClick: () => void;
 }
 
-const COLLAPSED_HEIGHT = 100;
+const COLLAPSED_HEIGHT = 160;
 const ANIMATION_DURATION = 0.5;
 const EASE = [0.4, 0, 0.2, 1] as const;
 

@@ -48,12 +48,12 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
             className="fixed inset-0 top-[0vh] z-50 flex overflow-hidden"
           >
             <div className="w-full h-full flex flex-col md:flex-row">
-              <ColoredAccentBar
+              {/*<ColoredAccentBar
                 id={project.id}
                 shortTitle={project.shortTitle}
                 tags={project.tags}
                 color={project.color}
-              />
+              />*/}
 
               {/* Main content area */}
               <div className="flex-1 bg-[#EEEFEB] text-black relative overflow-y-auto">

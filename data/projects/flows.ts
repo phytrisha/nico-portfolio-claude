@@ -4,7 +4,7 @@ export const flows = {
   id: 11,
   slug: 'flows',
   title: 'Flows – rethinking the development of user interfaces',
-  shortTitle: 'FLOWS',
+  shortTitle: 'Flows – rethinking the development of user interfaces',
   category: 'strategic design' as const,
   tags: ['#INTERACTION DESIGN'],
   year: '2017',

@@ -4,7 +4,7 @@ export const socialObjectivity = {
   id: 2,
   slug: 'social-objectivity',
   title: 'On the psychological underpinnings of social objectivity',
-  shortTitle: 'ON THE PSYCHOLOGICAL UNDERPINNINGS OF SOCIAL OBJECTIVITY',
+  shortTitle: 'On the psychological underpinnings of social objectivity',
   category: 'philosophy' as const,
   tags: ['#PHILOSOPHY'],
   year: '2025',

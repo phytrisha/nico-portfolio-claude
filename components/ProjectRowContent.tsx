@@ -31,23 +31,19 @@ export default function ProjectRowContent({
       exit={{ opacity: 0 }}
       transition={{ duration: animationDuration, ease }}
     >
-      <div className="p-12 pb-12 grid grid-cols-2 gap-12">
+      <div className="pl-12 pt-2 pb-12 grid grid-cols-2 gap-12">
         {/* Left column - Title and metadata */}
         <div>
-          <h2 className="text-4xl font-bold mb-12 leading-tight">{project.title}</h2>
+            <div className="text-xs leading-normal">{renderDescription(project.description)}</div>
 
-          <div style={{ border: '1px solid black' }}>
-            <div className="p-6" style={{ borderBottom: '1px solid black' }}>
+          {/*<div style={{ border: '0px solid black' }}>
+           <div className="p-6" style={{ borderBottom: '1px solid black' }}>
               <p className="text-sm font-medium">{project.metadata.type}</p>
             </div>
             <div className="p-6" style={{ borderBottom: '1px solid black' }}>
               <p className="text-sm font-medium">{project.metadata.topics}</p>
             </div>
-            <div className="p-6">
-              <p className="text-sm font-medium mb-4">Description</p>
-              <div className="text-xs leading-normal">{renderDescription(project.description)}</div>
-            </div>
-          </div>
+          </div>*/}
         </div>
 
         {/* Right column - Action button */}
@@ -67,10 +63,10 @@ export default function ProjectRowContent({
               >
                 <path
                   d="M10 70L70 10M73 10H25M70 10V55"
-                  stroke={project.color}
+                  stroke="#ffffff"
                   strokeWidth="6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  strokeLinecap="none"
+                  strokeLinejoin="none"
                 />
               </svg>
             </div>
