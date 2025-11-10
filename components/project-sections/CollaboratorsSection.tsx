@@ -16,10 +16,10 @@ export default function CollaboratorsSection({ collaborators }: CollaboratorsSec
 
   return (
     <div>
-      <div className="max-w-[350px]">
+      <div className="max-w-flex pl-20">
         {withCollaborators.length > 0 && (
-          <div className="border-t-1 border-black mb-8 pt-4">
-            <p className="text-sm mb-4">With:</p>
+          <div className="border-t-1 border-black mb-4 pt-4">
+            <p className="text-sm mb-3 font-mono text-transform: uppercase">With</p>
             <div className="space-y-2">
               {withCollaborators.map((collaborator, index) => (
                 <div key={index}>
@@ -58,8 +58,8 @@ export default function CollaboratorsSection({ collaborators }: CollaboratorsSec
         )}
 
         {supervisionCollaborators.length > 0 && (
-          <div className="border-t-1 border-black mb-8 pt-4">
-            <p className="text-sm mb-4">Supervision:</p>
+          <div className="border-t-1 border-black mb-4 pt-4">
+            <p className="text-sm mb-3 font-mono text-transform: uppercase">Supervision</p>
             <div className="space-y-2">
               {supervisionCollaborators.map((collaborator, index) => (
                 <div key={index}>

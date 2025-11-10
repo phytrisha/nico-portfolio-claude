@@ -6,7 +6,7 @@ export const beneficialAI = {
   title:'Approaching Beneficial Artificial Intelligence in the Context of [...]',
   shortTitle:'Approaching Beneficial Artificial Intelligence in the Context of [...]',
   category: 'strategic-design' as const,
-  tags: ['#MA-THESIS', '#STRATEGIC-DESIGN'],
+  tags: ['MA-THESIS  ·  STRATEGIC-DESIGN   ·  BENEFICIAL AI'],
   year: '2019',
   color: '#FF6D01',
   metadata: {
@@ -37,9 +37,9 @@ export const beneficialAI = {
         'As soon as AI systems influence our daily life – and in many ways they already do – it becomes essential to design them to act in a beneficial way: now and looking forward. Establishing ethics as an integral part of design, economics, engineering and development will take time and lots of dedicated work. The constant increase in intelligence makes work on ethical systems a relevant issue long before artificial superintelligence has been attained. A system does not need to be superintelligent to cause serious issues. For example, as the autonomy in the operation of those agents increases, entirely new questions, for example, in the area of accountability for action, will arise.',
       ],
       collaborators: [
-        { name: 'Mark F. Meyer', url: 'https://markfmeyer.com', role: 'with' },
-        { name: 'Prof. David Osswald', url: 'https://www.hfg-gmuend.de/david-osswald', role: 'supervision' },
-        { name: 'Prof. Dr. Ulrich Barnhöfer', url: 'https://www.hfg-gmuend.de/ulrich-barnhoefer', role: 'supervision' },
+      { name: 'Mark F. Meyer', url: 'https://markfmeyer.com', role: 'with' },
+      { name: 'Prof. David Osswald', url: 'https://www.hfg-gmuend.de/david-osswald', role: 'supervision' },
+      { name: 'Prof. Dr. Ulrich Barnhöfer', url: 'https://www.hfg-gmuend.de/ulrich-barnhoefer', role: 'supervision' },
       ],
     },
     {

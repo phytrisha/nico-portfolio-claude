@@ -76,14 +76,50 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                 </button>
 
                 <div className="max-w-[80%] mx-auto">
-                  <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-16 mt-8 leading-tight">
-                    {project.title}
-                  </h1>
+                  <div className="grid grid-cols-3 gap-0">
+                    <div className='col-span-2'>
+                    <h1 className="text-4xl md:text-5xl lg:text-[46px] font-medium mb-0 mt-28 leading-tight">
+                      {project.title}
+                    </h1>
+                    <h1 className="text-4xl md:text-5xl lg:text-[46px] font-regular mb-18 mt-0 leading-tight">
+                      {"Master Thesis (MA), Strategic Design, 2019, HfG Schwäbisch Gmünd"}
+                    </h1>
+                    </div>
+                  </div>
 
-                  <ProjectMetadata project={project} />
+         <div
+          className="flex items-center gap-0 text-xs font-mono mb-2"
+          style={{ border: '1px solid black' }}
+        >
+          <div
+            className="px-4 py-2 font-medium"
+            style={{ borderRight: '1px solid black' }}
+          >
+            {project.id.toString().padStart(2, '0')}
+          </div>
+          {"name" && (
+            <div 
+              className="px-4 py-2 font-medium"
+              style={{ borderRight: '1px solid black' }}>
+              {"With: Mark Meyer"}
+            </div>
+          )}
+          {project.tags.map((tag, i) => (
+            <div
+              key={i}
+              className="px-4 py-2"
+              //style={{ borderRight: '1px solid black' }}
+            >
+              {"Supervision: Prof. David Oswald, Prof. Dr. Ulrich Barnhöfer"}
+            </div>
+          ))}
+        </div>
+
+
+                  {/*<ProjectMetadata project={project} />*/}
 
                   {/* Main content */}
-                  <div className="space-y-8 mb-16">
+                  <div className="space-y-8 mb-16 mt-16">
                     {project.contentSections?.map((section: ContentSection, index: number) => {
                       switch (section.type) {
                         case 'text':

@@ -25,7 +25,7 @@ export default function ProjectRowContent({
       exit={{ height: 0, backgroundColor: 'transparent' }}
       transition={{ duration: animationDuration, ease }}
     >
-      <div className="pl-0 pt-2 grid grid-cols-3 gap-12">
+      <div className="pl-0 pt-0 grid grid-cols-3 gap-12">
         {/* Left column - Title and metadata */}
         <div className='col-span-2 pb-12'>
             <div className="text-xs leading-normal">{renderDescription(project.description)}</div>
