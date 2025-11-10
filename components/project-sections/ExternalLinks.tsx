@@ -1,4 +1,4 @@
-import type { ExternalLink } from '@/data/projects';
+import type { ExternalLink } from '@/data/types';
 
 interface ExternalLinksProps {
   links: ExternalLink[];
@@ -9,44 +9,44 @@ export default function ExternalLinks({ links, projectColor }: ExternalLinksProp
   if (!links || links.length === 0) return null;
 
   return (
-    <div className="border-t-2 border-black pt-12">
-      <h3 className="text-2xl font-bold mb-8">External Links</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="mt-16 mb-16 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {links.map((link, index) => (
-          <a
-            key={index}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group"
-          >
-            <div className="bg-black p-6 transition-transform">
-              <div className="flex items-end justify-between mb-4">
-                <h4 className="text-white text-sm font-medium flex-1">
-                  {link.title}
-                </h4>
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 80 80"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="flex-shrink-0 ml-2"
-                >
-                  <path
-                    d="M10 70L70 10M70 10H25M70 10V55"
-                    stroke={projectColor}
-                    strokeWidth="6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+          <div key={index} className="w-full">
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              {/* Black square with colored arrow */}
+              <div className="bg-black w-full relative" style={{ paddingBottom: '100%' }}>
+                <div className="absolute inset-0 flex items-center justify-center sm:p-12 md:p-16 lg:p-24 xl:p-32 ">
+                  <svg
+                    className="w-full h-full"
+                    viewBox="0 0 80 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 70L70 10M70 10H25M70 10V55"
+                      stroke={projectColor}
+                      strokeWidth="6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
               </div>
-              <p className="text-gray-400 text-xs">
-                External Link
-              </p>
-            </div>
-          </a>
+
+              {/* Text label below */}
+              <div className="mt-3">
+                <p className="text-sm font-medium">
+                  {link.title}
+                </p>
+              </div>
+            </a>
+          </div>
         ))}
       </div>
     </div>

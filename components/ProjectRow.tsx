@@ -13,7 +13,7 @@ interface ProjectRowProps {
 }
 
 const ANIMATION_DURATION = 0.5;
-const EASE = [0.4, 0, 0.2, 1] as const;
+const EASE = [0.4, 0, 0.2, 1];
 
 export default function ProjectRow({ project, isExpanded, onClick }: ProjectRowProps) {
   return (

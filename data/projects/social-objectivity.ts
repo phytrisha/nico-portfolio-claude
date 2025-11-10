@@ -1,33 +1,17 @@
-import { ContentSection } from '../types';
+import type { Project } from '../types';
 
-export const socialObjectivity = {
+export const socialObjectivity: Project = {
   id: 2,
   slug: 'social-objectivity',
-  title: 'On the psychological underpinnings of social objectivity',
-  shortTitle: 'On the psychological underpinnings of social objectivity',
-  category: 'philosophy' as const,
-  tags: ['#PHILOSOPHY'],
-  year: '2025',
-  color: '#CF73CA',
+  title: 'Social Objectivity',
+  shortTitle: 'Social Objectivity',
+  category: 'philosophy',
+  tags: ['PHILOSOPHY', 'EPISTEMOLOGY'],
+  year: '2023',
+  color: '#4A90E2',
   metadata: {
-    type: 'Philosophy, HU Berlin, B.A., 2025',
-    topics: 'Social epistemology, feminist philosophy',
+    topics: 'Philosophy, Epistemology, Social Theory',
   },
-  description: 'DEI measures are under attack. A growing fraction of the political right sees DEI initiatives as ineffective and unjustified gimmicks or actually harmful projects that threaten the narrative of a presumed meritocratic order. Of course the motivations behind such anti diversity, equity and inclusion campaigns are complex and often deeply rooted in sexism, racism, and classism. They cannot solely be explained by presumptions of a lack of skill, talent or qualification of marginalized groups by those who argue for their termination. So any argument that aims to support the benefits of diversity will face challenges of ideology and deeply anchored prejudice, often deflected and masked as more shallow concerns for meritocracy. Despite these limitations putting forward compelling arguments for the epistemic benefits of diversity wherever feasible may serve as a meaningful contribution to the broader endeavour of exposing such narratives as lacking both conceptual coherence and empirical support. This essay develops an argument in favor of the epistemic benefits of diversity and shows how the interactionist theory of reason, ITR, developed by Dan Sperber and Hugo Mercier lends conceptual support to the argument that practices of transformative criticism, which promote objectivity, benefit from a diverse epistemic communities – a view developed by Helen Longinos critical contextual empiricism, CCE.',
-  contentSections: [
-    {
-      type: 'text',
-      content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.',
-    },
-    {
-      type: 'image',
-      image: '/images/projects/social-objectivity/hero.jpg',
-    },
-    {
-      type: 'two-column',
-      leftContent: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
-      rightImage: '/images/projects/social-objectivity/detail-1.jpg',
-    },
-  ] as ContentSection[],
-    externalUrl: "https://drive.google.com/file/d/1FIuVr8Xizz92yOdOF8TGY6yABcJ9nQ92/view?usp=share_link"
+  description: 'An exploration of objectivity in social contexts.',
+  externalLinks: [],
 };

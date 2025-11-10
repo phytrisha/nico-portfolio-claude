@@ -9,7 +9,7 @@ import { renderDescription } from './utils/descriptionRenderer';
 interface ProjectRowContentProps {
   project: Project;
   animationDuration: number;
-  ease: readonly number[];
+  ease: number[];
 }
 
 export default function ProjectRowContent({
@@ -23,7 +23,7 @@ export default function ProjectRowContent({
       initial={{ height: 0, backgroundColor: 'transparent' }}
       animate={{ height: 'auto', backgroundColor: project.color }}
       exit={{ height: 0, backgroundColor: 'transparent' }}
-      transition={{ duration: animationDuration, ease }}
+      transition={{ duration: animationDuration, ease: ease as [number, number, number, number] }}
     >
       <div className="pl-0 pt-0 grid grid-cols-3 gap-12">
         {/* Left column - Title and metadata */}
@@ -59,8 +59,8 @@ export default function ProjectRowContent({
                   d="M10 70L70 10M73 10H25M70 10V55"
                   stroke="#ffffff"
                   strokeWidth="6"
-                  strokeLinecap="none"
-                  strokeLinejoin="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>

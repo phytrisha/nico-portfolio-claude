@@ -1,18 +1,10 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import type { Project, ContentSection } from '@/data/projects';
-import TextSection from './project-sections/TextSection';
-import ImageSection from './project-sections/ImageSection';
-import TwoColumnSection from './project-sections/TwoColumnSection';
-import QuoteSection from './project-sections/QuoteSection';
-import TwoThirdsLayoutSection from './project-sections/TwoThirdsLayoutSection';
-import OneThirdLayoutSection from './project-sections/OneThirdLayoutSection';
-import SubheadlineSection from './project-sections/SubheadlineSection';
-import LinksSection from './project-sections/LinksSection';
-import ProjectMetadata from './project-sections/ProjectMetadata';
+import type { Project } from '@/data/types';
+import Metadata from './project-sections/Metadata';
+import ProjectSection from './project-sections/ProjectSection';
 import ExternalLinks from './project-sections/ExternalLinks';
-import ColoredAccentBar from './ColoredAccentBar';
 
 interface ProjectDetailModalProps {
   project: Project;
@@ -48,12 +40,6 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
             className="fixed inset-0 top-[0vh] z-50 flex overflow-hidden"
           >
             <div className="w-full h-full flex flex-col md:flex-row">
-              {/*<ColoredAccentBar
-                id={project.id}
-                shortTitle={project.shortTitle}
-                tags={project.tags}
-                color={project.color}
-              />*/}
 
               {/* Main content area */}
               <div className="flex-1 bg-[#EEEFEB] text-black relative overflow-y-auto">
@@ -69,89 +55,28 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.5"
-                    strokeLinecap="none"
                   >
                     <path d="M18 6L6 18M6 6l12 12" />
                   </svg>
                 </button>
 
                 <div className="max-w-[80%] mx-auto">
-                  <div className="grid grid-cols-3 gap-0">
-                    <div className='col-span-2'>
-                    <h1 className="text-4xl md:text-5xl lg:text-[46px] font-medium mb-0 mt-28 leading-tight">
-                      {project.title}
-                    </h1>
-                    <h1 className="text-4xl md:text-5xl lg:text-[46px] font-regular mb-18 mt-0 leading-tight">
-                      {"Master Thesis (MA), Strategic Design, 2019, HfG Schwäbisch Gmünd"}
-                    </h1>
+                  {/* Project Title */}
+                  <h1 className="text-4xl md:text-5xl lg:text-[46px] w-[66%] font-medium mb-8 mt-28 leading-tight">
+                    {project.title}
+                  </h1>
+
+                  {/* Metadata Section */}
+                  <Metadata projectId={project.id} metadata={project.metadata} />
+
+                  {/* Project Section - All content in one div */}
+                  {project.projectSection && (
+                    <div className="border">
+                      <ProjectSection projectSection={project.projectSection} />
                     </div>
-                  </div>
+                  )}
 
-         <div
-          className="flex items-center gap-0 text-xs font-mono mb-2"
-          style={{ border: '1px solid black' }}
-        >
-          <div
-            className="px-4 py-2 font-medium"
-            style={{ borderRight: '1px solid black' }}
-          >
-            {project.id.toString().padStart(2, '0')}
-          </div>
-          {"name" && (
-            <div 
-              className="px-4 py-2 font-medium"
-              style={{ borderRight: '1px solid black' }}>
-              {"With: Mark Meyer"}
-            </div>
-          )}
-          {project.tags.map((tag, i) => (
-            <div
-              key={i}
-              className="px-4 py-2"
-              //style={{ borderRight: '1px solid black' }}
-            >
-              {"Supervision: Prof. David Oswald, Prof. Dr. Ulrich Barnhöfer"}
-            </div>
-          ))}
-        </div>
-
-
-                  {/*<ProjectMetadata project={project} />*/}
-
-                  {/* Main content */}
-                  <div className="space-y-8 mb-16 mt-16">
-                    {project.contentSections?.map((section: ContentSection, index: number) => {
-                      switch (section.type) {
-                        case 'text':
-                          return <TextSection key={index} section={section} />;
-
-                        case 'image':
-                          return <ImageSection key={index} section={section} />;
-
-                        case 'two-column':
-                          return <TwoColumnSection key={index} section={section} />;
-
-                        case 'quote':
-                          return <QuoteSection key={index} section={section} />;
-
-                        case 'two-thirds-layout':
-                          return <TwoThirdsLayoutSection key={index} section={section} />;
-
-                        case 'one-third-layout':
-                          return <OneThirdLayoutSection key={index} section={section} />;
-
-                        case 'subheadline':
-                          return <SubheadlineSection key={index} section={section} />;
-
-                        case 'links':
-                          return <LinksSection key={index} section={section} />;
-
-                        default:
-                          return null;
-                      }
-                    })}
-                  </div>
-
+                  {/* External Links */}
                   <ExternalLinks links={project.externalLinks || []} projectColor={project.color} />
                 </div>
               </div>
