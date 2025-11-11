@@ -6,8 +6,10 @@ interface HeroImageProps {
 }
 
 export default function HeroImage({ component }: HeroImageProps) {
+  const pyClass = component.py || 'my-0';
+
   return (
-    <div className="w-full my-0">
+    <div className={`w-full ${pyClass}`}>
       <Image
         src={component.src}
         alt={component.alt || ''}

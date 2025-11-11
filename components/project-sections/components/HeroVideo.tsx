@@ -5,8 +5,10 @@ interface HeroVideoProps {
 }
 
 export default function HeroVideo({ component }: HeroVideoProps) {
+  const pyClass = component.py || 'my-0';
+
   return (
-    <div className="w-full my-0">
+    <div className={`w-full ${pyClass}`}>
       <video
         src={component.src}
         controls

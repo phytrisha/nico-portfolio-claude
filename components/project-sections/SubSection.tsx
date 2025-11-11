@@ -24,7 +24,7 @@ export default function SubSection({ subSection }: SubSectionProps) {
       case 'feature-block':
         return <FeatureBlock key={index} component={component} />;
       case 'divider':
-        return <Divider key={index} />;
+        return <Divider key={index} component={component} />;
       case 'hero-image':
         return <HeroImage key={index} component={component} />;
       case 'hero-video':

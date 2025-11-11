@@ -6,8 +6,10 @@ interface SideBySideProps {
 }
 
 export default function SideBySide({ component }: SideBySideProps) {
+  const pyClass = component.py || 'py-8';
+
   return (
-    <div className="w-full flex gap-4 p-8">
+    <div className={`w-full flex gap-4 px-8 ${pyClass}`}>
       {/* Left Block */}
       <div className="w-1/2">
         {component.left.type === 'image' ? (

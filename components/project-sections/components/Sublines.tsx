@@ -5,8 +5,10 @@ interface SublinesProps {
 }
 
 export default function Sublines({ component }: SublinesProps) {
+  const pyClass = component.py || 'py-8';
+
   return (
-    <div className="font-mono text-xs p-8 my-0 whitespace-pre-wrap">
+    <div className={`font-mono text-xs px-8 ${pyClass} my-0 whitespace-pre-wrap`}>
       {component.content}
     </div>
   );

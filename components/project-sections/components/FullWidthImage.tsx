@@ -6,8 +6,10 @@ interface FullWidthImageProps {
 }
 
 export default function FullWidthImage({ component }: FullWidthImageProps) {
+  const pyClass = component.py || 'py-8';
+
   return (
-    <div className="w-full p-8">
+    <div className={`w-full px-8 ${pyClass}`}>
       <Image
         src={component.src}
         alt={component.alt || ''}

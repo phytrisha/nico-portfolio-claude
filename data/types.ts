@@ -8,43 +8,51 @@ export interface Collaborator {
 export interface ParagraphComponent {
   type: 'paragraph';
   content: string;
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
 
 export interface InlineHeaderComponent {
   type: 'inline-header';
   content: string;
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
 
 export interface FeatureBlockComponent {
   type: 'feature-block';
   skyline: string; // monospace text
   description: string; // paragraph below
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
 
 export interface DividerComponent {
   type: 'divider';
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
 
 export interface HeroImageComponent {
   type: 'hero-image';
   src: string;
   alt?: string;
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
 
 export interface HeroVideoComponent {
   type: 'hero-video';
   src: string;
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
 
 export interface FullWidthImageComponent {
   type: 'full-width-image';
   src: string;
   alt?: string;
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
 
 export interface FullWidthVideoComponent {
   type: 'full-width-video';
   src: string;
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
 
 export interface SideBySideComponent {
@@ -59,11 +67,13 @@ export interface SideBySideComponent {
     src: string;
     alt?: string;
   };
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
 
 export interface SublinesComponent {
   type: 'sublines';
   content: string; // monospace text
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
 
 export type SubSectionComponent =
