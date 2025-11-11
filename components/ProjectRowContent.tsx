@@ -59,8 +59,8 @@ export default function ProjectRowContent({
                   d="M10 70L70 10M73 10H25M70 10V55"
                   stroke="#ffffff"
                   strokeWidth="6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  strokeLinecap="none"
+                  strokeLinejoin="none"
                 />
               </svg>
             </div>

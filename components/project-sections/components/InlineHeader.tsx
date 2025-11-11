@@ -6,7 +6,7 @@ interface InlineHeaderProps {
 
 export default function InlineHeader({ component }: InlineHeaderProps) {
   return (
-    <h3 className="text-xl font-medium my-0 p-8">
+    <h3 className="text-base font-bold my-0 p-8">
       {component.content}
     </h3>
   );

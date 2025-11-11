@@ -21,7 +21,7 @@ export default function ExternalLinks({ links, projectColor }: ExternalLinksProp
             >
               {/* Black square with colored arrow */}
               <div className="bg-black w-full relative" style={{ paddingBottom: '100%' }}>
-                <div className="absolute inset-0 flex items-center justify-center sm:p-12 md:p-16 lg:p-24 xl:p-32 ">
+                <div className="absolute inset-0 flex items-center justify-center sm:p-12 md:p-16 lg:p-24 xl:p-36 ">
                   <svg
                     className="w-full h-full"
                     viewBox="0 0 80 80"
@@ -32,8 +32,8 @@ export default function ExternalLinks({ links, projectColor }: ExternalLinksProp
                       d="M10 70L70 10M70 10H25M70 10V55"
                       stroke={projectColor}
                       strokeWidth="6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                      strokeLinecap="square"
+                      strokeLinejoin="square"
                     />
                   </svg>
                 </div>
@@ -41,7 +41,7 @@ export default function ExternalLinks({ links, projectColor }: ExternalLinksProp
 
               {/* Text label below */}
               <div className="mt-3">
-                <p className="text-sm font-medium">
+                <p className="text-base font-regular">
                   {link.title}
                 </p>
               </div>

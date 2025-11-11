@@ -81,13 +81,13 @@ export default function Metadata({ metadata }: MetadataProps) {
 
   return (
     <div
-      className="flex items-center gap-0 text-xs font-mono"
+      className="flex items-center gap-0 text-xs font-mono text-transform: uppercase"
       style={{ border: '1px solid black' }}
     >
       {cells.map((cell, index) => (
         <div
           key={index}
-          className="px-4 py-2"
+          className="px-6 py-4"
           style={{
             borderRight: index < cells.length - 1 ? '1px solid black' : 'none'
           }}

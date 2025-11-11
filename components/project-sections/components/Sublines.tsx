@@ -6,7 +6,7 @@ interface SublinesProps {
 
 export default function Sublines({ component }: SublinesProps) {
   return (
-    <div className="font-mono text-sm p-8 my-0 whitespace-pre-wrap">
+    <div className="font-mono text-xs p-8 my-0 whitespace-pre-wrap">
       {component.content}
     </div>
   );
