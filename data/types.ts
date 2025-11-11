@@ -103,6 +103,7 @@ export interface MetadataSection {
   collaborators?: string[] | MetadataLink[];
   topics?: string[] | string; // Support both array and legacy string format
   type?: string; // Legacy field for backwards compatibility
+  row2?: string; // Optional free text for second row
 }
 
 // Legacy content section (for backwards compatibility during migration)
