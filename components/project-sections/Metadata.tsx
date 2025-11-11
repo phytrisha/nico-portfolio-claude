@@ -74,6 +74,16 @@ export default function Metadata({ metadata }: MetadataProps) {
     </div>
   );
 
+  // Add topics if present
+  if (metadata.topics) {
+    const topicsValue = typeof metadata.topics === 'string'
+      ? metadata.topics
+      : metadata.topics.join(', ');
+    if (topicsValue) {
+      row1.push({ content: topicsValue });
+    }
+  }
+
   // Add collaborators if present
   if (metadata.collaborators && metadata.collaborators.length > 0) {
     row1.push({
@@ -90,15 +100,6 @@ export default function Metadata({ metadata }: MetadataProps) {
     });
   }
 
-  // Add topics if present
-  if (metadata.topics) {
-    const topicsValue = typeof metadata.topics === 'string'
-      ? metadata.topics
-      : metadata.topics.join(', ');
-    if (topicsValue) {
-      row1.push({ content: topicsValue });
-    }
-  }
 
   // Add optional second row free text
   if (metadata.row2) {

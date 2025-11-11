@@ -17,14 +17,16 @@ export const beneficialAI: Project = {
     year: '2019',
     institution: 'HfG Schwäbisch Gmünd',
     supervision: [
-      { name: 'Prof. David Osswald', url: 'https://www.hfg-gmuend.de/david-osswald' },
-      { name: 'Prof. Dr. Ulrich Barnhöfer', url: 'https://www.hfg-gmuend.de/ulrich-barnhoefer' }
+      { name: 'Prof. David Osswald', url: 'https://www.hfg-gmuend.de/personen/david-oswald' },
+      { name: 'Prof. Dr. Ulrich Barnhöfer', url: 'https://www.hfg-gmuend.de/en/people/ulrich-barnh%C3%B6fer' }
     ],
     collaborators: [
-      { name: 'Mark F. Meyer', url: 'https://markfmeyer.com' }
+      { name: 'Mark F. Meyer', url: 'https://mark-gestaltung.de' }
     ],
-    topics: ['Artificial Intelligence', 'Ethics', 'Scenario Design'],
+    topics: ['Master Thesis, M.A.', '2019'],
+    row2: ['strategic design, ', 'HfG schwäbisch gmünd']
   },
+
 
   description: 'This master thesis is concerned with the topic of beneficial artificial intelligence. Broadly “beneficial”, in this context, means that AI systems act in a way that is desired by humans. There are great chances for AI to positively influence many areas of our life, but also numerous risks with potentially extremely negative outcome. To approach beneficial behavior of such systems two models are outlined: the first suggests a classification for aspects of beneficiality in artificially intelligent systems. The second one explores methods to capture and counter ethical problem spaces. The defined models were explored in three speculative use cases to exemplify and refine them. Establishing ethics as an integral part of design, economics, engineering and development takes time and lots of dedicated work. Work that has to start long before artificial superintelligence has been attained.',
 
@@ -43,14 +45,14 @@ export const beneficialAI: Project = {
         components: [
           {
             type: 'paragraph',
-            content: 'The following is concerned with the topic of beneficial artificial intelligence. "Beneficial", in this context, means that systems that use AI act in a way that is desired by humans. Therefore two models will be suggested: the first approaches a classification for aspects of beneficiality in artificially intelligent systems. The second one explores methods to capture and counter ethical problem spaces. The defined models will be explored in three speculative use cases to exemplify and refine them. The impact areas of AI are growing constantly as agents advance in capabilities. As soon as AI systems influence our daily life – and in many ways they already do – it becomes essential to design them to act in a beneficial way: now and looking forward. Establishing ethics as an integral part of design, economics, engineering and development will take time and lots of dedicated work. The constant increase in intelligence makes work on ethical systems a relevant issue long before artificial superintelligence has been attained. A system does not need to be superintelligent to cause serious issues. For example, as the autonomy in the operation of those agents increases, entirely new questions, for example, in the area of accountability for action, will arise.',
+            content: 'This master thesis is concerned with the topic of beneficial artificial intelligence. Broadly “beneficial”, in this context, means that AI systems act in a way that is desired by humans. There are great chances for AI to positively influence many areas of our life, but also numerous risks with potentially extremely negative outcome. It is therefore essential to design those systems to act in a beneficial way: now and looking forward. To approach beneficial behavior of such systems two models are outlined: the first suggests a classification for aspects of beneficiality in artificially intelligent systems. The second one explores methods to capture and counter ethical problem spaces. The defined models were explored in three speculative use cases to exemplify and refine them. Establishing ethics as an integral part of design, economics, engineering and development takes time and lots of dedicated work. Work that has to start long before artificial super-intelligence has been attained.'
           },
           
         ]
       },
       {
         // header: 'Visual Documentation',
-        number: '02',
+        number: '00',
         components: [
           {
             type: 'hero-image',
@@ -63,7 +65,7 @@ export const beneficialAI: Project = {
       // ===== SECTION =====
       {
         header: 'WE BELIEVE THAT',
-        number: '03',
+        number: '02',
         components: [
           {
             type: 'paragraph',
