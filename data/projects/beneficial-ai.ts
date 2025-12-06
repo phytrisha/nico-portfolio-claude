@@ -10,21 +10,14 @@ export const beneficialAI: Project = {
   year: '2019',
   color: '#FF6D01',
 
-  // New metadata structure
+  // New metadata structure - each entry is one row
+  // Use [text](url) syntax for inline links
   metadata: {
-    degree: 'Master Thesis (MA)',
-    program: 'Strategic Design',
-    year: '2019',
-    institution: 'HfG Schwäbisch Gmünd',
-    supervision: [
-      { name: 'Prof. David Osswald', url: 'https://www.hfg-gmuend.de/personen/david-oswald' },
-      { name: 'Prof. Dr. Ulrich Barnhöfer', url: 'https://www.hfg-gmuend.de/en/people/ulrich-barnh%C3%B6fer' }
-    ],
-    collaborators: [
-      { name: 'Mark F. Meyer', url: 'https://mark-gestaltung.de' }
-    ],
-    topics: ['Master Thesis, (MA) · Strategic Design'],
-    row2: ['February 2019 – July 2019', 'HfG schwäbisch gmünd']
+    entries: [
+      'Master Thesis (MA) · Strategic Design · 2019',
+      'With [Mark F. Meyer](https://mark-gestaltung.de) · Supervision [Prof. David Osswald](https://www.hfg-gmuend.de/personen/david-oswald), [Prof. Dr. Ulrich Barnhöfer](https://www.hfg-gmuend.de/en/people/ulrich-barnh%C3%B6fer)',
+      'February 2019 – July 2019 · HfG Schwäbisch Gmünd'
+    ]
   },
 
 

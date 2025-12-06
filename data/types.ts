@@ -106,15 +106,17 @@ export interface MetadataLink {
 }
 
 export interface MetadataSection {
+  entries: string[]; // Simple array of text entries, each becomes one row
+  // Legacy fields - kept for backwards compatibility
   degree?: string;
   year?: string;
   program?: string;
   institution?: string;
   supervision?: string[] | MetadataLink[];
   collaborators?: string[] | MetadataLink[];
-  topics?: string[] | string; // Support both array and legacy string format
-  type?: string; // Legacy field for backwards compatibility
-  row2?: string; // Optional free text for second row
+  topics?: string[] | string;
+  type?: string;
+  row2?: string;
 }
 
 // Legacy content section (for backwards compatibility during migration)
