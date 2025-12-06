@@ -53,6 +53,7 @@ export interface FullWidthVideoComponent {
   type: 'full-width-video';
   src: string;
   py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+  thumb?: string;
 }
 
 export interface SideBySideComponent {

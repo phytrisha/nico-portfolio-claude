@@ -27,7 +27,7 @@ export default function ProjectRowHeader({
         {/* First line - Title and expand button */}
         <div className="flex items-center justify-between mb-6">
           <div className="text-[28px] font-medium">{project.shortTitle}</div>
-          <div className="text-2xl">{isExpanded ? '−' : '+'}</div>
+          <div className="text-3xl font-extralight">{isExpanded ? '−' : '+'}</div>
         </div>
 
         {/* Second line - Table format with ID, Tags, and Year */}

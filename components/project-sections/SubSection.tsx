@@ -45,12 +45,12 @@ export default function SubSection({ subSection }: SubSectionProps) {
   return (
     <div>
       {subSection.header && (
-        <div className="bg-black py-3 px-8 flex justify-between items-center">
-          <h2 className="text-sm text-white font-medium font-mono">
+        <div className="bg-black py-4 px-8 flex justify-between items-center">
+          <h2 className="text-xs text-white font-medium font-mono tracking-wider text-transform: uppercase">
             {subSection.header}
           </h2>
           {subSection.number && (
-            <span className="text-base text-white font-mono">
+            <span className="text-xs text-white font-medium font-mono tracking-wider">
               {subSection.number}
             </span>
           )}

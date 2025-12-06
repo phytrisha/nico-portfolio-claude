@@ -3,10 +3,10 @@ import type { Project } from '../types';
 export const transformativeExperiences: Project = {
   id: 6,
   slug: 'transformative-experiences',
-  title: 'On the admissibility of will based commitment facing transformative experiences.',
-  shortTitle: 'On the admissibility of will based commitment facing transformative experiences.',
+  title: 'On the admissibility of will based commitment facing transformative experiences',
+  shortTitle: 'On the admissibility of will based commitment facing transformative experiences',
   category: 'philosophy',
-  tags: ['PHILOSOPHY', 'EXPERIENCE'],
+  tags: ['PHILOSOPHY · TRANSFORMATIVE EXPERIENCES · RATIONAL CHOICE THEORY · HARD CHOICES'],
   year: '2022',
   color: '#F290EE',
   metadata: {

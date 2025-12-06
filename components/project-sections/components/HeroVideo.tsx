@@ -12,6 +12,7 @@ export default function HeroVideo({ component }: HeroVideoProps) {
       <video
         src={component.src}
         controls
+        poster={component.thumb}
         className="w-full h-auto"
         style={{ padding: 0 }}
       />

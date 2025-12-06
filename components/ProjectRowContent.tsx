@@ -60,7 +60,7 @@ export default function ProjectRowContent({
                   stroke="#ffffff"
                   strokeWidth="6"
                   strokeLinecap="none"
-                  strokeLinejoin="none"
+                  strokeLinejoin="square"
                 />
               </svg>
             </div>

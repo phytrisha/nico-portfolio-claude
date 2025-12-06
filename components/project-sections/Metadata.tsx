@@ -60,7 +60,7 @@ export default function Metadata({ metadata }: MetadataProps) {
       {cells.map((cell, index) => (
         <div
           key={index}
-          className="px-6 py-4"
+          className="px-8 py-4"
           style={{
             borderRight: index < cells.length - 1 ? '1px solid black' : 'none'
           }}
@@ -108,7 +108,7 @@ export default function Metadata({ metadata }: MetadataProps) {
 
   return (
     <div
-      className="flex flex-col gap-0 text-xs font-mono text-transform: uppercase"
+      className="flex flex-col gap-0 text-xs font-mono text-transform: uppercase tracking-wide "
       style={{ border: '1px solid black' }}
     >
       {row1.length > 0 && renderRow(row1)}

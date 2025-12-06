@@ -12,6 +12,7 @@ export default function FullWidthVideo({ component }: FullWidthVideoProps) {
       <video
         src={component.src}
         controls
+        poster={component.thumb}
         className="w-full h-auto"
       />
     </div>
