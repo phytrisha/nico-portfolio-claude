@@ -62,7 +62,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
 
                 <div className="max-w-[62%] mx-auto">
                   {/* Project Title */}
-                  <h1 className="text-4xl md:text-5xl lg:text-[72px] font-bold mb-18 mt-28 leading-tight">
+                  <h1 className="text-4xl md:text-5xl lg:text-[60px] font-bold mb-18 mt-28 leading-tight">
                     {project.title}
                   </h1>
 

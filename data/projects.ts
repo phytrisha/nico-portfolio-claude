@@ -8,6 +8,7 @@ import { mentalHealth } from './projects/mental-health';
 import { flows } from './projects/flows';
 import { zalando } from './projects/zalando';
 import { taxfix } from './projects/taxfix';
+import { darwinproject } from './projects/darwinproject';
 import { collection } from './projects/collection';
 
 import { Project } from './types';
@@ -18,12 +19,13 @@ export const projects: Project[] = [
   beneficialAI,
   socialObjectivity,
   autismEmotions,
-  bankingPurpose,
   conceptLearning,
-  transformativeExperiences,
-  mentalHealth,
+  taxfix,
+  darwinproject,
   flows,
   zalando,
-  taxfix,
+  mentalHealth,
+  bankingPurpose,
+  transformativeExperiences,
   collection,
 ];
