@@ -105,11 +105,6 @@ export const bankingPurpose: Project = {
   },
 
   // External links
-  externalLinks: [
-    {
-                  py: 'pt-0 pb-8',
-    },
-
-  ],
+  externalLinks: [],
 };
 

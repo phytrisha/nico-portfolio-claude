@@ -9,6 +9,7 @@ import FullWidthImage from './components/FullWidthImage';
 import FullWidthVideo from './components/FullWidthVideo';
 import SideBySide from './components/SideBySide';
 import Sublines from './components/Sublines';
+import IntroText from './components/IntroText';
 
 interface SubSectionProps {
   subSection: SubSectionType;
@@ -37,6 +38,8 @@ export default function SubSection({ subSection }: SubSectionProps) {
         return <SideBySide key={index} component={component} />;
       case 'sublines':
         return <Sublines key={index} component={component} />;
+      case 'intro-text':
+        return <IntroText key={index} component={component} />;
       default:
         return null;
     }

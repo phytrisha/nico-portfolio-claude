@@ -39,7 +39,14 @@ export interface HeroImageComponent {
 export interface HeroVideoComponent {
   type: 'hero-video';
   src: string;
+  alt?: string; // Alt text for accessibility
   py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+  thumb?: string; // Optional poster/thumbnail image
+  autoplay?: boolean; // Auto-play video
+  loop?: boolean; // Loop video
+  muted?: boolean; // Mute video
+  controls?: boolean; // Show controls (default: true)
+  playsinline?: boolean; // Play inline on mobile
 }
 
 export interface FullWidthImageComponent {
@@ -52,8 +59,14 @@ export interface FullWidthImageComponent {
 export interface FullWidthVideoComponent {
   type: 'full-width-video';
   src: string;
+  alt?: string; // Alt text for accessibility
   py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
-  thumb?: string;
+  thumb?: string; // Optional poster/thumbnail image
+  autoplay?: boolean; // Auto-play video
+  loop?: boolean; // Loop video
+  muted?: boolean; // Mute video
+  controls?: boolean; // Show controls (default: true)
+  playsinline?: boolean; // Play inline on mobile
 }
 
 export interface SideBySideComponent {
@@ -77,6 +90,12 @@ export interface SublinesComponent {
   py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
 
+export interface IntroTextComponent {
+  type: 'intro-text';
+  content: string; // intro text content
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+}
+
 export type SubSectionComponent =
   | ParagraphComponent
   | InlineHeaderComponent
@@ -87,7 +106,8 @@ export type SubSectionComponent =
   | FullWidthImageComponent
   | FullWidthVideoComponent
   | SideBySideComponent
-  | SublinesComponent;
+  | SublinesComponent
+  | IntroTextComponent;
 
 export interface SubSection {
   header?: string; // optional section header

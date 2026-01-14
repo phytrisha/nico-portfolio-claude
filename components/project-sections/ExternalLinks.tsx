@@ -33,7 +33,7 @@ export default function ExternalLinks({ links, projectColor }: ExternalLinksProp
                       stroke={projectColor}
                       strokeWidth="6"
                       strokeLinecap="square"
-                      strokeLinejoin="square"
+                      strokeLinejoin="miter"
                     />
                   </svg>
                 </div>

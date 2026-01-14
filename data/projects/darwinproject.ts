@@ -22,7 +22,6 @@ export const darwinproject: Project = {
 
  
   description: 'The Darwin Project is a speculative design thesis that confronts the environmental and social consequences of mass consumption by imagining alternative futures where products are deeply individualized, sustainably produced, and emotionally meaningful. Darwin project projects current technological developments and consumption trends across three progressive phases, culminating in a provocative lighthouse scenario that challenges fundamental assumptions about product ownership, brand identity, and material consumption.',
-  externalLinks: [],
 
 
 
@@ -46,7 +45,6 @@ export const darwinproject: Project = {
             type: 'hero-image',
             src: '/images/projects/darwinproject/coverdarwin.jpg',
             alt: 'Research methodology overview',
-            thumb: '/images/projects/aemote/coverimage01.jpg',
           },
           {
             type: 'inline-header',

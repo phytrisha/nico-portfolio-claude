@@ -9,32 +9,17 @@ export const autismEmotions: Project = {
   tags: ['STRATEGIC DESIGN · SOCIAL DESIGN · ACCESSIBILITY'],
   year: '2019',
   color: '#FF6D01',
-  metadata: {
-    topics: 'Psychology, Design Research, Accessibility',
-  },
 
   // New metadata structure
   metadata: {
-    degree: 'Master Thesis (MA)',
-    program: 'Strategic Design',
-    year: '2019',
-    institution: 'HfG Schwäbisch Gmünd',
-    supervision: [
-      { name: 'Prof. Benedikt Groß', url: 'https://www.hfg-gmuend.de/personen/david-oswald' },
-      { name: 'Prof. Julia Kühne', url: 'https://www.hfg-gmuend.de/en/people/ulrich-barnh%C3%B6fer' },
-      { name: 'Dr. Eileen Mandir', url: 'https://www.hfg-gmuend.de/en/people/ulrich-barnh%C3%B6fer' },
-
-    ],
-    collaborators: [
-      { name: 'Mark F. Meyer', url: 'https://mark-gestaltung.de' },
-      { name: 'Luis Holeczek', url: 'https://mark-gestaltung.de' },
-    ],
-    topics: ['Semesterproject', 'Strategic Design'],
-    row2: ['October 2018 - January 2019, ', 'HfG schwäbisch gmünd']
+    entries: [
+      'Master Thesis (MA) · Strategic Design · October 2018 - January 2019 · HfG Schwäbisch Gmünd',
+      'With: [Mark F. Meyer](https://mark-gestaltung.de), [Luis Holeczek](https://mark-gestaltung.de)',
+      'Supervision: [Prof. Benedikt Groß](https://www.hfg-gmuend.de/personen/david-oswald), [Prof. Julia Kühne](https://www.hfg-gmuend.de/en/people/ulrich-barnh%C3%B6fer), [Dr. Eileen Mandir](https://www.hfg-gmuend.de/en/people/ulrich-barnh%C3%B6fer)'
+    ]
   },
 
   description: 'æ:mote is a concept, designed to train people on the autistic spectrum disorder (ASD) in recognizing and understanding emotions. Developed in cooperation with the Paulinenpflege Winnenden, an institution that prepares young adults on the ASD for work, æ:mote can be seen as a first step in order to enable parents, as well as professional therapists to better support people on the ASD and to simplify their everyday life a bit. æ:mote combines a smartphone application used in face to face training sessions with the participant on the ASD with analog communication cards that are supposed to trigger guided conversations around topics that likely evoke specific emotions.',
-  externalLinks: [],
 
 
 
@@ -56,7 +41,7 @@ export const autismEmotions: Project = {
         components: [
             {
             type: 'hero-video',
-            src: '/images/projects/aemote/aemote.mp4',
+            src: '/images/projects/aemote/aemote_1.mp4',
             alt: 'Research methodology overview',
             thumb: '/images/projects/aemote/coverimage01.jpg',
           },
@@ -289,22 +274,4 @@ export const autismEmotions: Project = {
 
       ]
   },
-     
-      
-
-  // External links
-  externalLinks: [
-    {
-      title: 'Read the thesis',
-      url: 'https://drive.google.com/file/d/1dezxLIDqTM2B9iwmS5YTkooCg5VFaoFv/view?usp=share_link',
-    },
-    {
-      title: 'Watch the keynote',
-      url: 'https://example.com/research',
-    },
-    {
-      title: 'Notion board',
-      url: 'https://www.notion.so/beneficialai/Approaching-Beneficial-AI-fd8feb8521624051a825aed94900081d',
-    },
-  ],
 };

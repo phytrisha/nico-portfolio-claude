@@ -71,7 +71,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
 
                   {/* Project Section - All content in one div */}
                   {project.projectSection && (
-                    <div className="border">
+                    <div className="border mb-16">
                       <ProjectSection projectSection={project.projectSection} />
                     </div>
                   )}

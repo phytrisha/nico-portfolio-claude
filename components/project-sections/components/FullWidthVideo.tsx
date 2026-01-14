@@ -11,8 +11,13 @@ export default function FullWidthVideo({ component }: FullWidthVideoProps) {
     <div className={`w-full px-8 ${pyClass}`}>
       <video
         src={component.src}
-        controls
+        controls={component.controls !== false}
         poster={component.thumb}
+        autoPlay={component.autoplay}
+        loop={component.loop}
+        muted={component.muted}
+        playsInline={component.playsinline}
+        aria-label={component.alt}
         className="w-full h-auto"
       />
     </div>

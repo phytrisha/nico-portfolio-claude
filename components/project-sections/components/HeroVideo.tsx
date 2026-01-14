@@ -11,8 +11,13 @@ export default function HeroVideo({ component }: HeroVideoProps) {
     <div className={`w-full ${pyClass}`}>
       <video
         src={component.src}
-        controls
+        controls={component.controls !== false}
         poster={component.thumb}
+        autoPlay={component.autoplay}
+        loop={component.loop}
+        muted={component.muted}
+        playsInline={component.playsinline}
+        aria-label={component.alt}
         className="w-full h-auto"
         style={{ padding: 0 }}
       />

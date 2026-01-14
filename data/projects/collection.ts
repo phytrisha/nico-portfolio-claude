@@ -11,9 +11,11 @@ export const collection: Project = {
   color: '#E6E2D8',
 
 
-     // New metadata structure
+  // New metadata structure
   metadata: {
-    topics: ['A LOOSE COLLECTION OF SOME MORE FREELANCE & UNIVERSITY PROJECTS – IN GERMAN IN ENGLISH'],
+    entries: [
+      'A LOOSE COLLECTION OF SOME MORE FREELANCE & UNIVERSITY PROJECTS – IN GERMAN IN ENGLISH'
+    ]
   },
 
 
@@ -32,7 +34,7 @@ export const collection: Project = {
         components: [
           {
             type: 'hero-video',
-            src: '/images/projects/collection/terraVideo.mp4',
+            src: '/images/projects/collection/terraVideo_1.mp4',
             alt: 'Terra Video',
             thumb: '/images/projects/collection/Terracover.jpg',
           },
