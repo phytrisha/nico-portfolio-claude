@@ -10,24 +10,17 @@ export const flows: Project = {
   year: '2017',
   color: '#FF6B00',
 
-  // New metadata structure
+    // New metadata structure - each entry is one row
+  // Use [text](url) syntax for inline links
   metadata: {
-    degree: 'Bachelor Thesis (BA)',
-    program: 'Strategic Design',
-    year: '2017',
-    institution: 'HfG Schwäbisch Gmünd',
-    supervision: [
-      { name: 'Prof. David Osswald', url: 'https://www.hfg-gmuend.de/personen/david-oswald' },
-      { name: 'Florian', url: 'https://www.hfg-gmuend.de/en/people/ulrich-barnh%C3%B6fer' }
-    ],
-    collaborators: [
-      { name: 'Mark F. Meyer', url: 'https://mark-gestaltung.de' }
-    ],
-    topics: ['Bachelor Thesis, BA · Interaction design'],
-    row2: ['February 2017 – July 2017', 'HfG schwäbisch gmünd']
+    entries: [
+      'Bachelor Thesis (BA) · Interaction Design · Feb – July 2017 · HfG Schwäbisch Gmünd',
+      'With: [Mark F. Meyer](https://mark-gestaltung.de) · Supervision: [Prof. David Osswald](https://www.hfg-gmuend.de/personen/david-oswald), Florian Geiselhart',
+    ]
   },
 
   description: 'Flows is a concept for a new design tool, conceptualized to enable a more structured design workflow, while at the same time offering the user better ways to create and iterate over variations. Flows applies the idea of classes, originating from code and development to a design tool, helping to create complex design systems with ease. Flows was built to allow designers to do a large part of their daily design processes in one tool. Therefore the concept combines early process steps like the creation of information architectures, the translation into asset based wireframes and their refinement in visuals while supporting interactive prototyping from the start. This approach gives each of those steps connection and purpose even as a project evolves.',
+
 
 // New project section structure demonstrating all components
   projectSection: {

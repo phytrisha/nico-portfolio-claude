@@ -60,7 +60,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                   </svg>
                 </button>
 
-                <div className="max-w-[62%] mx-auto">
+                <div className="max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[76%] xl:max-w-[62%] mx-auto">
                   {/* Project Title */}
                   <h1 className="text-4xl md:text-5xl lg:text-[60px] font-bold mb-18 mt-28 leading-tight">
                     {project.title}

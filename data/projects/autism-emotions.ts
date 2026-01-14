@@ -110,7 +110,7 @@ export const autismEmotions: Project = {
           },       
           {
             type: 'full-width-image',
-            src: '/images/projects/aemote/OA1.jpg',
+            src: '/images/projects/aemote/OA5.jpg',
             alt: 'Research methodology overview',
             py: 'pt-3 pb-12',
           },
@@ -123,7 +123,7 @@ export const autismEmotions: Project = {
           },
           {
             type: 'full-width-image',
-            src: '/images/projects/aemote/OA2.jpg',
+            src: '/images/projects/aemote/OA4.jpg',
             alt: 'Research methodology overview',
             py: 'pt-3 pb-6',
           },
@@ -135,7 +135,7 @@ export const autismEmotions: Project = {
           },
           {
             type: 'full-width-image',
-            src: '/images/projects/aemote/OA3.jpg',
+            src: '/images/projects/aemote/OA6.jpg',
             alt: 'Research methodology overview',
             py: 'pt-3 pb-0',
           },
@@ -166,7 +166,7 @@ export const autismEmotions: Project = {
             type: 'full-width-image',
             src: '/images/projects/aemote/ST1.jpg',
             alt: 'Research methodology overview',
-            py: 'pt-3 pb-12',
+            py: 'pt-3 pb-14',
           },
         
           {
@@ -179,7 +179,7 @@ export const autismEmotions: Project = {
             type: 'full-width-image',
             src: '/images/projects/aemote/ST2.jpg',
             alt: 'Research methodology overview',
-            py: 'pt-3 pb-6',
+            py: 'pt-3 pb-8',
           },
         
           {
@@ -217,7 +217,7 @@ export const autismEmotions: Project = {
           }, 
           {
             type: 'full-width-image',
-            src: '/images/projects/aemote/S2.jpg',
+            src: '/images/projects/aemote/Cards.png',
             alt: 'Research methodology overview',
             py: 'pt-2 pb-12',
           },
@@ -229,9 +229,9 @@ export const autismEmotions: Project = {
           }, 
           {
             type: 'full-width-image',
-            src: '/images/projects/aemote/S1.jpg',
+            src: '/images/projects/aemote/S4.jpg',
             alt: 'Research methodology overview',
-            py: 'pt-2 pb-6',
+            py: 'pt-2 pb-12',
           },
 
           {
@@ -241,9 +241,9 @@ export const autismEmotions: Project = {
           }, 
           {
             type: 'full-width-image',
-            src: '/images/projects/aemote/S3.jpg',
+            src: '/images/projects/aemote/S5.png',
             alt: 'Research methodology overview',
-            py: 'pt-2 pb-12',
+            py: 'pt-2 pb-8',
           },         
         ]
       },
@@ -259,25 +259,25 @@ export const autismEmotions: Project = {
           {
             type: 'paragraph',
             content: 'The current state of the application only provides some basic functionality, which could be further extended in the future. Here are some of our core ideas:',
-            py: 'pt-8 pb-6',
+            py: 'pt-8 pb-8',
           },
           {
             type: 'feature-block',
             skyline: 'CUSTOM DATABASE',
             description: 'The user does not have to rely on the sample images of each emotion that we provide. She can save and tag situations in which the emotions were somehow memorable and can thereby extend the database to further improve her abilities.',
-            py: 'pb-6',
+            py: 'pb-8',
           },         
           {
             type: 'feature-block',
             skyline: 'DOUBLE CHECK',
             description: 'Currently, the user receives immediate feedback when answering in the quiz mode. Perhaps a double check could lead to better learning results. This could also be linked to the custom database, perhaps showing her images from the custom database which she has already correctly recognized in the past as a reference for the current situation.',
-           py: 'pb-6',
+           py: 'pb-8',
           },
           {
             type: 'feature-block',
             skyline: 'DIGITAL ASSISTANT',
-            description: 'Basically, the idea behind the application must not be limited to a smartphone. The assistance and training could very well also be implemented on other devices, such as wearables. If we consider advancements in deep learning, it is also very well imaginable, that in the future the assistance could not only help recognizing emotions, but also help in situations of emotional instability and so on. This basically leads to the second strategy, which was described earlier: the vision 2030 approach.',
-            py: 'pb-6',
+            description: 'Basically, the idea behind the application must not be limited to a smartphone. The assistance and training could very well also be implemented on other devices, such as wearables. If we consider advancements in deep learning, it is also very well imaginable, that in the future the assistance could not only help recognizing emotions, but also help in situations of emotional instability and so on. This basically leads to the second strategy, which was described earlier: The vision 2030 approach.',
+            py: 'pb-8',
           },
           {
             type: 'paragraph',

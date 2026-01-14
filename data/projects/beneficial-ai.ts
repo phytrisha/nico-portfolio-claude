@@ -14,9 +14,8 @@ export const beneficialAI: Project = {
   // Use [text](url) syntax for inline links
   metadata: {
     entries: [
-      'Master Thesis (MA) · Strategic Design · 2019',
-      'With [Mark F. Meyer](https://mark-gestaltung.de) · Supervision [Prof. David Osswald](https://www.hfg-gmuend.de/personen/david-oswald), [Prof. Dr. Ulrich Barnhöfer](https://www.hfg-gmuend.de/en/people/ulrich-barnh%C3%B6fer)',
-      'February 2019 – July 2019 · HfG Schwäbisch Gmünd'
+      'Master Thesis (MA) · Strategic Design · Feb 2019 – July 2019 · HfG Schwäbisch Gmünd · With: [Mark F. Meyer](https://mark-gestaltung.de) · ',
+      'Supervision: [Prof. David Osswald](https://www.hfg-gmuend.de/personen/david-oswald), [Prof. Dr. Ulrich Barnhöfer](https://www.hfg-gmuend.de/en/people/ulrich-barnh%C3%B6fer)',
     ]
   },
 
@@ -216,7 +215,7 @@ export const beneficialAI: Project = {
         components: [
           {
             type: 'full-width-image',
-            src: '/images/projects/beneficial-ai/Model8.jpg',
+            src: '/images/projects/beneficial-ai/Model10.png',
             alt: 'Research methodology overview',
             py: 'py-0'
 

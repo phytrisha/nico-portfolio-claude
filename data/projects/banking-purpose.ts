@@ -10,10 +10,15 @@ export const bankingPurpose: Project = {
   year: '2021',
   color: '#259918',
 
-    // New metadata structure
+    // New metadata structure - each entry is one row
+  // Use [text](url) syntax for inline links
   metadata: {
-    topics: ['FREELANCE WORK · FINTECH · UI / UX CONCEPT · 2021 · CLIENT: REMAGINE'],
+    entries: [
+      'Client work · Feb - July 2022, BERLIN · CLIENT: Remagine',
+      'involvement: UX CONCEPT, UI Design'
+    ]
   },
+
 
 
   description: 'Remagine is a financial platform that provides banking services to high-growth enterprises, distinguished by its explicit commitment to impact-driven business models. Specializing in revenue-based financing, the company offers an alternative to conventional equity or debt instruments, that is typically more favorable to founders, enabling rapid access to capital while preserving entrepreneurial autonomy. Remagine’s Financing & Online Banking Application serves as primary touchpoint to apply for and manage financing applications, repayment processes, bank account access and credit card control. A plattform wide responsive reconcept was devised, rethinking major navigation flows from the ground up, and extending the existing design language to accommodate newly introduced features, while maintaining the brand’s distinctive and assertive visual identity.',

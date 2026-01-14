@@ -14,14 +14,14 @@ export const darwinproject: Project = {
   // Use [text](url) syntax for inline links
   metadata: {
     entries: [
-      'Strategic Design · MARCH – JULY 2018 · HfG Schwäbisch Gmünd',
-      'With: Robert Mayer, Jonathan Aichele, Jasmin Großer',
+      'Strategic Design · MARCH – JULY 2018 · HfG Schwäbisch Gmünd · With: Robert Mayer, Jonathan Aichele, Jasmin Großer',
+      // 'With: Robert Mayer, Jonathan Aichele, Jasmin Großer',
       'Supervision: Prof. Gabriele N. Reichert, Prof. Günther Biste, Thomas Schönweitz'
     ]
   },
 
  
-  description: 'The Darwin Project is a speculative design thesis that confronts the environmental and social consequences of mass consumption by imagining alternative futures where products are deeply individualized, sustainably produced, and emotionally meaningful. Developed as a master`s project at HfG Schwäbisch Gmünd, the work projects current technological developments and consumption trends across three progressive phases, culminating in a provocative "lighthouse scenario" that challenges fundamental assumptions about product ownership, brand identity, and material consumption.',
+  description: 'The Darwin Project is a speculative design thesis that confronts the environmental and social consequences of mass consumption by imagining alternative futures where products are deeply individualized, sustainably produced, and emotionally meaningful. Darwin project projects current technological developments and consumption trends across three progressive phases, culminating in a provocative lighthouse scenario that challenges fundamental assumptions about product ownership, brand identity, and material consumption.',
   externalLinks: [],
 
 
@@ -49,238 +49,213 @@ export const darwinproject: Project = {
             thumb: '/images/projects/aemote/coverimage01.jpg',
           },
           {
-            type: 'paragraph',
-            content: 'The Darwin Project is a speculative design thesis that confronts the environmental and social consequences of mass consumption by imagining alternative futures where products are deeply individualized, sustainably produced, and emotionally meaningful. Developed as a master`s project at HfG Schwäbisch Gmünd, the work projects current technological developments and consumption trends across three progressive phases, culminating in a provocative "lighthouse scenario" that challenges fundamental assumptions about product ownership, brand identity, and material consumption.',
-          },
-          
+            type: 'inline-header',
+            content: 'The Darwin Project is a speculative design thesis that confronts the environmental and social consequences of mass consumption by imagining alternative futures where products are deeply individualized, sustainably produced, and emotionally meaningful. Developed in a course of the masters programs second semester at HfG Schwäbisch Gmünd, the work projects current technological developments and consumption trends across three progressive phases, culminating in a provocative "lighthouse scenario" that challenges fundamental assumptions about product ownership, brand identity, and material consumption.', 
+            py: 'pt-12 pb-8',
+          },          
         ]
       },
 
 
       // ===== SECTION =====
       {
-        header: 'Problem space',
+        header: 'Problem space: From Hyperconsumption to Conscious Consumption',
         number: '02',
         components: [
+
           {
-            type: 'inline-header',
-            content: 'From Hyperconsumption to Conscious Consumption',
+            type: 'paragraph',
+            content: 'The project opens with a critique of contemporary consumer society, drawing on Neil Gaimans observation that modern culture has spawned "new gods" of credit cards, internet, and plastic – symbols we worship with the same fervor as ancient deities. The designers argue that we live in an overflow society characterized by senseless hyper-consumption, where products are discarded long before their functional end-of-life, driven by planned obsolescence and manufactured desire. Key sustainability challenges identified include:',
             py: 'pt-8 pb-0',
           },
           {
-            type: 'paragraph',
-            content: 'The project opens with a critique of contemporary consumer society, drawing on Neil Gaiman`s observation that modern culture has spawned "new gods" of credit cards, internet, and plastic – symbols we worship with the same fervor as ancient deities. The designers argue that we live in an overflow society characterized by senseless hyper-consumption, where products are discarded long before their functional end-of-life, driven by planned obsolescence and manufactured desire. Key sustainability challenges identified include:',
+            type: 'feature-block',
+            skyline: 'Resource depletion',
+            description: 'Germany exhausts its annual natural resources by May, requiring three planets if everyone lived this way. Household waste increased from 458 kg to 559 kg per person between 2000-2015.',
+            py: 'pt-8 pb-0',
           },
-          
+           {
+            type: 'feature-block',
+            skyline: 'Exploitation',
+            description: 'Both of workers in low-wage countries and of natural resources in developing nations.',
+            py: 'pt-8 pb-0',
+          },
+           {
+            type: 'feature-block',
+            skyline: 'Emotional disconnect',
+            description: 'Products are purchased but never truly valued, leading to cycles of dissatisfaction and replacement.'
+          },
+          {
+            type: 'paragraph',
+            content: 'The project proposes reorientation: away from hyperconsumption toward conscious, sustainable consumption, buying what one truly needs, meeting personal requirements without compromise.',
+            py: 'pt-0 pb-8',
+          },
         ]
       },
 
       // ===== SECTION =====
       {
-        header: 'POTENTIALS',
+        header: 'Individualization as Sustainability Strategy',
         number: '03',
         components: [          
         ]
       },
       {
         components: [
+
           {
-            type: 'inline-header',
-            content: 'After an initial desk research and on site observation, we considered three opportunity areas, which we could tackle.',
+            type: 'paragraph',
+            content: 'The Darwin Project`s central thesis might seem counterintuitive: Radical individualization can serve sustainability. When products are precisely tailored to user needs, functionally, ergonomically, and aesthetically, they create emotional bonds that discourage disposal and replacement. The project draws biological inspiration from slime molds (Mycetozoa), organisms that demonstrate remarkable collective intelligence without central control. In 2010, researchers at Hokkaido University demonstrated that slime molds could replicate Tokyo`s rail network with equal or superior efficiency. This biological model informs the project`s vision of intelligent, adaptive material systems. Three levels of individualization are explored:',
+            py: 'pt-8 pb-2',
+          },
+          {
+            type: 'feature-block',
+            skyline: 'Functional individualization',
+            description: 'Products adapted to body measurements, movement patterns, and use contexts.',
             py: 'pt-8 pb-0',
+          },
+          {
+            type: 'feature-block',
+            skyline: 'Aesthetic individualization',
+            description: 'Personal style expression without brand dependence.',
+            py: 'pt-8 pb-0',
+          },
+          {
+            type: 'feature-block',
+            skyline: 'Evolutionary adaptation',
+            description: 'Products that improve over successive generations based on usage data.',
+            py: 'pt-8 pb-10',
           },
         ]
       },
+
+
       // ===== FEATURE BLOCK EXAMPLE =====
       {
         //header: 'Key Features',
-        number: '02',
+        header: 'Phase Structure and Technological Roadmap',
+        number: '04',
         components: [
           {
             type: 'feature-block',
-            skyline: 'OPPORTUNITY AREA 1: STRESS',
-            description: 'Often, people on the ASD are constantly under a lot of stress. This is due to the disorder leading to a questioning of every given thing. Things that people, who are not on the ASD perhaps do not even notice, and if they do, do not question (e.g. "Why is this person wearing a red sweater today, when he was wearing a green one yesterday?"). Often, the many impulses we encounter on a daily basis lead to an overflow of impulses, which are typically not handled very well, possibly leading to panic attacks. This can lead to difficult situations in everyday life. The first opportunity area therefore considers blocking these impulses in certain situations or training handling them.'
+            skyline: 'Phase 1 (2019-2025): Foundation Building',
+            description: 'Establishes research capabilities across four areas: an Eco-Score app tracking sustainable purchasing behavior, additive manufacturing facilities, recyclable filament research, and sentient (sensor-embedded) filament development. This phase builds technological foundations while generating revenue to minimize risk.',
+            py: 'pt-8 pb-12',          
           },       
+        
           {
-            type: 'full-width-image',
-            src: '/images/projects/aemote/OA1.jpg',
+            type: 'feature-block',
+            skyline: 'Phase 2 (2025-2034): Product X – Individualized Products',
+            description: 'Introduces iwa ("I want..."), a conversational AI guiding users through product creation. The project includes extensive research into iwas communication architecture, developing detailed conversation flows, question typologies, and response frameworks. User personas with distinct characteristics (from perfectionists to extroverts to professional athletes) informed nuanced dialogue design, ensuring iwa adapts tone and approach to individual users while maintaining consistent values. The research addresses how iwa handles edge cases, refuses inappropriate requests, and maintains transparency about data usage. Products enter an evolutionary cycle: when damaged or suboptimal, they`re returned, recycled, and evolved into improved versions. Material from previous products incorporates into successors, creating environmental benefits and emotional continuity.',
+            py: 'pt-0 pb-8'
+          },
+          {
+            type: 'full-width-video',
+            src: '/images/projects/darwinproject/the darwin project_SG1_SS18_720p.mp4',
             alt: 'Research methodology overview',
-            py: 'pt-3 pb-12',
+            py: 'pt-0 pb-10',
           },
         
           {
             type: 'feature-block',
-            skyline: 'OPPORTUNITY AREA 2: LEARNING',
-            description: 'These difficulties in dealing with a lot of impulses may also lead to numerous problems when learning. As most impressions can not simply be ignored, they can quickly be distracting when facing the challenge to concentrate on a certain task. This does not only apply exclusively to cognitive tasks, but also repetitive manual tasks, as for example different initial circumstances can lead to confusion. The second opportunity area suggests establishing a more concentrated space with fewer distractions and clearer instructions in certain predictable situations.',
-            py: 'py-0'
+            skyline: 'The Lighthouse Scenario: The Cube',
+            description: 'The projects most speculative element imagines products decoupled from fixed form, specific brands, and predetermined characteristics. The foundation is an intelligent matter aggregation: The Cube. The Cube transforms into any user-desired product, limited only by mass. Multiple Cubes combine for larger objects. Key implications:'
           },
           {
             type: 'full-width-image',
-            src: '/images/projects/aemote/OA2.jpg',
+            src: '/images/projects/darwinproject/implications.png',
             alt: 'Research methodology overview',
-            py: 'pt-3 pb-6',
-          },
-        
-          {
-            type: 'feature-block',
-            skyline: 'OPPORTUNITY AREA 3: COMMUNICATION',
-            description: 'The third opportunity area tackles the problems that occur during communication. People with ASD often have difficulties communicating with other people, as communication often heavily relies on recognizing and reacting to messages in a way, which general society has deemed appropriate. The recognition and "appropriate" reaction can be very difficult for people with ASD and the consequences can be fairly frustrating, as a lack of communication can impact almost every area of day-to-day life. There are already numerous research projects concerned with improving the communication skills of people with ASD, nevertheless this area was the most interesting to us, as we saw the most potential in improving day-to-day life here.'
+            py: 'pt-2 pb-8',
           },
           {
             type: 'full-width-image',
-            src: '/images/projects/aemote/OA3.jpg',
+            src: '/images/projects/darwinproject/morph.jpg',
             alt: 'Research methodology overview',
-            py: 'pt-3 pb-0',
+            py: 'pt-6 pb-12',
           },
         ]
       },
       
 
       {
-        header: 'STRATEGIES',
+        header: 'Sustainability Through Emotional Connection',
         number: '04',
         components: [
         ]
       },
       {
         components: [
+
           {
-            type: 'inline-header',
-            content: 'To tackle the challenge of improving communication we outlined three different strategies of how we might approach our goal of inclusion.', 
+            type: 'paragraph',
+            content: 'Research on product attachment grounds the approach. Neurological research indicates 95% of consumer behavior is emotional rather than rational. Products become irreplaceable when they facilitate individuation, integration, and temporal orientation. The project engineers these bonds deliberately. By designing for attachment, sustainability becomes a byproduct of satisfaction rather than sacrifice.',
             py: 'pt-8 pb-0',
           },
           {
             type: 'feature-block',
-            skyline: 'STRATEGY 1: RAPID TECH APPROACH',
-            description: 'The idea behind the first strategy is to make use of the opportunity of testing with real people with ASD and therefore immediately validate the product. To tackle the issue of communication, we could therefore currently work with smartphone applications, smartwatches or other devices, that are common nowadays.',
+            skyline: 'BONDS THROUGH Individuation',
+            description: 'What kinds of influences will drive the expressive / aesthetic dimension of products when mass-market uniformity is called in question?',
             py: 'pt-8 pb-0',
           },       
+        
           {
-            type: 'full-width-image',
-            src: '/images/projects/aemote/ST1.jpg',
-            alt: 'Research methodology overview',
-            py: 'pt-3 pb-12',
+            type: 'feature-block',
+            skyline: 'BONDS THROUGH Integration',
+            description: 'Can usage data create a shared history between user and product, that builds familiarity and attachment through accumulated interaction over time?',
+            py: 'pt-8 pb-0'
           },
         
           {
             type: 'feature-block',
-            skyline: 'STRATEGY 2: VISION 2030 APPROACH',
-            description: 'The second approach is set a bit further in the future. Here we could assume that a lot more technology is available in terms of hardware and we could also speculate, that several crucial improvements in software development have been made, such as improved deep learning methods, that have been fed from more reliable data. Possibilities would be to include assistance, which is powered by deep learning, in wearable devices, such as augmented glasses, which are perhaps more common in a couple of years. This approach does rely heavily on speculation though, as it cannot be validated accordingly.',
-            py: 'py-0'
+            skyline: 'BONDS THROUGH Temporal orientation',
+            description: 'Can evolutionary product cycles maintain emotional connection across generations, as materials from previous iterations carry forward into successors?',
+            py: 'pt-8 pb-12',
           },
-          {
-            type: 'full-width-image',
-            src: '/images/projects/aemote/ST2.jpg',
-            alt: 'Research methodology overview',
-            py: 'pt-3 pb-6',
-          },
-        
+        ]
+      },
+
+
+      {
+        header: 'Critical Reflection',
+        number: '05',
+        components: [
+        ]
+      },
+      {
+        components: [
           {
             type: 'feature-block',
-            skyline: 'STRATEGY 3: SOCIAL / POLITICAL APPROACH',
-            description: 'A completely different strategy on the other hand would be to not design a product in the traditional sense – which in its core simply approaches solving a problem, which is already present – but rather to look into how people with ASD could be assisted, if there was more awareness in society, as well as in politics. This approach could consist of different types of awareness campaigns, which include multiple milestones that are based on top of each other.',
+            skyline: 'For designers',
+            description: 'The profession shifts from operative execution to strategic curation, establishing rules and constraints for AI systems rather than crafting individual products.',
             py: 'pt-8 pb-0',
-          },
+          }, 
           {
-            type: 'full-width-image',
-            src: '/images/projects/aemote/ST3.jpg',
-            alt: 'Research methodology overview',
-            py: 'pt-3 pb-12',
-          },
-        ]
-      },
-
-
-      {
-        header: 'CONCEPT',
-        number: '05',
-        components: [
-        ]
-      },
-      {
-        components: [
+            type: 'feature-block',
+            skyline: 'For consumption',
+            description: 'Two trajectories emerge: Users either hoard Cubes for simultaneous products, or own fewer objects since single Cubes serve multiple purposes.',
+            py: 'pt-8 pb-0',
+          }, 
+          {
+            type: 'feature-block',
+            skyline: 'For society',
+            description: 'Without brand markers, social differentiation may shift to other domains. Parameterized style preferences replace brand identification, but group belonging through aesthetic consensus likely persists.',
+            py: 'pt-8 pb-0',
+          },  
           {
             type: 'paragraph',
-            content: 'For us as designers, we concluded, that the strategy, that could have the most real impact, was the first one, the rapid tech approach. We went on to develop a concept, which is based on three low fidelity components, which can be easily assembled, so that they do not inevitably have to be bought but could very well also be assembled in a makerspace or similar. The overall concept is to enable assistance for people with ASD in everyday life by giving them the opportunity to use an app to identify the emotions people are expressing in certain situations. Additionally, this recognition can be explicitly trained with a set of components, which are briefly described in the following.',
-          },
-          {
-            type: 'feature-block',
-            skyline: 'COMPONENT 1: CONVERSATION CARDS',
-            description: 'The conversation cards are a source of inspiration for conversations that could be led by a parent (or a professional therapist) and a person with ASD. The parent uses a conversation card to come up with a topic, which typically express strong emotions, such as the joy of Christmas will probably lead to happy emotions. The person with ASD is then quizzed via the app which emotion is currently being expressed.'
-          }, 
-          {
-            type: 'full-width-image',
-            src: '/images/projects/aemote/S2.jpg',
-            alt: 'Research methodology overview',
-            py: 'pt-2 pb-12',
-          },
-
-          {
-            type: 'feature-block',
-            skyline: 'COMPONENT 2: HOLDER',
-            description: 'The aim of the holder is to enable a more unconstrained conversation flow. It is placed on the center of the table and is able to hold a smartphone in different desired positions, due to its flexible mechanism. The screen of the smartphone faces towards the person with ASD. A mirror enables the camera of the smartphone to be pointing at the face of the person with whom the conversation is taking place, while the smartphone is placed in an unobtrusive fashion, not disturbing the conversation flow. On top of that, the holder is also designed as the packaging of the product.'
-          }, 
-          {
-            type: 'full-width-image',
-            src: '/images/projects/aemote/S1.jpg',
-            alt: 'Research methodology overview',
-            py: 'pt-2 pb-6',
-          },
-
-          {
-            type: 'feature-block',
-            skyline: 'COMPONENT 3: DIGITIAL APPLICATION',
-            description: 'The digital application is divided into two main parts, which can be accessed via the main menu: the detection mode and the quiz mode. The detection mode simply shows the image the camera is currently capturing and displays the recognized emotion underneath, given that there is currently a face in the field of view as well as that this faces expresses an emotion at least to some degree. The application was prototyped using Unity and the emotion recognition framework Affectiva [^2], which was developed as a startup at MIT Media Lab in 2009.'
-          }, 
-          {
-            type: 'full-width-image',
-            src: '/images/projects/aemote/S3.jpg',
-            alt: 'Research methodology overview',
-            py: 'pt-2 pb-12',
-          },         
-        ]
-      },
-
-      {
-        header: 'WHAT NOW?',
-        number: '05',
-        components: [
-        ]
-      },
-      {
-        components: [
-          {
-            type: 'paragraph',
-            content: 'The current state of the application only provides some basic functionality, which could be further extended in the future. Here are some of our core ideas:',
+            content: 'The Darwin Project offers a critical design space for examining assumptions about consumption and sustainability. By imagining radical individualization as environmental strategy, it inverts conventional wisdom that mass production serves efficiency. By projecting intelligent materials, it questions whether the product category itself remains meaningful. Most significantly, the project demonstrates designs capacity for speculative inquiry, using disciplinary tools not to solve problems but to imagine alternative futures that reframe the present.',
             py: 'pt-8 pb-6',
           },
           {
-            type: 'feature-block',
-            skyline: 'CUSTOM DATABASE',
-            description: 'The user does not have to rely on the sample images of each emotion that we provide. She can save and tag situations in which the emotions were somehow memorable and can thereby extend the database to further improve her abilities.',
-            py: 'pb-6',
-          },         
-          {
-            type: 'feature-block',
-            skyline: 'DOUBLE CHECK',
-            description: 'Currently, the user receives immediate feedback when answering in the quiz mode. Perhaps a double check could lead to better learning results. This could also be linked to the custom database, perhaps showing her images from the custom database which she has already correctly recognized in the past as a reference for the current situation.',
-           py: 'pb-6',
+            type: 'full-width-image',
+            src: '/images/projects/darwinproject/20180626_133514_A1.jpg',
+            alt: 'Research methodology overview',
+            py: 'pt-3 pb-8',
           },
-          {
-            type: 'feature-block',
-            skyline: 'DIGITAL ASSISTANT',
-            description: 'Basically, the idea behind the application must not be limited to a smartphone. The assistance and training could very well also be implemented on other devices, such as wearables. If we consider advancements in deep learning, it is also very well imaginable, that in the future the assistance could not only help recognizing emotions, but also help in situations of emotional instability and so on. This basically leads to the second strategy, which was described earlier: the vision 2030 approach.',
-            py: 'pb-6',
-          },
-          {
-            type: 'paragraph',
-            content: 'In conclusion, this project was extremely inspiring for us, as we had the opportunity to help real people in their everyday life, which is an extremely rewarding task. We want to thank all staff of the Paulinenpflege Winnenden, especially Tabea König and Mrs. Fischer-Beutel. We also want to thank Prof. Benedikt Groß, Prof. Julia Kühne and Dr. Eileen Mandir for supervising and enabling this project in the first place.',
-            py: 'pt-0 pb-8',
-          },
+
         ]
       },
-
-      ]
+    ]
   },
      
       

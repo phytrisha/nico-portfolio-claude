@@ -9,7 +9,7 @@ export default function FeatureBlock({ component }: FeatureBlockProps) {
 
   return (
     <div className={`px-8 ${pyClass} my-0`}>
-      <div className="font-mono font-bold text-sm whitespace-pre-wrap pb-2 tracking-wide">
+      <div className="font-mono font-semibold text-xs whitespace-pre-wrap pb-3 tracking-wide text-transfrom: uppercase">
         {component.skyline}
       </div>
       <p className="text-sm leading-relaxed sm:text-base md:text-base lg:text-base">

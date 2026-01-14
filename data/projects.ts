@@ -4,7 +4,6 @@ import { transformativeExperiences } from './projects/transformative-experiences
 import { autismEmotions } from './projects/autism-emotions';
 import { bankingPurpose } from './projects/banking-purpose';
 import { conceptLearning } from './projects/concept-learning';
-import { mentalHealth } from './projects/mental-health';
 import { flows } from './projects/flows';
 import { zalando } from './projects/zalando';
 import { taxfix } from './projects/taxfix';
@@ -24,7 +23,6 @@ export const projects: Project[] = [
   darwinproject,
   flows,
   zalando,
-  mentalHealth,
   bankingPurpose,
   transformativeExperiences,
   collection,

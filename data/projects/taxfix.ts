@@ -12,10 +12,15 @@ export const taxfix: Project = {
 
 
 
-   // New metadata structure
+  // New metadata structure - each entry is one row
+  // Use [text](url) syntax for inline links
   metadata: {
-    topics: ['FREELANCE WORK · TAX LOGIC · NO-CODE INTERFACES ·  REASEARCH, CONCEPT & TESTING · 2021 · CLIENT: TAXFIX'],
+    entries: [
+      'Client work · Feb - OCT 2022, BERLIN · CLIENT: TAXFIX',
+      'Role / involvement: USER RESEARCH, UX CONCEPT & TESTING · TEAM: Internal taxfix team, henri thomee'
+    ]
   },
+
 
 
   description: 'Taxfix offers an online tax assistance platform designed to simplify tax declarations to end users via a dynamic questionnaire to fully automate communication with the user and accommodate fiscal differences across countries, enabling private individuals to get back their tax refunds. In order for the user-facing application to work internal tooling needed to be devised to enable Taxfix`s tax experts to define tax logic independently from developers and without the need to code themselves. Based on an extensive research and synthesis phase, understanding tax experts workflows and needs, a no-code editor was conceptualized, wireframed, and tested across multiple ideation rounds. For this functional outline a design language was crafted, focussed on bringing visual structure and clarity to a tool that enables high-complexity workflows within dense information structures.',
@@ -58,7 +63,7 @@ export const taxfix: Project = {
         components: [
           {
             type: 'paragraph',
-            content: 'Based on the initial research conducted major pain points were identified that made the current code based solution both inefficient and unnecessarily complicated. Those pain points (alongside other problems identified) served as the foundation for ideation, wireframing and testing.',
+            content: 'Our research process combined multiple methods to build a comprehensive understanding of user needs and business context. Qualitative interviews, competitor analysis, stakeholder workshops, and workflow testing provided diverse perspectives on current challenges and opportunities. These inputs were then synthesized through affinity mapping, user journey visualization, and persona development, translating raw data into actionable insights that defined the problem space and established clear goals for the design phase of the no-code editor.',
             py: 'pt-8 pb-0',
           
           },
@@ -79,7 +84,7 @@ export const taxfix: Project = {
         components: [
           {
             type: 'paragraph',
-            content: 'Based on the initial research conducted major pain points were identified that made the current code based solution both inefficient and unnecessarily complicated. Those pain points (alongside other problems identified) served as the foundation for ideation, wireframing and testing.',
+            content: 'For example user research revealed three core pain points in the existing workflow: Rigid hard-coded tax logic that resisted change, error-prone communication between tax experts and developers, and the absence of release management infrastructure. These insights were translated into actionable opportunity areas: Flexibility through visual logic building, empowerment by giving tax experts direct control over implementation, and structured release planning across markets and tax years. This problem-to-opportunity mapping provided a clear roadmap for design decisions throughout the project.',
             py: 'pt-8 pb-2',
           },
            {
@@ -99,15 +104,21 @@ export const taxfix: Project = {
         components: [
           {
             type: 'paragraph',
-            content: 'From Translating insights into software features, to conceptualizing & testing UX solutions. Building the non-code editor was a highly iterative process that strechted over multiple months to traslate the vast amount of insights into tangbile product solutions. Due to the complexity and interdependence of tax-law, conceptualizing the no-code editor that enables tax experts to build tax logic which is then presented to end users in the form of questions in the consumer facing side of the product, proved to be both a highly challenging and a super interesting process...',
+            content: 'Translating research insights into software features and testable interfaces required an iterative process that stretched over multiple months. The no-code editor, designed to enable tax experts to build tax logic that surfaces as guided questions on the consumer-facing side, demanded careful conceptualization and continuous testing. Given the complexity and interdependent logic of tax law, designing an interface that makes this logic accessible to non-developers proved both exceptionally challenging and deeply rewarding (and sometimes really frustrating...).',
             py: 'pt-8 pb-0',
           },
-           {
+          {
             type: 'full-width-image',
             src: '/images/projects/taxfix/P3.jpg',
             alt: 'Research methodology overview',
             py: 'pt-8 pb-8',
-          },  
+          }, 
+          {
+            type: 'hero-image',
+            src: '/images/projects/taxfix/wireframe.jpg',
+            alt: 'Beneficial AI Framework Model',
+            py: 'pb-0'
+          }, 
         ]
       },
 
@@ -117,6 +128,7 @@ export const taxfix: Project = {
         header: 'OUTCOME',
         number: '05',
         components: [
+
            {
             type: 'full-width-image',
             src: '/images/projects/taxfix/S1.jpg',
@@ -124,10 +136,11 @@ export const taxfix: Project = {
             py: 'pt-8 pb-6',
           }, 
           {
-            type: 'sublines',
-            content: 'RELEASE PACKAGE OVERVIEW & SCHEDULING (DATA ANONYMIZED)',
-            py: 'pt-0 pb-2',
-          }, 
+            type: 'feature-block',
+            skyline: 'Release Package Overview & Scheduling',
+            description: 'The release package dashboard provides tax experts with a high-level view of release packages across multiple markets and tax years. Users can manage production and staging environments, track version history, and schedule deployments, ensuring tax logic updates are coordinated across countries and aligned with annual regulatory changes.',
+            py: 'pt-3 pb-6',
+          },  
           {
             type: 'full-width-image',
             src: '/images/projects/taxfix/S2.jpg',
@@ -135,11 +148,11 @@ export const taxfix: Project = {
             py: 'pt-8 pb-6',
           }, 
           {
-            type: 'sublines',
-            content: 'NO-CODE TAX LOGIC BUILDER FOR INCOMES AND DEDUCTIONS FOR BUILDING CALCULATION LOGIC (DATA ANONYMIZED)',
-            py: 'pt-0 pb-2',
-
-          }, 
+            type: 'feature-block',
+            skyline: 'No-Code Tax Logic Builder',
+            description: 'The no-code visual rule editor enables tax experts to construct complex calculation logic without writing code. The interface maps entities to conditional rules that determine eligibility, thresholds, and applicable deductions. Branching logic and attribute relation-ships are displayed spatially, making interdependen-cies between tax rules transparent and editable across different layers.',
+            py: 'pt-3 pb-6',
+          },  
           {
             type: 'full-width-image',
             src: '/images/projects/taxfix/S3.jpg',
@@ -147,9 +160,10 @@ export const taxfix: Project = {
             py: 'pt-8 pb-6',
           }, 
           {
-            type: 'sublines',
-            content: 'QUESTION EDITOR WHERE TAX EXPERTS DEFINE THE CONTENT AND ORDER OF QUESTIONS END USERS WILL SEE (DATA ANONYMIZED)',
-            py: 'pt-0 pb-8',
+            type: 'feature-block',
+            skyline: 'Question Flow Editor',
+            description: 'To define the questions end-users will be shown in the Taxfix app, we build a dedicated authoring environment where tax experts define the questions end users encounter in different languages. Each question is linked to underlying data entities and attributes, with support for conditional display logic, multilingual content, and answer type configuration. The hierarchical sidebar reveals how questions relate to one another.',
+            py: 'pt-3 pb-12',
           }, 
         ]
       },  
