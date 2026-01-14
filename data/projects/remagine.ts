@@ -1,8 +1,8 @@
 import type { Project } from '../types';
 
-export const bankingPurpose: Project = {
+export const remagine: Project = {
   id: 4,
-  slug: 'banking-purpose',
+  slug: 'remagine',
   title: 'Remagine - Banking meets purpose',
   shortTitle: 'Remagine - Banking meets purpose',
   category: 'strategic-design',

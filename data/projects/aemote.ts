@@ -1,8 +1,8 @@
 import type { Project } from '../types';
 
-export const autismEmotions: Project = {
+export const aemote: Project = {
   id: 3,
-  slug: 'autism-emotions',
+  slug: 'aemote',
   title: 'æ:mote – Supporting people with autism in understanding emotions',
   shortTitle: 'æ:mote – Supporting people with autism in understanding emotions',
   category: 'strategic-design',

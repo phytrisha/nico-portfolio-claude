@@ -1,8 +1,8 @@
 import { beneficialAI } from './projects/beneficial-ai';
 import { socialObjectivity } from './projects/social-objectivity';
 import { transformativeExperiences } from './projects/transformative-experiences';
-import { autismEmotions } from './projects/autism-emotions';
-import { bankingPurpose } from './projects/banking-purpose';
+import { aemote } from './projects/aemote';
+import { remagine } from './projects/remagine';
 import { conceptLearning } from './projects/concept-learning';
 import { flows } from './projects/flows';
 import { zalando } from './projects/zalando';
@@ -17,13 +17,13 @@ export * from './types';
 export const projects: Project[] = [
   beneficialAI,
   socialObjectivity,
-  autismEmotions,
+  aemote,
   conceptLearning,
   taxfix,
   darwinproject,
   flows,
   zalando,
-  bankingPurpose,
+  remagine,
   transformativeExperiences,
   collection,
 ];
