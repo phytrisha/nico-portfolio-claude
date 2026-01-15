@@ -1,20 +1,185 @@
+export interface Collaborator {
+  name: string;
+  url?: string;
+  role?: 'with' | 'supervision';
+}
+
+// New sub-section component types
+export interface ParagraphComponent {
+  type: 'paragraph';
+  content: string;
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+}
+
+export interface InlineHeaderComponent {
+  type: 'inline-header';
+  content: string;
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+}
+
+export interface FeatureBlockComponent {
+  type: 'feature-block';
+  skyline: string; // monospace text
+  description: string; // paragraph below
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+}
+
+export interface DividerComponent {
+  type: 'divider';
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+}
+
+export interface HeroImageComponent {
+  type: 'hero-image';
+  src: string;
+  alt?: string;
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+}
+
+export interface HeroVideoComponent {
+  type: 'hero-video';
+  src: string;
+  alt?: string; // Alt text for accessibility
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+  thumb?: string; // Optional poster/thumbnail image
+  autoplay?: boolean; // Auto-play video
+  loop?: boolean; // Loop video
+  muted?: boolean; // Mute video
+  controls?: boolean; // Show controls (default: true)
+  playsinline?: boolean; // Play inline on mobile
+}
+
+export interface FullWidthImageComponent {
+  type: 'full-width-image';
+  src: string;
+  alt?: string;
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+}
+
+export interface FullWidthVideoComponent {
+  type: 'full-width-video';
+  src: string;
+  alt?: string; // Alt text for accessibility
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+  thumb?: string; // Optional poster/thumbnail image
+  autoplay?: boolean; // Auto-play video
+  loop?: boolean; // Loop video
+  muted?: boolean; // Mute video
+  controls?: boolean; // Show controls (default: true)
+  playsinline?: boolean; // Play inline on mobile
+}
+
+export interface SideBySideComponent {
+  type: 'side-by-side';
+  left: {
+    type: 'image' | 'video';
+    src: string;
+    alt?: string;
+  };
+  right: {
+    type: 'image' | 'video';
+    src: string;
+    alt?: string;
+  };
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+}
+
+export interface SublinesComponent {
+  type: 'sublines';
+  content: string; // monospace text
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+}
+
+export interface IntroTextComponent {
+  type: 'intro-text';
+  content: string; // intro text content
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+}
+
+export type SubSectionComponent =
+  | ParagraphComponent
+  | InlineHeaderComponent
+  | FeatureBlockComponent
+  | DividerComponent
+  | HeroImageComponent
+  | HeroVideoComponent
+  | FullWidthImageComponent
+  | FullWidthVideoComponent
+  | SideBySideComponent
+  | SublinesComponent
+  | IntroTextComponent;
+
+export interface SubSection {
+  header?: string; // optional section header
+  number?: string; // optional section number (e.g., "01", "02")
+  components: SubSectionComponent[];
+}
+
+export interface ProjectSection {
+  type: 'project-section';
+  subSections: SubSection[];
+}
+
+export interface MetadataLink {
+  name: string;
+  url: string;
+}
+
+export interface MetadataSection {
+  entries: string[]; // Simple array of text entries, each becomes one row
+  // Legacy fields - kept for backwards compatibility
+  degree?: string;
+  year?: string;
+  program?: string;
+  institution?: string;
+  supervision?: string[] | MetadataLink[];
+  collaborators?: string[] | MetadataLink[];
+  topics?: string[] | string;
+  type?: string;
+  row2?: string;
+}
+
+// Legacy content section (for backwards compatibility during migration)
 export interface ContentSection {
   type: 'text' | 'image' | 'quote' | 'two-column' | 'two-thirds-layout' | 'one-third-layout' | 'subheadline' | 'links';
   content?: string;
   image?: string;
-  leftContent?: string;
+  leftContent?: string | string[];
   rightContent?: string;
   rightImage?: string;
   leftImage?: string;
   layout?: 'image-text' | 'image-image' | 'text-image' | 'text-text';
   title?: string;
   links?: ExternalLink[];
+  listType?: 'bullet' | 'numbered';
+  items?: string[];
+  collaborators?: Collaborator[];
 }
 
 export interface ExternalLink {
   title: string;
   url: string;
+  description?: string;
 }
+
+export interface DescriptionTextBlock {
+  type: 'text';
+  content: string;
+}
+
+export interface DescriptionListBlock {
+  type: 'bullet' | 'numbered';
+  items: string[];
+}
+
+export interface DescriptionImageBlock {
+  type: 'image';
+  src: string;
+  alt?: string;
+  caption?: string;
+}
+
+export type DescriptionBlock = DescriptionTextBlock | DescriptionListBlock | DescriptionImageBlock;
 
 export interface Project {
   id: number;
@@ -23,12 +188,12 @@ export interface Project {
   shortTitle: string;
   category: 'strategic-design' | 'philosophy' | 'freelance';
   tags: string[];
+  year?: string; // Optional year field for projects
   color: string;
-  metadata: {
-    type: string;
-    topics: string;
-  };
-  description: string;
-  contentSections?: ContentSection[];
+  metadata: MetadataSection;
+  description: string | DescriptionBlock[];
+  projectSection?: ProjectSection; // New structure
+  contentSections?: ContentSection[]; // Legacy structure
   externalLinks?: ExternalLink[];
+  externalUrl?: string; // If provided, arrow button links to external URL instead of detail page
 }

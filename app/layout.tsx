@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nico - Strategic Designer & Philosopher",
-  description: "Portfolio of Nico - Strategic Designer studying Philosophy while UX freelancing. Exploring the intersection of design and philosophy.",
+  title: "Hi, I am nico...",
+  description: "Hi, I am Nico, a Strategic Designer studying Philosophy while UX freelancing. Exploring the intersection of design and philosophy.",
 };
 
 export default function RootLayout({
