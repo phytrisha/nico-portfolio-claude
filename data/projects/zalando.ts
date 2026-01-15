@@ -45,10 +45,10 @@ export const zalando: Project = {
             py: 'pb-0'
           },
           {
-            type: 'paragraph',
+            type: 'intro-text',
             content: 'Zalando SE is one of Europe`s leading online fashion platforms. The company operates multiple cross-platform stores selling shoes, fashion, and beauty products. The client sought to build a custom in-house HR tool where evaluations, promotions, salary adjustments, and developmental feedback, both peer-to-peer and from leadership, as well as mentoring relationships could be managed and maintained through a single internal portal. Used by over 15,000 employees, team leads, and management, this tool serves as the digital backbone of Zalando`s workforce operations. Given the sensitive nature of the relationships maintained on this platform, an extensive user-research-driven UX strategy and a carefully crafted UI design approach were essential to the tools conception and development.',
+            py: 'pt-12 pb-12',
           },
-          
         ]
       },
 
@@ -165,20 +165,4 @@ export const zalando: Project = {
       },  
     ]
   },
-
-  // External links
-  externalLinks: [
-    {
-      title: 'Read the thesis',
-      url: 'https://drive.google.com/file/d/1dezxLIDqTM2B9iwmS5YTkooCg5VFaoFv/view?usp=share_link',
-    },
-    {
-      title: 'Watch the keynote',
-      url: 'https://example.com/research',
-    },
-    {
-      title: 'Notion board',
-      url: 'https://www.notion.so/beneficialai/Approaching-Beneficial-AI-fd8feb8521624051a825aed94900081d',
-    },
-  ],
 };

@@ -13,8 +13,7 @@ export const aemote: Project = {
   // New metadata structure
   metadata: {
     entries: [
-      'Master Thesis (MA) · Strategic Design · October 2018 - January 2019 · HfG Schwäbisch Gmünd',
-      'With: [Mark F. Meyer](https://mark-gestaltung.de), [Luis Holeczek](https://mark-gestaltung.de)',
+      'Master Thesis (MA) · Strategic Design · Oct - Jan 2019 · HfG Schwäbisch Gmünd ·  With: [Mark F. Meyer](https://mark-gestaltung.de), [Luis Holeczek](https://mark-gestaltung.de)',
       'Supervision: [Prof. Benedikt Groß](https://www.hfg-gmuend.de/personen/david-oswald), [Prof. Julia Kühne](https://www.hfg-gmuend.de/en/people/ulrich-barnh%C3%B6fer), [Dr. Eileen Mandir](https://www.hfg-gmuend.de/en/people/ulrich-barnh%C3%B6fer)'
     ]
   },
@@ -45,11 +44,12 @@ export const aemote: Project = {
             alt: 'Research methodology overview',
             thumb: '/images/projects/aemote/coverimage01.jpg',
           },
+
           {
-            type: 'paragraph',
+            type: 'intro-text',
             content: 'æ:mote is a concept, designed to train people on the autistic spectrum disorder (ASD) in recognizing and understanding emotions. Developed in cooperation with the Paulinenpflege Winnenden, an institution that prepares young adults on the ASD for work, æ:mote can be seen as a first step in order to enable parents, as well as professional therapists to better support people on the ASD and to simplify their everyday life a bit. æ:mote combines a smartphone application used in face to face training sessions with the participant on the ASD with analog communication cards that are supposed to trigger guided conversations around certain topics that likely evoke specific emotions. The digital component can be placed in a cardboard stand on the table so the phone does not become a distracting part of the conversation. As soon as the software detects a certain emotion in the face of the conversation partner the autistic student is promted to make a guess about type of emotion he just witnessed in his counterpart and is presented with additional information or hints in case he / she has trouble identifying the facial expression correctly.',
-          },
-          
+            py: 'pt-12 pb-10',          
+          },          
         ]
       },
 
@@ -91,7 +91,8 @@ export const aemote: Project = {
           {
             type: 'feature-block',
             skyline: 'OPPORTUNITY AREA 1: STRESS',
-            description: 'Often, people on the ASD are constantly under a lot of stress. This is due to the disorder leading to a questioning of every given thing. Things that people, who are not on the ASD perhaps do not even notice, and if they do, do not question (e.g. "Why is this person wearing a red sweater today, when he was wearing a green one yesterday?"). Often, the many impulses we encounter on a daily basis lead to an overflow of impulses, which are typically not handled very well, possibly leading to panic attacks. This can lead to difficult situations in everyday life. The first opportunity area therefore considers blocking these impulses in certain situations or training handling them.'
+            description: 'Often, people on the ASD are constantly under a lot of stress. This is due to the disorder leading to a questioning of every given thing. Things that people, who are not on the ASD perhaps do not even notice, and if they do, do not question (e.g. "Why is this person wearing a red sweater today, when he was wearing a green one yesterday?"). Often, the many impulses we encounter on a daily basis lead to an overflow of impulses, which are typically not handled very well, possibly leading to panic attacks. This can lead to difficult situations in everyday life. The first opportunity area therefore considers blocking these impulses in certain situations or training handling them.',
+            py: 'pt-6 pb-8',
           },       
           {
             type: 'full-width-image',
@@ -145,7 +146,7 @@ export const aemote: Project = {
             type: 'feature-block',
             skyline: 'STRATEGY 1: RAPID TECH APPROACH',
             description: 'The idea behind the first strategy is to make use of the opportunity of testing with real people with ASD and therefore immediately validate the product. To tackle the issue of communication, we could therefore currently work with smartphone applications, smartwatches or other devices, that are common nowadays.',
-            py: 'pt-8 pb-0',
+            py: 'pt-6 pb-0',
           },       
           {
             type: 'full-width-image',

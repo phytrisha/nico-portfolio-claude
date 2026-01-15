@@ -8,7 +8,7 @@ export default function IntroText({ component }: IntroTextProps) {
   const pyClass = component.py || 'py-8';
 
   return (
-    <div className={`text-2xl leading-relaxed px-8 ${pyClass} my-0 font-light xs:text-xl sm:text-xl md:text-2xl lg:text-2xl`}>
+    <div className={`text-lg leading-[1.75] px-8 ${pyClass} my-0 font-medium xs:text-lg sm:text-lg md:text-xl lg:text-xl`}>
       {component.content}
     </div>
   );

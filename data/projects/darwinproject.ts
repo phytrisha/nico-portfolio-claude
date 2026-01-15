@@ -27,11 +27,6 @@ export const darwinproject: Project = {
 
 
 
-
-
-
-
-
 // New project section structure demonstrating all components
   projectSection: {
     type: 'project-section',
@@ -47,10 +42,10 @@ export const darwinproject: Project = {
             alt: 'Research methodology overview',
           },
           {
-            type: 'inline-header',
-            content: 'The Darwin Project is a speculative design thesis that confronts the environmental and social consequences of mass consumption by imagining alternative futures where products are deeply individualized, sustainably produced, and emotionally meaningful. Developed in a course of the masters programs second semester at HfG Schwäbisch Gmünd, the work projects current technological developments and consumption trends across three progressive phases, culminating in a provocative "lighthouse scenario" that challenges fundamental assumptions about product ownership, brand identity, and material consumption.', 
-            py: 'pt-12 pb-8',
-          },          
+            type: 'intro-text',
+            content: 'The Darwin Project is a speculative design thesis that confronts the environmental and social consequences of mass consumption by imagining alternative futures where products are deeply individualized, sustainably produced, and emotionally meaningful. Developed in a course of the masters programs second semester at HfG Schwäbisch Gmünd, the work projects current technological developments and consumption trends across three progressive phases, culminating in a provocative "lighthouse scenario" that challenges fundamental assumptions about product ownership, brand identity, and material consumption.',
+            py: 'pt-12 pb-10',
+          },           
         ]
       },
 
@@ -255,22 +250,4 @@ export const darwinproject: Project = {
       },
     ]
   },
-     
-      
-
-  // External links
-  externalLinks: [
-    {
-      title: 'Read the thesis',
-      url: 'https://drive.google.com/file/d/1dezxLIDqTM2B9iwmS5YTkooCg5VFaoFv/view?usp=share_link',
-    },
-    {
-      title: 'Watch the keynote',
-      url: 'https://example.com/research',
-    },
-    {
-      title: 'Notion board',
-      url: 'https://www.notion.so/beneficialai/Approaching-Beneficial-AI-fd8feb8521624051a825aed94900081d',
-    },
-  ],
 };

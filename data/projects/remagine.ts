@@ -38,9 +38,11 @@ export const remagine: Project = {
             alt: 'Beneficial AI Framework Model',
             py: 'pb-0'
           },
+
           {
-            type: 'paragraph',
-           content: 'Remagine, a financing platform offering banking services to high-growth companies with an ‘impact’ twist, has raised €20 million ($24M) in a Seed funding round. Its backers include former Global Head of Google Payment Jonathan Weiner and former COO of Venmo Michael Vaughn. The fintech specialises in offering revenue-based financing for high-growth and impact-led businesses, which tends to be more founder-friendly than equity or debt products, allowing them to quickly secure funding while staying in control of their business. Remagine’s Financing & Online Banking Application serves as primary touchpoint for their startup founder clientele of customers to apply for and manage their financing applications & repayment processes. Remagine’s clients also manage bank account access and credit card control for their employees through the application.',
+            type: 'intro-text',
+            content: 'Remagine, a financing platform offering banking services to high-growth companies with an ‘impact’ twist, has raised €20 million ($24M) in a Seed funding round. Its backers include former Global Head of Google Payment Jonathan Weiner and former COO of Venmo Michael Vaughn. The fintech specialises in offering revenue-based financing for high-growth and impact-led businesses, which tends to be more founder-friendly than equity or debt products, allowing them to quickly secure funding while staying in control of their business. Remagine’s Financing & Online Banking Application serves as primary touchpoint for their startup founder clientele of customers to apply for and manage their financing applications & repayment processes. Remagine’s clients also manage bank account access and credit card control for their employees through the application.',
+            py: 'pt-12 pb-12',
           },
           
         ]

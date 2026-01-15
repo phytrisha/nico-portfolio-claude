@@ -35,18 +35,12 @@ export const flows: Project = {
             type: 'hero-image',
             src: '/images/projects/flows/cover7.jpg',
             alt: 'Beneficial AI Framework Model',
-            py: 'pb-10'
           },
           {
-            type: 'paragraph',
-            content: 'Flows is a design application conceived to provide designers with a high degree of structure and scalability within projects while supporting variant formation and iterations. Flows is based on the principle of applying the class model established among developers to design, thereby creating an application that distinguishes itself from classic "drawing tools" such as Sketch or Illustrator through its structured approach to design. Class-based design and the resulting dependencies between elements lead to a significant increase in scalability within larger projects. Likewise, this approach enables the development of complex, interdependent design systems.',
-            py: 'pb-0',
+            type: 'intro-text',
+            content: 'Flows is a design application conceived to provide designers with a high degree of structure and scalability within projects while supporting variant formation and iterations. Flows is based on the principle of applying the class model established among developers to design, thereby creating an application that distinguishes itself from classic "drawing tools" such as Sketch or Illustrator through its structured approach to design. Class-based design and the resulting dependencies between elements lead to a significant increase in scalability within larger projects. Likewise, this approach enables the development of complex, interdependent design systems. The second fundamental principle upon which Flows was developed was to provide designers with an application that offers spaces for testing ideas and variations. This was realized through the so-called Playground, in which users can edit and further develop individual assets in detail, free from the structural constraints of their layout. Combined with prototyping functionalities and approaches to simplify design across different platforms and device sizes, flows represents a novel approach to the design of digital products.',
+            py: 'pt-12 pb-12',
           },
-          {
-            type: 'paragraph',
-            content: 'The second fundamental principle upon which Flows was developed was to provide designers with an application that offers spaces for testing ideas and variations. This was realized through the so-called Playground, in which users can edit and further develop individual assets in detail, free from the structural constraints of their layout. Combined with prototyping functionalities and approaches to simplify design across different platforms and device sizes, Flows represents a novel approach to the design of digital products.',
-          },
-          
         ]
       },
 
@@ -180,22 +174,6 @@ export const flows: Project = {
   
     ]
   },
-
-  // External links
-  externalLinks: [
-    {
-      title: 'Read the thesis',
-      url: 'https://drive.google.com/file/d/1dezxLIDqTM2B9iwmS5YTkooCg5VFaoFv/view?usp=share_link',
-    },
-    {
-      title: 'Watch the keynote',
-      url: 'https://example.com/research',
-    },
-    {
-      title: 'Notion board',
-      url: 'https://www.notion.so/beneficialai/Approaching-Beneficial-AI-fd8feb8521624051a825aed94900081d',
-    },
-  ],
 };
 
 

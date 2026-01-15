@@ -46,10 +46,11 @@ export const taxfix: Project = {
             py: 'pb-0'
           },
           {
-            type: 'paragraph',
+            type: 'intro-text',
             content: 'Taxfix offers an online tax assistance platform designed to simplify tax declarations to end users via a dynamic questionnaire to fully automate communication with the user and accommodate fiscal differences across countries, enabling private individuals to get back their tax refunds. In order for the user-facing application to work internal tooling needed to be devised to enable Taxfix`s tax experts to define tax logic independently from developers and without the need to code themselves. Based on an extensive research and synthesis phase, understanding tax experts workflows and needs, a no-code editor was conceptualized, wireframed, and tested across multiple ideation rounds. For this functional outline a design language was crafted, focussed on bringing visual structure and clarity to a tool that enables high-complexity workflows within dense information structures.',
+            py: 'pt-10 pb-10',          
           },
-          
+
         ]
       },
       
@@ -169,20 +170,4 @@ export const taxfix: Project = {
       },  
     ]
   },
-
-  // External links
-  externalLinks: [
-    {
-      title: 'Read the thesis',
-      url: 'https://drive.google.com/file/d/1dezxLIDqTM2B9iwmS5YTkooCg5VFaoFv/view?usp=share_link',
-    },
-    {
-      title: 'Watch the keynote',
-      url: 'https://example.com/research',
-    },
-    {
-      title: 'Notion board',
-      url: 'https://www.notion.so/beneficialai/Approaching-Beneficial-AI-fd8feb8521624051a825aed94900081d',
-    },
-  ],
 };
