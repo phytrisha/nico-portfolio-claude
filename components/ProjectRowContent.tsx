@@ -28,7 +28,7 @@ export default function ProjectRowContent({
       <div className="pl-0 pt-0 grid grid-cols-3 gap-12">
         {/* Left column - Title and metadata */}
         <div className='col-span-2 pb-12'>
-            <div className="text-xs leading-normal">{renderDescription(project.description)}</div>
+            <div className="text-5xl leading-normal">{renderDescription(project.description)}</div>
 
           {/*<div style={{ border: '0px solid black' }}>
            <div className="p-6" style={{ borderBottom: '1px solid black' }}>
