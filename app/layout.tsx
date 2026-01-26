@@ -28,6 +28,39 @@ export default function RootLayout({
       >
         {children}
         {modal}
+
+        {/* Fixed email button */}
+        <a
+          href="mailto:hello@nico.com"
+          className="fixed bottom-6 right-6 z-50 bg-black p-3 hover:opacity-80 transition-opacity"
+        >
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 80 80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="8"
+              y="18"
+              width="64"
+              height="44"
+              stroke="#ffffff"
+              strokeWidth="6"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+              fill="none"
+            />
+            <path
+              d="M8 18L40 46L72 18"
+              stroke="#ffffff"
+              strokeWidth="6"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+            />
+          </svg>
+        </a>
       </body>
     </html>
   );
