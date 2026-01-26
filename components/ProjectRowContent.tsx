@@ -27,7 +27,7 @@ export default function ProjectRowContent({
     >
       <div className="pl-0 pt-0 grid grid-cols-3 gap-12">
         {/* Left column - Title and metadata */}
-        <div className='col-span-2 pb-12'>
+        <div className='col-span-3 md:col-span-2 pb-12'>
             <div className="text-xs leading-normal">{renderDescription(project.description)}</div>
 
           {/*<div style={{ border: '0px solid black' }}>
@@ -41,7 +41,7 @@ export default function ProjectRowContent({
         </div>
 
         {/* Right column - Action button */}
-        <div className="flex items-end justify-end col-span-1">
+        <div className="flex items-end justify-end col-span-3 md:col-span-1">
           <Link
             href={project.externalUrl || `/project/${project.slug}`}
             target={project.externalUrl ? '_blank' : undefined}
