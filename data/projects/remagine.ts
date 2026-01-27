@@ -1,12 +1,12 @@
 import type { Project } from '../types';
 
 export const remagine: Project = {
-  id: 4,
+  id: 9,
   slug: 'remagine',
   title: 'Remagine - Banking meets purpose',
   shortTitle: 'Remagine - Banking meets purpose',
   category: 'strategic-design',
-  tags: ['FREELANCE WORK · FINTECH · UI / UX CONCEPT'],
+  tags: ['FREELANCE, FINTECH, BANKING, UI/UX DESIGN'],
   year: '2021',
   color: '#259918',
 

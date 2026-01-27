@@ -1,12 +1,12 @@
 import type { Project } from '../types';
 
 export const flows: Project = {
-  id: 11,
+  id: 7,
   slug: 'flows',
   title: 'Flows – Rethinking the development of user interfaces',
   shortTitle: 'Flows – Rethinking the development of user interfaces',
   category: 'strategic-design',
-  tags: ['BACHELOR THESIS (BA) · INTERACTION DESIGN · DESIGN TOOLS'],
+  tags: ['BACHELOR THESIS, INTERACTION DESIGN, DESIGN TOOLS'],
   year: '2017',
   color: '#FF6B00',
 

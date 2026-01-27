@@ -6,7 +6,7 @@ export const beneficialAI: Project = {
   title: 'Approaching Beneficial Artificial Intelligence in the Context of [...]',
   shortTitle: 'Approaching Beneficial Artificial Intelligence in the Context of [...]',
   category: 'strategic-design',
-  tags: ['MA-THESIS · STRATEGIC-DESIGN · BENEFICIAL AI'],
+  tags: ['MASTER THESIS, STRATEGIC DESIGN, BENEFICIAL AI'],
   year: '2019',
   color: '#FF6D01',
 

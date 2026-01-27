@@ -1,12 +1,12 @@
 import type { Project } from '../types';
 
 export const collection: Project = {
-  id: 15,
+  id: 11,
   slug: 'collection',
   title: 'A couple more things...',
   shortTitle: 'A couple more things...',
   category: 'freelance',
-  tags: ['INTERACTION DESIGN · FREELANCE WORK'],
+  tags: ['INTERACTION DESIGN & FREELANCE WORK'],
   year: '2014 – 2025',
   color: '#E6E2D8',
 

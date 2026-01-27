@@ -32,11 +32,11 @@ export default function RootLayout({
         {/* Fixed email button */}
         <a
           href="mailto:hello@nico.com"
-          className="fixed bottom-6 right-6 z-50 bg-black p-3 hover:opacity-80 transition-opacity"
+          className="fixed bottom-0 right-0 z-50 bg-black p-5 hover:opacity-80 transition-opacity"
         >
           <svg
-            width="36"
-            height="36"
+            width="40"
+            height="40"
             viewBox="0 0 80 80"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ export default function RootLayout({
               width="64"
               height="44"
               stroke="#ffffff"
-              strokeWidth="6"
+              strokeWidth="5"
               strokeLinecap="square"
               strokeLinejoin="miter"
               fill="none"
@@ -55,7 +55,7 @@ export default function RootLayout({
             <path
               d="M8 18L40 46L72 18"
               stroke="#ffffff"
-              strokeWidth="6"
+              strokeWidth="4"
               strokeLinecap="square"
               strokeLinejoin="miter"
             />

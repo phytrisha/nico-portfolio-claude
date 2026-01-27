@@ -1,12 +1,12 @@
 import type { Project } from '../types';
 
 export const zalando: Project = {
-  id: 13,
+  id: 8,
   slug: 'zalando',
   title: 'Zalando-Zonar: Internal HR-performance & feedback tooling',
   shortTitle: 'Zalando-Zonar: Internal HR-performance & feedback tooling',
   category: 'freelance',
-  tags: ['FREELANCE WORK · HR-TOOLING · PROFESSIONAL DEVELOPMENT · RESEARCH & CONCEPT'],
+  tags: ['FREELANCE, HR-TOOLING, RESEARCH & CONCEPT'],
   year: '2018',
   color: '#259918',
 

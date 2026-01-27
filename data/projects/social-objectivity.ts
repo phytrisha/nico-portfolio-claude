@@ -6,7 +6,7 @@ export const socialObjectivity: Project = {
   title: 'On the psychological underpinnings of social objectivity',
   shortTitle: 'On the psychological underpinnings of social objectivity',
   category: 'philosophy',
-  tags: ['PHILOSOPHY · SOCIAL EPISTEMOLOGY · INTERACTIONIST REASONING · STANDPOINT THEORY'],
+  tags: ['PHILOSOPHY, REASONING, SOCIAL EPISTEMOLOGY, PHILOSOPHY OF SCIENCE'],
   year: '2025',
   color: '#F290EE',
   metadata: {
