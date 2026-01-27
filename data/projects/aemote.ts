@@ -6,7 +6,7 @@ export const aemote: Project = {
   title: 'æ:mote – Supporting people with autism in understanding emotions',
   shortTitle: 'æ:mote – Supporting people with autism in understanding emotions',
   category: 'strategic-design',
-  tags: ['STRATEGIC DESIGN · SOCIAL DESIGN · ACCESSIBILITY'],
+  tags: ['STRATEGIC DESIGN, SOCIAL DESIGN, ACCESSIBILITY'],
   year: '2019',
   color: '#FF6D01',
 

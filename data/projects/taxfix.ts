@@ -1,12 +1,12 @@
 import type { Project } from '../types';
 
 export const taxfix: Project = {
-  id: 14,
+  id: 5,
   slug: 'taxfix',
   title: 'Taxfix project workhorse',
   shortTitle: 'Taxfix project workhorse',
   category: 'freelance',
-  tags: ['FREELANCE WORK · TAX LOGIC · NO-CODE INTERFACES ·  REASEARCH, CONCEPT & TESTING'],
+  tags: ['FREELANCE, TAX LOGIC, REASEARCH, CONCEPT, TESTING, UI/UX DESIGN'],
   year: '2021',
   color: '#259918',
 

@@ -1,12 +1,12 @@
 import type { Project } from '../types';
 
 export const conceptLearning: Project = {
-  id: 7,
+  id: 4,
   slug: 'concept-learning',
   title: 'Approaching mechanisms of concept learning in the context of transforming ideologies',
   shortTitle: 'Approaching mechanisms of concept learning in the context of transforming ideologies',
   category: 'philosophy',
-  tags: ['PHILOSOPHY · IDEOLOGY CRITIQUE · CONCEPTUAL ACT THEORY · CRITICAL SOCIAL ONTOLOGY'],
+  tags: ['PHILOSOPHY, IDEOLOGY, CONCEPTUAL ACT THEORY · SOCIAL ONTOLOGY'],
   year: '2024',
   color: '#F290EE',
   metadata: {
