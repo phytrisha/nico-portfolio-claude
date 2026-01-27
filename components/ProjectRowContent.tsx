@@ -41,16 +41,16 @@ export default function ProjectRowContent({
         </div>
 
         {/* Right column - Action button */}
-        <div className="flex items-end justify-end col-span-3 md:col-span-1">
+        <div className="mx-[calc(50%-50vw)] md:mx-0 w-screen md:w-auto flex items-end justify-center md:justify-end col-span-3 md:col-span-1">
           <Link
             href={project.externalUrl || `/project/${project.slug}`}
             target={project.externalUrl ? '_blank' : undefined}
             rel={project.externalUrl ? 'noopener noreferrer' : undefined}
+            className="block w-full md:w-auto"
           >
-            <div className="bg-black p-8 cursor-pointer">
+            <div className="bg-black p-4 md:p-8 flex items-center justify-center cursor-pointer">
               <svg
-                width="100"
-                height="100"
+                className="w-12 h-12 md:w-[100px] md:h-[100px]"
                 viewBox="0 0 80 80"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
