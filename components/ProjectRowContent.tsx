@@ -27,7 +27,7 @@ export default function ProjectRowContent({
     >
       <div className="pl-0 pt-0 grid grid-cols-3 gap-12">
         {/* Left column - Title and metadata */}
-        <div className='col-span-3 md:col-span-2 pb-12'>
+        <div className='col-span-3 md:col-span-2 pb-2 md:pb-12'>
             <div className="text-5xl leading-normal">{renderDescription(project.description)}</div>
 
           {/*<div style={{ border: '0px solid black' }}>
@@ -48,7 +48,7 @@ export default function ProjectRowContent({
             rel={project.externalUrl ? 'noopener noreferrer' : undefined}
             className="block w-full md:w-auto"
           >
-            <div className="bg-black p-4 md:p-8 flex items-center justify-center cursor-pointer">
+            <div className="bg-black p-10 md:p-8 flex items-center justify-center cursor-pointer">
               <svg
                 className="w-12 h-12 md:w-[100px] md:h-[100px]"
                 viewBox="0 0 80 80"
