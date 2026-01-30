@@ -48,12 +48,12 @@ export default function SubSection({ subSection }: SubSectionProps) {
   return (
     <div>
       {subSection.header && (
-        <div className="bg-black py-4 px-8 flex justify-between items-center">
-          <h2 className="text-xs text-white font-medium font-mono tracking-wider text-transform: uppercase">
+        <div className="py-4 px-8 flex justify-between items-center" style={{ backgroundColor: 'var(--email-btn-bg)' }}>
+          <h2 className="text-xs font-medium font-mono tracking-wider text-transform: uppercase" style={{ color: 'var(--email-btn-icon)' }}>
             {subSection.header}
           </h2>
           {subSection.number && (
-            <span className="text-xs text-white font-medium font-mono tracking-wider">
+            <span className="text-xs font-medium font-mono tracking-wider" style={{ color: 'var(--email-btn-icon)' }}>
               {subSection.number}
             </span>
           )}

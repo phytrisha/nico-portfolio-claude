@@ -61,7 +61,7 @@ export default function HeroSection() {
   }, [isTypewriterComplete]);
 
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center">
+    <section className="min-h-screen flex items-center justify-center" style={{ backgroundColor: 'var(--bg-hero)' }}>
       <div className="w-[80%] mt-64">
         <h1 className="text-[30px] md:text-6xl lg:text-[86px] font-bold leading-tight">
           <div className="text-white mb-24 min-h-[1.2em]">{displayedText}</div>

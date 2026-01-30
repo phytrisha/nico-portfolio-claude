@@ -42,11 +42,12 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
             <div className="w-full h-full flex flex-col md:flex-row">
 
               {/* Main content area */}
-              <div className="flex-1 bg-[#EEEFEB] text-black relative overflow-y-auto">
+              <div className="flex-1 relative overflow-y-auto" style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
                 {/* Close button */}
                 <button
                   onClick={handleClose}
-                  className="fixed top-0 right-0 z-50 bg-black text-white w-20 h-20 flex items-center justify-center cursor-pointer transition-transform"
+                  className="fixed top-0 right-0 z-50 w-20 h-20 flex items-center justify-center cursor-pointer transition-transform"
+                  style={{ backgroundColor: 'var(--email-btn-bg)', color: 'var(--email-btn-icon)' }}
                 >
                   <svg
                     width="50"
@@ -71,7 +72,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
 
                   {/* Project Section - All content in one div */}
                   {project.projectSection && (
-                    <div className="border mb-16">
+                    <div className="mb-16" style={{ border: '1px solid var(--border-color)' }}>
                       <ProjectSection projectSection={project.projectSection} />
                     </div>
                   )}
