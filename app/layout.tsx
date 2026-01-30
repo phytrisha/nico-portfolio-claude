@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,46 +23,51 @@ export default function RootLayout({
   modal: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} antialiased`}
         style={{ fontFamily: 'var(--font-inter), Inter, sans-serif' }}
       >
-        {children}
-        {modal}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+          {modal}
 
-        {/* Fixed email button */}
-        <a
-          href="mailto:hello@nico.com"
-          className="fixed bottom-0 right-0 z-50 bg-black p-5 hover:opacity-80 transition-opacity"
-        >
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 80 80"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <ThemeToggle />
+
+          {/* Fixed email button */}
+          <a
+            href="mailto:hello@nico.com"
+            className="fixed bottom-0 right-0 z-50 p-5 hover:opacity-80 transition-opacity"
+            style={{ backgroundColor: 'var(--email-btn-bg)' }}
           >
-            <rect
-              x="8"
-              y="18"
-              width="64"
-              height="44"
-              stroke="#ffffff"
-              strokeWidth="5"
-              strokeLinecap="square"
-              strokeLinejoin="miter"
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 80 80"
               fill="none"
-            />
-            <path
-              d="M8 18L40 46L72 18"
-              stroke="#ffffff"
-              strokeWidth="4"
-              strokeLinecap="square"
-              strokeLinejoin="miter"
-            />
-          </svg>
-        </a>
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="8"
+                y="18"
+                width="64"
+                height="44"
+                stroke="var(--email-btn-icon)"
+                strokeWidth="5"
+                strokeLinecap="square"
+                strokeLinejoin="miter"
+                fill="none"
+              />
+              <path
+                d="M8 18L40 46L72 18"
+                stroke="var(--email-btn-icon)"
+                strokeWidth="4"
+                strokeLinecap="square"
+                strokeLinejoin="miter"
+              />
+            </svg>
+          </a>
+        </ThemeProvider>
       </body>
     </html>
   );

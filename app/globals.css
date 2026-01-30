@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+:root {
+  --bg-primary: #EEEFEB;
+  --bg-hero: #000000;
+  --text-primary: #000000;
+  --text-hero: #ffffff;
+  --border-color: #000000;
+  --email-btn-bg: #000000;
+  --email-btn-icon: #ffffff;
+}
+
+.dark {
+  --bg-primary: #1a1a1a;
+  --bg-hero: #0a0a0a;
+  --text-primary: #ffffff;
+  --text-hero: #ffffff;
+  --border-color: #ffffff;
+  --email-btn-bg: #ffffff;
+  --email-btn-icon: #000000;
+}
+
 *,
 *::before,
 *::after {
@@ -8,8 +28,8 @@
 
 body {
   font-family: var(--font-inter), Inter, sans-serif;
-  background: #000000;
-  color: #ffffff;
+  background: var(--bg-hero);
+  color: var(--text-hero);
   overflow-x: hidden;
 }
 

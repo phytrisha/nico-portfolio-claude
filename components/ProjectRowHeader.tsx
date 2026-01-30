@@ -18,11 +18,11 @@ export default function ProjectRowHeader({
     <div
       className="cursor-pointer w-full"
       style={{
-        backgroundColor: isExpanded ? project.color : '#EEEFEB'
+        backgroundColor: isExpanded ? project.color : 'var(--bg-primary)'
       }}
       onClick={onClick}
     >
-      <div className="flex flex-col justify-center font-sans text-black px-0 py-8">
+      <div className="flex flex-col justify-center font-sans px-0 py-8" style={{ color: 'var(--text-primary)' }}>
 
         {/* First line - Title and expand button */}
         <div className="flex items-center justify-between mb-6">
@@ -33,18 +33,18 @@ export default function ProjectRowHeader({
         {/* Second line - Table format with ID, Tags, and Year */}
         <div
           className="flex items-center gap-0 text-xs font-mono mb-2"
-          style={{ border: '1px solid black' }}
+          style={{ border: '1px solid var(--border-color)' }}
         >
           <div
             className="px-4 py-2 font-medium"
-            style={{ borderRight: '1px solid black' }}
+            style={{ borderRight: '1px solid var(--border-color)' }}
           >
             {project.id.toString().padStart(2, '0')}
           </div>
           {project.year && (
             <div 
               className="px-4 py-2 font-medium"
-              style={{ borderRight: '1px solid black' }}>
+              style={{ borderRight: '1px solid var(--border-color)' }}>
               {project.year}
             </div>
           )}
@@ -52,7 +52,7 @@ export default function ProjectRowHeader({
             <div
               key={i}
               className="px-4 py-2"
-              //style={{ borderRight: '1px solid black' }}
+              //style={{ borderRight: '1px solid var(--border-color)' }}
             >
               {tag}
             </div>
