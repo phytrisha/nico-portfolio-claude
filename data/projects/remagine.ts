@@ -3,10 +3,10 @@ import type { Project } from '../types';
 export const remagine: Project = {
   id: 9,
   slug: 'remagine',
-  title: 'Remagine - Banking meets purpose',
-  shortTitle: 'Remagine - Banking meets purpose',
-  category: 'strategic-design',
-  tags: ['FREELANCE, FINTECH, BANKING, UI/UX DESIGN'],
+  title: 'Case Study: Solving for different banking needs of fintech stakeholder groups',
+  shortTitle: 'Case Study: Solving for different banking needs of fintech stakeholder groups',
+  category: 'CLIENT WORK',
+  tags: ['CLIENT: REMAGINE, CLIENT WORK, UI/UX DESIGN'],
   year: '2021',
   color: '#259918',
 
@@ -14,14 +14,14 @@ export const remagine: Project = {
   // Use [text](url) syntax for inline links
   metadata: {
     entries: [
-      'Client work · Feb - July 2022, BERLIN · CLIENT: Remagine',
+      'CLIENT: REMAGINE · Client work · Feb - July 2022, BERLIN',
       'involvement: UX CONCEPT, UI Design'
     ]
   },
 
 
 
-  description: 'Remagine is a financial platform that provides banking services to high-growth enterprises, distinguished by its explicit commitment to impact-driven business models. Specializing in revenue-based financing, the company offers an alternative to conventional equity or debt instruments, that is typically more favorable to founders, enabling rapid access to capital while preserving entrepreneurial autonomy. Remagine’s Financing & Online Banking Application serves as primary touchpoint to apply for and manage financing applications, repayment processes, bank account access and credit card control. A plattform wide responsive reconcept was devised, rethinking major navigation flows from the ground up, and extending the existing design language to accommodate newly introduced features, while maintaining the brand’s distinctive and assertive visual identity.',
+  description: 'Remagine is a financial platform that provides banking services to high-growth enterprises, distinguished by its explicit commitment to impact-driven business models. Remagine’s Financing & Online Banking Application serves as primary touchpoint to apply for and manage financing applications, repayment processes, bank account access and credit card control. A plattform wide responsive reconcept was devised, rethinking major navigation flows from the ground up, and extending the existing design language to accommodate newly introduced features, while maintaining the brand’s distinctive and assertive visual identity.',
 
 // New project section structure demonstrating all components
   projectSection: {

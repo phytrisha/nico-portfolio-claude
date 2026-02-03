@@ -72,11 +72,11 @@ export default function Metadata({ metadata }: MetadataProps) {
   return (
     <div
       className="flex flex-col gap-0 text-xs font-mono text-transform: uppercase tracking-wide"
-      style={{ border: '1px solid var(--border-color)' }}
+      style={{ border: '1px solid var(--border-projectdetail)' }}
     >
       {entries.map((entry, index) => (
         <div key={index}>
-          {index > 0 && <div style={{ borderTop: '1px solid var(--border-color)' }} />}
+          {index > 0 && <div style={{ borderTop: '1px solid var(--border-projectdetail)' }} />}
           <div className="px-8 py-4 font-medium">
             {parseTextWithLinks(entry)}
           </div>

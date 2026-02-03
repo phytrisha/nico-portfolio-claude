@@ -35,45 +35,11 @@ export default function RootLayout({
         {/* Fixed email button */}
         <a
           href="mailto:hello@nico.com"
-          className="fixed bottom-0 right-0 z-50 bg-black p-5 hover:opacity-80 transition-opacity"
+          className="fixed bottom-0 right-0 z-50 p-5 hover:opacity-80 transition-opacity" style={{ backgroundColor: 'var(--externallink-bg)' }}
         >
           <span className="text-4xl">👋</span>
         </a>
           <ThemeToggle />
-
-          {/* Fixed email button */}
-          <a
-            href="mailto:hello@nico.com"
-            className="fixed bottom-0 right-0 z-50 p-5 hover:opacity-80 transition-opacity"
-            style={{ backgroundColor: 'var(--email-btn-bg)' }}
-          >
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 80 80"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="8"
-                y="18"
-                width="64"
-                height="44"
-                stroke="var(--email-btn-icon)"
-                strokeWidth="5"
-                strokeLinecap="square"
-                strokeLinejoin="miter"
-                fill="none"
-              />
-              <path
-                d="M8 18L40 46L72 18"
-                stroke="var(--email-btn-icon)"
-                strokeWidth="4"
-                strokeLinecap="square"
-                strokeLinejoin="miter"
-              />
-            </svg>
-          </a>
         </ThemeProvider>
       </body>
     </html>

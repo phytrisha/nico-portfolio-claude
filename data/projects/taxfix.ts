@@ -3,10 +3,10 @@ import type { Project } from '../types';
 export const taxfix: Project = {
   id: 5,
   slug: 'taxfix',
-  title: 'Taxfix project workhorse',
-  shortTitle: 'Taxfix project workhorse',
-  category: 'freelance',
-  tags: ['FREELANCE, TAX LOGIC, REASEARCH, CONCEPT, TESTING, UI/UX DESIGN'],
+  title: 'Case Study: Crafting a no-code tax logic editor that enables flexibility while managing complexity',
+  shortTitle: 'Case Study: No-code tax logic editor that enables flexibility while managing complexity',
+  category: 'CLIENT WORK',
+  tags: ['CLIENT: TAXFIX, CLIENT WORK, RESEARCH & DESIGN'],
   year: '2021',
   color: '#259918',
 
@@ -16,7 +16,7 @@ export const taxfix: Project = {
   // Use [text](url) syntax for inline links
   metadata: {
     entries: [
-      'Client work · Feb - OCT 2022, BERLIN · CLIENT: TAXFIX',
+      'CLIENT: TAXFIX · Freelance work · Feb - OCT 2022, BERLIN',
       'Role / involvement: USER RESEARCH, UX CONCEPT & TESTING · TEAM: Internal taxfix team, henri thomee'
     ]
   },

@@ -19,7 +19,7 @@ export default function ProjectRowContent({
 }: ProjectRowContentProps) {
   return (
     <motion.div
-      style={{ color: 'var(--text-primary)' }}
+      style={{ color: 'var(--text-projectpreview)' }}
       initial={{ height: 0, backgroundColor: 'transparent' }}
       animate={{ height: 'auto', backgroundColor: project.color }}
       exit={{ height: 0, backgroundColor: 'transparent' }}
@@ -48,7 +48,7 @@ export default function ProjectRowContent({
             rel={project.externalUrl ? 'noopener noreferrer' : undefined}
             className="block w-full md:w-auto"
           >
-            <div className="p-10 md:p-8 flex items-center justify-center cursor-pointer" style={{ backgroundColor: 'var(--email-btn-bg)' }}>
+            <div className="p-10 md:p-8 flex items-center justify-center cursor-pointer" style={{ backgroundColor: '#000000' }}>
               <svg
                 className="w-12 h-12 md:w-[100px] md:h-[100px]"
                 viewBox="0 0 80 80"
@@ -57,7 +57,7 @@ export default function ProjectRowContent({
               >
                 <path
                   d="M10 70L70 10M73 10H25M70 10V55"
-                  stroke="var(--email-btn-icon)"
+                  stroke="#EDEBE3"
                   strokeWidth="6"
                   strokeLinecap="butt"
                   strokeLinejoin="miter"

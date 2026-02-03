@@ -3,10 +3,10 @@ import type { Project } from '../types';
 export const zalando: Project = {
   id: 8,
   slug: 'zalando',
-  title: 'Zalando-Zonar: Internal HR-performance & feedback tooling',
-  shortTitle: 'Zalando-Zonar: Internal HR-performance & feedback tooling',
-  category: 'freelance',
-  tags: ['FREELANCE, HR-TOOLING, RESEARCH & CONCEPT'],
+  title: 'Case Study: Designing for trust and engagement around sensitive personal data',
+  shortTitle: 'Case Study: Designing for trust and engagement around sensitive personal data',
+  category: 'CLIENT WORK',
+  tags: ['CLIENT: ZALANDO, CLIENT WORK, RESEARCH & CONCEPT'],
   year: '2018',
   color: '#259918',
 
@@ -15,14 +15,14 @@ export const zalando: Project = {
   // Use [text](url) syntax for inline links
   metadata: {
     entries: [
-      'Client work · Sept 2018 - July 2019, BERLIN · CLIENT: zalando',
+      'CLIENT: ZALANDO · Client work · Sept 2018 - July 2019, BERLIN',
       'involvement: RESEARCH, concept, ui design & TESTING · TEAM: Internal zalando team, henri thomee'
     ]
   },
 
 
 
-  description: 'Zalando SE is one of Europe`s leading online fashion platforms. The company operates multiple cross-platform stores selling shoes, fashion, and beauty products. The client sought to build a custom in-house HR tool where evaluations, promotions, salary adjustments, and developmental feedback, both peer-to-peer and from leadership, as well as mentoring relationships could be managed and maintained through a single internal portal. Used by over 15,000 employees, team leads, and management, this tool serves as the digital backbone of Zalando`s workforce operations. Given the sensitive nature of the relationships maintained on this platform, an extensive user-research-driven UX strategy and a carefully crafted UI design approach were essential to the tools conception and development.',
+  description: 'Zalando sought to build a custom in-house HR tool where evaluations, promotions, salary adjustments, and developmental feedback, both peer-to-peer and from leadership, as well as mentoring relationships could be managed and maintained through a single internal portal. Used by over 15,000 employees, team leads, and management, this tool serves as the digital backbone of Zalando`s workforce operations. Given the sensitive nature of the relationships maintained on this platform, an extensive user-research-driven UX strategy and a carefully crafted UI design approach were essential to the tools conception and development.',
 
 
 

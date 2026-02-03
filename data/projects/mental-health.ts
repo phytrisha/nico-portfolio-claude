@@ -5,7 +5,7 @@ export const mentalHealth: Project = {
   slug: 'mental-health',
   title: 'Selfapy - Prescription-based online therapy',
   shortTitle: 'Selfapy - Prescription-based online therapy',
-  category: 'strategic-design',
+  category: 'CLIENT WORK',
   tags: ['FREELANCE WORK · MINDFULNESS · ONLINE THERAPY · UI / UX OPTIMIZATION'],
   year: '2021',
   color: '#259918',

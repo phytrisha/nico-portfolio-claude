@@ -21,7 +21,7 @@ export default function ProjectRow({ project, isExpanded, onClick }: ProjectRowP
       className="w-full"
       style={{
         backgroundColor: isExpanded ? project.color : 'var(--bg-primary)',
-        borderBottom: '1px solid var(--border-color)',
+        borderBottom: '1px solid var(--border-colorunderlinepreview)',
         overflow: 'hidden'
       }}
     >

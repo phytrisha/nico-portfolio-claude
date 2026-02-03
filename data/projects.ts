@@ -9,6 +9,7 @@ import { zalando } from './projects/zalando';
 import { taxfix } from './projects/taxfix';
 import { darwinproject } from './projects/darwinproject';
 import { collection } from './projects/collection';
+import { BT } from './projects/BT';
 
 import { Project } from './types';
 
@@ -18,6 +19,7 @@ export const projects: Project[] = [
   beneficialAI,
   socialObjectivity,
   aemote,
+  BT,
   conceptLearning,
   taxfix,
   darwinproject,

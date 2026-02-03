@@ -47,7 +47,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                 <button
                   onClick={handleClose}
                   className="fixed top-0 right-0 z-50 w-20 h-20 flex items-center justify-center cursor-pointer transition-transform"
-                  style={{ backgroundColor: 'var(--email-btn-bg)', color: 'var(--email-btn-icon)' }}
+                  style={{ backgroundColor: 'var(--externallink-bg)', color: 'var(--close-btn-icon)' }}
                 >
                   <svg
                     width="50"
@@ -72,7 +72,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
 
                   {/* Project Section - All content in one div */}
                   {project.projectSection && (
-                    <div className="mb-16" style={{ border: '1px solid var(--border-color)' }}>
+                    <div className="mb-16" style={{ border: '1px solid var(--border-projectdetail)' }}>
                       <ProjectSection projectSection={project.projectSection} />
                     </div>
                   )}

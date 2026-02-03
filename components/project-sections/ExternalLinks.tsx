@@ -20,7 +20,7 @@ export default function ExternalLinks({ links, projectColor }: ExternalLinksProp
               className="group block"
             >
               {/* Black square with colored arrow */}
-              <div className="w-full relative" style={{ paddingBottom: '100%', backgroundColor: 'var(--email-btn-bg)' }}>
+              <div className="w-full relative" style={{ paddingBottom: '100%', backgroundColor: 'var(--externallink-bg)' }}>
                 <div className="absolute inset-0 flex items-center justify-center sm:p-12 md:p-16 lg:p-24 xl:p-28 ">
                   <svg
                     className="w-full h-full"
