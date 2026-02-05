@@ -1,17 +1,23 @@
+'use client';
+
 import type { HeroImageComponent } from '@/data/types';
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 interface HeroImageProps {
   component: HeroImageComponent;
 }
 
 export default function HeroImage({ component }: HeroImageProps) {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === 'dark';
+  const src = isDark && component.darkSrc ? component.darkSrc : component.src;
   const pyClass = component.py || 'my-0';
 
   return (
     <div className={`w-full ${pyClass}`}>
       <Image
-        src={component.src}
+        src={src}
         alt={component.alt || ''}
         width={1920}
         height={1080}

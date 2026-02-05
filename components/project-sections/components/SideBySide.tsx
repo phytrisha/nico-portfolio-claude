@@ -1,11 +1,18 @@
+'use client';
+
 import type { SideBySideComponent } from '@/data/types';
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 interface SideBySideProps {
   component: SideBySideComponent;
 }
 
 export default function SideBySide({ component }: SideBySideProps) {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === 'dark';
+  const leftSrc = isDark && component.left.darkSrc ? component.left.darkSrc : component.left.src;
+  const rightSrc = isDark && component.right.darkSrc ? component.right.darkSrc : component.right.src;
   const pyClass = component.py || 'py-8';
 
   return (
@@ -14,7 +21,7 @@ export default function SideBySide({ component }: SideBySideProps) {
       <div className="w-1/2">
         {component.left.type === 'image' ? (
           <Image
-            src={component.left.src}
+            src={leftSrc}
             alt={component.left.alt || ''}
             width={960}
             height={540}
@@ -22,7 +29,7 @@ export default function SideBySide({ component }: SideBySideProps) {
           />
         ) : (
           <video
-            src={component.left.src}
+            src={leftSrc}
             controls
             className="w-full h-auto"
           />
@@ -33,7 +40,7 @@ export default function SideBySide({ component }: SideBySideProps) {
       <div className="w-1/2">
         {component.right.type === 'image' ? (
           <Image
-            src={component.right.src}
+            src={rightSrc}
             alt={component.right.alt || ''}
             width={960}
             height={540}
@@ -41,7 +48,7 @@ export default function SideBySide({ component }: SideBySideProps) {
           />
         ) : (
           <video
-            src={component.right.src}
+            src={rightSrc}
             controls
             className="w-full h-auto"
           />

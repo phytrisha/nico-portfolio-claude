@@ -117,6 +117,7 @@ export const beneficialAI: Project = {
           {
             type: 'full-width-image',
             src: '/images/projects/beneficial-ai/Model3.jpg',
+            darkSrc: '/images/projects/beneficial-ai/Model3_dark.jpg',
             alt: 'Research methodology overview',
             py: 'pb-4'
 

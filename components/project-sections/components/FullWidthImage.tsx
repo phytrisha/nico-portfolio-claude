@@ -1,17 +1,23 @@
+'use client';
+
 import type { FullWidthImageComponent } from '@/data/types';
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 interface FullWidthImageProps {
   component: FullWidthImageComponent;
 }
 
 export default function FullWidthImage({ component }: FullWidthImageProps) {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === 'dark';
+  const src = isDark && component.darkSrc ? component.darkSrc : component.src;
   const pyClass = component.py || 'py-8';
 
   return (
     <div className={`w-full px-8 ${pyClass}`}>
       <Image
-        src={component.src}
+        src={src}
         alt={component.alt || ''}
         width={1920}
         height={1080}

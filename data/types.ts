@@ -32,6 +32,7 @@ export interface DividerComponent {
 export interface HeroImageComponent {
   type: 'hero-image';
   src: string;
+  darkSrc?: string; // Optional dark mode variant
   alt?: string;
   py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
@@ -39,9 +40,11 @@ export interface HeroImageComponent {
 export interface HeroVideoComponent {
   type: 'hero-video';
   src: string;
+  darkSrc?: string; // Optional dark mode variant
   alt?: string; // Alt text for accessibility
   py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
   thumb?: string; // Optional poster/thumbnail image
+  darkThumb?: string; // Optional dark mode poster/thumbnail
   autoplay?: boolean; // Auto-play video
   loop?: boolean; // Loop video
   muted?: boolean; // Mute video
@@ -52,6 +55,7 @@ export interface HeroVideoComponent {
 export interface FullWidthImageComponent {
   type: 'full-width-image';
   src: string;
+  darkSrc?: string; // Optional dark mode variant
   alt?: string;
   py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
@@ -59,9 +63,11 @@ export interface FullWidthImageComponent {
 export interface FullWidthVideoComponent {
   type: 'full-width-video';
   src: string;
+  darkSrc?: string; // Optional dark mode variant
   alt?: string; // Alt text for accessibility
   py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
   thumb?: string; // Optional poster/thumbnail image
+  darkThumb?: string; // Optional dark mode poster/thumbnail
   autoplay?: boolean; // Auto-play video
   loop?: boolean; // Loop video
   muted?: boolean; // Mute video
@@ -74,11 +80,13 @@ export interface SideBySideComponent {
   left: {
     type: 'image' | 'video';
     src: string;
+    darkSrc?: string; // Optional dark mode variant
     alt?: string;
   };
   right: {
     type: 'image' | 'video';
     src: string;
+    darkSrc?: string; // Optional dark mode variant
     alt?: string;
   };
   py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')

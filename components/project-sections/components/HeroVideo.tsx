@@ -1,18 +1,25 @@
+'use client';
+
 import type { HeroVideoComponent } from '@/data/types';
+import { useTheme } from 'next-themes';
 
 interface HeroVideoProps {
   component: HeroVideoComponent;
 }
 
 export default function HeroVideo({ component }: HeroVideoProps) {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === 'dark';
+  const src = isDark && component.darkSrc ? component.darkSrc : component.src;
+  const thumb = isDark && component.darkThumb ? component.darkThumb : component.thumb;
   const pyClass = component.py || 'my-0';
 
   return (
     <div className={`w-full ${pyClass}`}>
       <video
-        src={component.src}
+        src={src}
         controls={component.controls !== false}
-        poster={component.thumb}
+        poster={thumb}
         autoPlay={component.autoplay}
         loop={component.loop}
         muted={component.muted}
