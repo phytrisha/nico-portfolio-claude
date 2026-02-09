@@ -124,7 +124,7 @@ export const collection: Project = {
         components: [
             {
             type: 'hero-image',
-            src: '/images/projects/collection/Zasta bento.jpg',
+            src: '/images/projects/collection/cover zasta.jpg',
             alt: 'Beneficial AI Framework Model',
           }, 
           {

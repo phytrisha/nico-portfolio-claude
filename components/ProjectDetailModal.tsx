@@ -68,7 +68,10 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                   </h1>
 
                   {/* Metadata Section */}
-                  <Metadata projectId={project.id} metadata={project.metadata} />
+                  <div className="-mb-[1px]">
+                   <Metadata projectId={project.id} metadata={project.metadata} />
+                  </div>
+
 
                   {/* Project Section - All content in one div */}
                   {project.projectSection && (

@@ -73,7 +73,8 @@ export const zalando: Project = {
           },
            {
             type: 'full-width-image',
-            src: '/images/projects/zalando/P4.png',
+            src: '/images/projects/zalando/P1.png',
+            darkSrc: '/images/projects/zalando/P1_dark.jpg',
             alt: 'Research methodology overview'
           },  
         ]
@@ -88,13 +89,14 @@ export const zalando: Project = {
           {
             type: 'paragraph',
             content: 'User research across Zalandos workforce revealed four interconnected pain points: A review process that felt opaque and arbitrary, feedback that lacked actionable direction, personal development that was difficult to track over time, and a cumbersome feedback system that placed unequal burden on a few ‘unicorn’ contributors. These insights were translated into high level design opportunities: Transparent communication of process stages and reasoning, structured feedback categories that motivate action, visual metrics for tracking growth across review cycles, and a lightweight mechanism for distributing feedback responsibilities equitably. This framework guided design decisions for a tool now serving over 15,000 employees at Zalando.',
-            py: 'pt-8 pb-2',
+            py: 'pt-8 pb-6',
           },
            {
             type: 'full-width-image',
             src: '/images/projects/zalando/P2.jpg',
+            darkSrc: '/images/projects/zalando/P2_dark.jpg',
             alt: 'Research methodology overview',
-            py: 'pt-8 pb-8',
+            py: 'pt-8 pb-14',
           },  
         ]
       },
@@ -112,7 +114,8 @@ export const zalando: Project = {
           },
            {
             type: 'full-width-image',
-            src: '/images/projects/zalando/P5.png',
+            src: '/images/projects/zalando/P3.png',
+            darkSrc: '/images/projects/zalando/P3_dark.jpg',
             alt: 'Research methodology overview',
             py: 'pt-8 pb-6',
           },  
@@ -128,6 +131,7 @@ export const zalando: Project = {
            {
             type: 'full-width-image',
             src: '/images/projects/zalando/S1.jpg',
+            darkSrc: '/images/projects/zalando/S1_dark.jpg',
             alt: 'Research methodology overview',
             py: 'pt-8 pb-6',
           }, 
@@ -135,11 +139,12 @@ export const zalando: Project = {
             type: 'feature-block',
             skyline: 'User Dashboard',
             description: 'On login users are provided with a personalized dashboard that gives them an at-a-glance overview of their development journey. Users can see their self-identified strengths and growth areas, upcoming key dates in the review cycle, pending feedback requests from colleagues, and in-progress evaluations. This creates transparency around process stages and outstanding actions.',
-            py: 'pt-3 pb-6',
+            py: 'pt-3 pb-8',
           },  
           {
             type: 'full-width-image',
             src: '/images/projects/zalando/S2.jpg',
+            darkSrc: '/images/projects/zalando/S2_dark.jpg',
             alt: 'Research methodology overview',
             py: 'pt-8 pb-6',
           }, 
@@ -147,11 +152,12 @@ export const zalando: Project = {
             type: 'feature-block',
             skyline: 'Performance Evaluation & Nomination List',
             description: 'Users get an overview over their current feedback nomination list and can invite colleagues, stakeholders, and directs to provide feedback on their performance, with guidance encouraging diverse perspectives. Progress indicators and status labels (accepted, declined, completed) make the current state of each nomination immediately visible, addressing the need for transparency.',
-            py: 'pt-3 pb-6',
+            py: 'pt-3 pb-8',
           },  
           {
             type: 'full-width-image',
             src: '/images/projects/zalando/S3.jpg',
+            darkSrc: '/images/projects/zalando/S3_dark.jpg',
             alt: 'Research methodology overview',
             py: 'pt-8 pb-6',
           }, 

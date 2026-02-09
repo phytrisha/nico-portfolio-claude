@@ -31,12 +31,12 @@ export default function ProjectRowHeader({
         {/* First line - Title and expand button */}
         <div className="flex items-center justify-between mb-6">
           <div className="text-[22px] md:text-[28px] lg:text-[28px] font-medium">{project.shortTitle}</div>
-          <div className="text-3xl font-extralight">{isExpanded ? '−' : '+'}</div>
+          <div className="text-3xl font-extralight pl-3">{isExpanded ? '−' : '+'}</div>
         </div>
 
         {/* Second line - Table format with ID, Tags, and Year */}
         <div
-          className="flex items-center gap-0 text-xs font-mono mb-2"
+          className="flex items-center gap-0 text-xs font-mono mb-2 leading-[1.5]"
           style={{ border: `1px solid ${isExpanded && isDark ? '#000000' : 'var(--border-color)'}` }}
         >
           <div

@@ -28,7 +28,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="fixed top-4 left-4 z-50 p-3 rounded-full hover:opacity-80 transition-opacity"
+      className="fixed bottom-0 right-0 z-50 p-5 rounded-none"
       style={{
         backgroundColor: 'var(--email-btn-bg)',
       }}
@@ -36,8 +36,8 @@ export function ThemeToggle() {
     >
       {theme === 'dark' ? (
         <svg
-          width="24"
-          height="24"
+          width="28"
+          height="28"
           viewBox="0 0 24 24"
           fill="none"
           stroke="var(--email-btn-icon)"
@@ -57,8 +57,8 @@ export function ThemeToggle() {
         </svg>
       ) : (
         <svg
-          width="24"
-          height="24"
+          width="28"
+          height="28"
           viewBox="0 0 24 24"
           fill="none"
           stroke="var(--email-btn-icon)"

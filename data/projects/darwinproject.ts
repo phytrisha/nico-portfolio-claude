@@ -146,7 +146,7 @@ export const darwinproject: Project = {
             type: 'full-width-video',
             src: '/images/projects/darwinproject/the darwin project_SG1_SS18_720p.mp4',
             alt: 'Research methodology overview',
-            py: 'pt-0 pb-10',
+            py: 'pt-4 pb-10',
           },
         
           {
@@ -157,12 +157,14 @@ export const darwinproject: Project = {
           {
             type: 'full-width-image',
             src: '/images/projects/darwinproject/implications.png',
+            darkSrc: '/images/projects/darwinproject/implications_dark.png',
             alt: 'Research methodology overview',
-            py: 'pt-2 pb-8',
+            py: 'pt-4 pb-8',
           },
           {
             type: 'full-width-image',
             src: '/images/projects/darwinproject/morph.jpg',
+            darkSrc: '/images/projects/darwinproject/morph_dark.jpg',
             alt: 'Research methodology overview',
             py: 'pt-6 pb-12',
           },
@@ -202,7 +204,7 @@ export const darwinproject: Project = {
             type: 'feature-block',
             skyline: 'BONDS THROUGH Temporal orientation',
             description: 'Can evolutionary product cycles maintain emotional connection across generations, as materials from previous iterations carry forward into successors?',
-            py: 'pt-8 pb-12',
+            py: 'pt-8 pb-10',
           },
         ]
       },

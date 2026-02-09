@@ -35,9 +35,9 @@ export default function RootLayout({
         {/* Fixed email button */}
         <a
           href="mailto:hello@nico.com"
-          className="fixed bottom-0 right-0 z-50 p-5 hover:opacity-80 transition-opacity" style={{ backgroundColor: 'var(--externallink-bg)' }}
+          className="fixed bottom-0 right-17 z-50 px-6 py-4" style={{ backgroundColor: 'var(--externallink-bg)' }}
         >
-          <span className="text-4xl">👋</span>
+          <span className="text-[24px]">👋</span>
         </a>
           <ThemeToggle />
         </ThemeProvider>

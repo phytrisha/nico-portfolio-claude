@@ -195,12 +195,13 @@ export const BT: Project = {
                     {
             type: 'paragraph',
             content: '- Icons',
-            py: 'pt-2 pb-0',
+            py: 'pt-2 pb-6',
           },
 
            {
             type: 'full-width-image',
             src: '/images/projects/BT/BT1.jpg',
+            darkSrc: '/images/projects/BT/BT1_dark.jpg',
             alt: 'Research methodology overview',
             py: 'pt-8 pb-8',
           },  
@@ -248,11 +249,12 @@ export const BT: Project = {
           {
             type: 'paragraph',
             content: 'This approach reduced the total component count while expanding what designers could build—fewer components to maintain, more design possibilities.',
-            py: 'pt-8 pb-8',
+            py: 'pt-8 pb-6',
           },
           {
             type: 'full-width-image',
             src: '/images/projects/BT/BT2.jpg',
+            darkSrc: '/images/projects/BT/BT2_dark.jpg',
             alt: 'Research methodology overview',
             py: 'pt-8 pb-8',
           },  
@@ -290,12 +292,13 @@ export const BT: Project = {
           {
             type: 'paragraph',
             content: 'This tight feedback loop between system and application ensured the library addressed actual needs rather than theoretical ones.',
-            py: 'pt-8 pb-8',
+            py: 'pt-8 pb-6',
           },
 
           {
             type: 'full-width-image',
             src: '/images/projects/BT/BT3.jpg',
+            darkSrc: '/images/projects/BT/BT3_dark.jpg',
             alt: 'Research methodology overview',
             py: 'pt-8 pb-8',
           },  
@@ -352,12 +355,12 @@ export const BT: Project = {
           {
             type: 'paragraph',
             content: '- Complete Figma component library built on variables and tokens',
-            py: 'pt-2 pb-0',
+            py: 'pt-1 pb-0',
           },
           {
             type: 'paragraph',
             content: '- Multi-platform support (iOS, Android, responsive web)',
-            py: 'pt-2 pb-0',
+            py: 'pt-1 pb-0',
           },
           {
             type: 'paragraph',
@@ -367,7 +370,7 @@ export const BT: Project = {
           {
             type: 'paragraph',
             content: '- Semantic token structure for theming and scalability',
-            py: 'pt-2 pb-2',
+            py: 'pt-1 pb-2',
           }, 
 
 
@@ -433,17 +436,17 @@ export const BT: Project = {
           {
             type: 'paragraph',
             content: '1. Reduced Design Time: The configurable component architecture eliminated redundant design work, enabling faster screen production.',
-            py: 'pt-6 pb-0',
+            py: 'pt-6 pb-2',
           },
           {
             type: 'paragraph',
             content: '2. Structural Consistency: A single source of truth across platforms ensured visual and behavioral coherence throughout the application.',
-            py: 'pt-2 pb-0',
+            py: 'pt-2 pb-2',
           },
           {
             type: 'paragraph',
-            content: '3. Team Enablement: The internal design team received not just a library, but a system they could understand, maintain, and extend – with documentation that anticipated their questions.',
-            py: 'pt-2 pb-0',
+            content: '3. Team Enablement: The internal design team received a system they could understand, maintain, and extend – with documentation that anticipated their questions.',
+            py: 'pt-2 pb-2',
           }, 
           {
             type: 'paragraph',
