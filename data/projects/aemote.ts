@@ -97,6 +97,7 @@ export const aemote: Project = {
           {
             type: 'full-width-image',
             src: '/images/projects/aemote/OA5.jpg',
+            darkSrc: '/images/projects/aemote/OA5_dark.jpg',
             alt: 'Research methodology overview',
             py: 'pt-3 pb-12',
           },
@@ -110,6 +111,7 @@ export const aemote: Project = {
           {
             type: 'full-width-image',
             src: '/images/projects/aemote/OA4.jpg',
+            darkSrc: '/images/projects/aemote/OA4_dark.jpg',
             alt: 'Research methodology overview',
             py: 'pt-3 pb-6',
           },
@@ -122,6 +124,7 @@ export const aemote: Project = {
           {
             type: 'full-width-image',
             src: '/images/projects/aemote/OA6.jpg',
+            darkSrc: '/images/projects/aemote/OA6_dark.jpg',
             alt: 'Research methodology overview',
             py: 'pt-3 pb-0',
           },
@@ -140,7 +143,7 @@ export const aemote: Project = {
           {
             type: 'inline-header',
             content: 'To tackle the challenge of improving communication we outlined three different strategies of how we might approach our goal of inclusion.', 
-            py: 'pt-8 pb-0',
+            py: 'pt-8 pb-2',
           },
           {
             type: 'feature-block',
@@ -151,8 +154,9 @@ export const aemote: Project = {
           {
             type: 'full-width-image',
             src: '/images/projects/aemote/ST1.jpg',
+            darkSrc: '/images/projects/aemote/ST1_dark.jpg',
             alt: 'Research methodology overview',
-            py: 'pt-3 pb-14',
+            py: 'pt-6 pb-16',
           },
         
           {
@@ -164,21 +168,23 @@ export const aemote: Project = {
           {
             type: 'full-width-image',
             src: '/images/projects/aemote/ST2.jpg',
+            darkSrc: '/images/projects/aemote/ST2_dark.jpg',
             alt: 'Research methodology overview',
-            py: 'pt-3 pb-8',
+            py: 'pt-6 pb-16',
           },
         
           {
             type: 'feature-block',
             skyline: 'STRATEGY 3: SOCIAL / POLITICAL APPROACH',
             description: 'A completely different strategy on the other hand would be to not design a product in the traditional sense – which in its core simply approaches solving a problem, which is already present – but rather to look into how people with ASD could be assisted, if there was more awareness in society, as well as in politics. This approach could consist of different types of awareness campaigns, which include multiple milestones that are based on top of each other.',
-            py: 'pt-8 pb-0',
+            py: 'py-0',
           },
           {
             type: 'full-width-image',
             src: '/images/projects/aemote/ST3.jpg',
+            darkSrc: '/images/projects/aemote/ST3_dark.jpg',
             alt: 'Research methodology overview',
-            py: 'pt-3 pb-12',
+            py: 'pt-4 pb-12',
           },
         ]
       },
@@ -195,6 +201,7 @@ export const aemote: Project = {
           {
             type: 'paragraph',
             content: 'For us as designers, we concluded, that the strategy, that could have the most real impact, was the first one, the rapid tech approach. We went on to develop a concept, which is based on three low fidelity components, which can be easily assembled, so that they do not inevitably have to be bought but could very well also be assembled in a makerspace or similar. The overall concept is to enable assistance for people with ASD in everyday life by giving them the opportunity to use an app to identify the emotions people are expressing in certain situations. Additionally, this recognition can be explicitly trained with a set of components, which are briefly described in the following.',
+           py: 'pt-8 pb-8',           
           },
           {
             type: 'feature-block',
@@ -205,7 +212,7 @@ export const aemote: Project = {
             type: 'full-width-image',
             src: '/images/projects/aemote/Cards.png',
             alt: 'Research methodology overview',
-            py: 'pt-2 pb-12',
+            py: 'pt-4 pb-12',
           },
 
           {
@@ -217,7 +224,7 @@ export const aemote: Project = {
             type: 'full-width-image',
             src: '/images/projects/aemote/S4.jpg',
             alt: 'Research methodology overview',
-            py: 'pt-2 pb-12',
+            py: 'pt-4 pb-12',
           },
 
           {
@@ -229,7 +236,7 @@ export const aemote: Project = {
             type: 'full-width-image',
             src: '/images/projects/aemote/S5.png',
             alt: 'Research methodology overview',
-            py: 'pt-2 pb-8',
+            py: 'pt-4 pb-8',
           },         
         ]
       },
@@ -251,13 +258,13 @@ export const aemote: Project = {
             type: 'feature-block',
             skyline: 'CUSTOM DATABASE',
             description: 'The user does not have to rely on the sample images of each emotion that we provide. She can save and tag situations in which the emotions were somehow memorable and can thereby extend the database to further improve her abilities.',
-            py: 'pb-8',
+            py: 'pb-10',
           },         
           {
             type: 'feature-block',
             skyline: 'DOUBLE CHECK',
             description: 'Currently, the user receives immediate feedback when answering in the quiz mode. Perhaps a double check could lead to better learning results. This could also be linked to the custom database, perhaps showing her images from the custom database which she has already correctly recognized in the past as a reference for the current situation.',
-           py: 'pb-8',
+           py: 'pb-10',
           },
           {
             type: 'feature-block',
@@ -268,7 +275,7 @@ export const aemote: Project = {
           {
             type: 'paragraph',
             content: 'In conclusion, this project was extremely inspiring for us, as we had the opportunity to help real people in their everyday life, which is an extremely rewarding task. We want to thank all staff of the Paulinenpflege Winnenden, especially Tabea König and Mrs. Fischer-Beutel. We also want to thank Prof. Benedikt Groß, Prof. Julia Kühne and Dr. Eileen Mandir for supervising and enabling this project in the first place.',
-            py: 'pt-0 pb-8',
+            py: 'pt-0 pb-10',
           },
         ]
       },

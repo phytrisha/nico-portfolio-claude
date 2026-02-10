@@ -38,6 +38,7 @@ export const beneficialAI: Project = {
           {
             type: 'hero-image',
             src: '/images/projects/beneficial-ai/Model1.jpg',
+            darkSrc: '/images/projects/beneficial-ai/Model1_dark.jpg',
             alt: 'Beneficial AI Framework Model',
             py: 'pb-0'
           },
@@ -81,7 +82,7 @@ export const beneficialAI: Project = {
           {
             type: 'paragraph',
             content: 'Approaching beneficial AI requires approaching what is to be considered beneficial. Maximizing beneficiality in an artificial agent’s behaviour can be seen as a fundamental goal in ensuring its safe operation and the promotion of goals considered broadly beneficial. To structure different actions and cluster steps relevant in approaching a system’s beneficial behaviour, the diverse aspects that contribute to the process can be classified in a model. The layers represent key areas of focus when designing beneficial agents. This model is not a conclusive instruction to achieve beneficial behaviour, but rather is sup- posed to give guidance and establish beneficiality in the developer’s thinking.',
-            py: 'py-0'
+            py: 'pt-0 pb-4'
           },
         ]
       },
@@ -105,33 +106,35 @@ export const beneficialAI: Project = {
           {
             type: 'feature-block',
             skyline: 'FEATURE 03',
-            description: 'Beneficial behaviour has to be established from the beginning as an integral part of the system.'
+            description: 'Beneficial behaviour has to be established from the beginning as an integral part of the system.',
           },
         ]
       },
-      // ===== FULL WIDTH MEDIA =====
       {
-        //header: 'Methodology',
         number: '04',
         components: [
           {
             type: 'full-width-image',
             src: '/images/projects/beneficial-ai/Model3.jpg',
-            alt: 'Research methodology overview',
-            py: 'pb-4'
+            darkSrc: '/images/projects/beneficial-ai/Model3_dark.jpg',
+            alt: '–',
+            py: 'pt-4 pb-4'
 
           },
           {
             type: 'sublines',
             content: 'MODEL: THE PILLARS OF BENEFICIALITY',
-            py: 'py-0'
+            py: 'pb-4'
           },
            {
              type: 'paragraph',
              content: 'The debate about how a “common beneficial” should be defined takes place on multiple layers across many disciplines and spans a long timeframe. Though general rough understanding of what is beneficial exists in many cases (e.g., no human should come to harm from an action), it is important to note that actions that are considered beneficial by an individual are not necessarily the most ethical actions. It can be assumed that there is no such thing as an “absolute perfect beneficial” for all affected parties in a situation, consequently a lot of consideration has to be placed on defining the agent’s value system to guide the process of finding a sufficient beneficial for its actions. Furthermore ensuring beneficial behaviour is a recursive endeavour, not a linear process. All of the pillars have to be regularly revisited as circumstances change (e.g. an agent’s level of intelligence increases). In order to successfully transition from the debate about super-intelligent agents to more concrete ethical questions, we suggest a model for beneficial AI. This model consists of a foundation and three pillars that must be satisfied in order to achieve “beneficial AI”. The foundation describes essential prerequisites that have to be addressed beforehand, whereas the pillars describe aspects of a system that must be approached in order for the system to be beneficial. These three pillars address defining, implementing and ensuring beneficiality in artificial agents.',            
+            py: 'pt-6 pb-10'
             },
         ]
       },
+
+
 
 
       {
@@ -150,13 +153,12 @@ export const beneficialAI: Project = {
           {
             type: 'paragraph',
             content: 'Concrete ethical issues in use cases often have underlying ethical problems. To frame these underlying problems, we suggest the concept of a “problem space”. We show that problem spaces can be described by analyzing use cases in detail and inducting from there to a higher-level issue. These higher-level issues are useful, because they allow transferring approaches from different situat-ions, in which the underlying ethical issues are similar. We present a model, in which the problem space is first framed by analyzing the effects on involved stakeholders over time in the use case that is being developed. Then an idealized goal is developed, which may not ever be reached, but serves as a guideline for what should be achieved under ideal circumstances. Next, concrete actions are formulated to approach the idealized goal. These concrete actions can be seen as countermeasures, meaning that they can be used to reduce the impact of the problem space. It is important to note, that problem spaces typically cannot be fully solved, therefore the actions that are developed during this process are used to reduce the impact of a problem space, rather than completely eliminate it. Because problem spaces cannot be entirely resolved, they will affect a system using AI over a longer period of time, which means the problem space must be regularly reevaluated. Lastly, we present several methods that can be used to frame and approach a problem space. These methods mostly originate from design-practices. We elaborate how they can be used in the context of working with AI.',
-            py: 'py-0'
+            py: 'pt-0 pb-4'
           },
         ]
       },
       // ===== FEATURE BLOCK EXAMPLE =====
       {
-        //header: 'Key Features',
         number: '02',
         components: [
           {
@@ -177,38 +179,38 @@ export const beneficialAI: Project = {
           },
         ]
       },
-      // ===== FULL WIDTH MEDIA =====
       {
-        //header: 'Methodology',
         number: '04',
         components: [
           {
             type: 'full-width-image',
             src: '/images/projects/beneficial-ai/Model6.jpg',
+            darkSrc: '/images/projects/beneficial-ai/Model6_dark.jpg',
             alt: 'Research methodology overview',
-            py: 'pt-2 pb-2'
+            py: 'pt-4 pb-4'
           },
           {
             type: 'sublines',
             content: 'ANATOMY OF A PROBLEMSPACE',
-            py: 'pt-2 pb-2'
+            py: 'pt-0 pb-4'
           },
           {
              type: 'paragraph',
-             content: 'To refine the models and demonstrate how the process of framing and approaching problem spaces can be applied to the creation of artificially intelligent systems we created three rough use cases. Since the underlying objective is to design the applications in the use case in a beneficial way the ‘pillars of beneficiality’ were used as guidance in regard to what should be achieved. The three use cases are set in different scenarios, each taking one step further into the future. The “beneficial layer” in each use case explains the different counter measures that help countering the problem spaces.'
+             content: 'To refine the models and demonstrate how the process of framing and approaching problem spaces can be applied to the creation of artificially intelligent systems we created three rough use cases. Since the underlying objective is to design the applications in the use case in a beneficial way the ‘pillars of beneficiality’ were used as guidance in regard to what should be achieved. The three use cases are set in different scenarios, each taking one step further into the future. The “beneficial layer” in each use case explains the different counter measures that help countering the problem spaces.',
+            py: 'pt-8 pb-10'
           },
         ]
       },
-      // ===== FULL WIDTH MEDIA =====
+
       {
-        //header: 'Methodology',
         number: '04',
         components: [
           {
             type: 'full-width-image',
             src: '/images/projects/beneficial-ai/Model10.png',
+            darkSrc: '/images/projects/beneficial-ai/Model10_dark.jpg',
             alt: 'Research methodology overview',
-            py: 'py-0'
+            py: 'pt-6 pb-2'
 
           },
         ]
@@ -219,7 +221,7 @@ export const beneficialAI: Project = {
           {
             type: 'sublines',
             content: 'FOCUS PROBLEMSPACES IN THE CONTEXT OF TIME AND USECASES',
-                        py: 'pt-4 pb-8'
+            py: 'pt-6 pb-10'
 
           },
         ]

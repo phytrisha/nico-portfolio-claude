@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,21 +23,24 @@ export default function RootLayout({
   modal: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} antialiased`}
         style={{ fontFamily: 'var(--font-inter), Inter, sans-serif' }}
       >
-        {children}
-        {modal}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+          {modal}
 
         {/* Fixed email button */}
         <a
-  href="mailto:hello@nico.com"
-  className="fixed bottom-0 right-0 z-50 bg-black p-5 hover:opacity-80 transition-opacity"
->
-  <span className="text-4xl">👋</span>
-</a>
+          href="mailto:hello@nico.com"
+          className="fixed bottom-0 right-17 z-50 px-6 py-4" style={{ backgroundColor: 'var(--externallink-bg)' }}
+        >
+          <span className="text-[24px]">👋</span>
+        </a>
+          <ThemeToggle />
+        </ThemeProvider>
       </body>
     </html>
   );

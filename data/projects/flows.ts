@@ -87,7 +87,7 @@ export const flows: Project = {
             type: 'feature-block',
             skyline: 'DESIGNING WITH ASSETS',
             description: 'Assets are reusable interface groups, ranging from a single label to a large organism of different elements. flows offers rich prefilled asset libraries the user can use to construct his interface. Users can either choose from libraries of fully customizable OS specific UI blocks or custom unstyled elements. New assets can be created using primitive elements.',
-            py: 'pt-8 pb-0',
+            py: 'pt-8 pb-2',
           },
         ]
       },
@@ -110,7 +110,7 @@ export const flows: Project = {
             type: 'feature-block',
             skyline: 'CREATION REQUIRES ITERATION',
             description: 'Design is an iterative process that requires creating and analyzing many different variation of the elements to get to the best result possible. Therefore flows was built to give users a dedicated space to try ideas and test different looks for assets, all without obstructing their actual layout. This space, called playground, is also used as the primary stage to create new assets in flows.',
-            py: 'pt-8 pb-0',
+            py: 'pt-8 pb-2',
           },
         ]
       },
@@ -133,7 +133,7 @@ export const flows: Project = {
             type: 'feature-block',
             skyline: 'MAKE IT INTERACTIVE',
             description: 'Interactivity is obviously an important part of creating digital products. Assigning behavior to static designs, can help to test ideas and UI flows, give customers a better idea of one’s vision and help to simplify the communication process for designers & developers. Therefore flows offers the possibility to easily add behavior to Assets, right inside the app they were created in.',
-            py: 'pt-8 pb-0',          
+            py: 'pt-8 pb-2',          
           },
         ]
       },
@@ -156,7 +156,7 @@ export const flows: Project = {
             type: 'feature-block',
             skyline: 'STRUCTURE MEANS FLEXIBILITY',
             description: 'The element graph is the class-models visual representation and can be used to create, link, edit and assign these classes. By using a column based interface to communicate hierarchy the graph combines the benefits of node based interfaces with the structure of list views. These features make the element graph a powerful tool for designers to create highly complex systems.',
-            py: 'pt-8 pb-0',
+            py: 'pt-8 pb-2',
           },
         ]
       },

@@ -5,7 +5,7 @@ export const collection: Project = {
   slug: 'collection',
   title: 'A couple more things...',
   shortTitle: 'A couple more things...',
-  category: 'freelance',
+  category: 'client work',
   tags: ['INTERACTION DESIGN & FREELANCE WORK'],
   year: '2014 – 2025',
   color: '#E6E2D8',
@@ -124,7 +124,7 @@ export const collection: Project = {
         components: [
             {
             type: 'hero-image',
-            src: '/images/projects/collection/Zasta bento.jpg',
+            src: '/images/projects/collection/cover zasta.jpg',
             alt: 'Beneficial AI Framework Model',
           }, 
           {

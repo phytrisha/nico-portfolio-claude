@@ -20,8 +20,8 @@ export default function ProjectRow({ project, isExpanded, onClick }: ProjectRowP
     <div
       className="w-full"
       style={{
-        backgroundColor: isExpanded ? project.color : '#EEEFEB',
-        borderBottom: '1px solid #000000',
+        backgroundColor: isExpanded ? project.color : 'var(--bg-primary)',
+        borderBottom: '1px solid var(--border-colorunderlinepreview)',
         overflow: 'hidden'
       }}
     >

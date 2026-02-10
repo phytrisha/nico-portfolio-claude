@@ -1,5 +1,35 @@
 @import "tailwindcss";
 
+:root {
+  --bg-primary: #EEEFEB;
+  --bg-hero: #000000;
+  --text-primary: #000000;
+  --text-projectpreview: #000000;
+  --text-hero: #ffffff;
+  --border-color: #000000;
+  --border-projectdetail: #000000;
+  --border-colorunderlinepreview: #000000;
+  --email-btn-bg: #000000;
+  --externallink-bg: #000000;
+  --email-btn-icon: #EDEBE3;
+  --close-btn-icon: #EDEBE3;
+}
+
+.dark {
+  --bg-primary: #000000;
+  --bg-hero: #000000;
+  --text-primary: #EDEBE3;
+  --text-projectpreview: #000000;
+  --text-hero: #EDEBE3;
+  --border-color: #EDEBE3;
+  --border-projectdetail: #999892;
+  --border-colorunderlinepreview: #333333;
+  --email-btn-bg: #EDEBE3;
+  --externallink-bg: #1A1918;
+  --email-btn-icon: #000000;
+  --close-btn-icon: #EDEBE3;
+}
+
 *,
 *::before,
 *::after {
@@ -8,8 +38,8 @@
 
 body {
   font-family: var(--font-inter), Inter, sans-serif;
-  background: #000000;
-  color: #ffffff;
+  background: var(--bg-hero);
+  color: var(--text-hero);
   overflow-x: hidden;
 }
 
