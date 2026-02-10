@@ -5,7 +5,7 @@ export const remagine: Project = {
   slug: 'remagine',
   title: 'Case Study: Solving for different banking needs of fintech stakeholder groups',
   shortTitle: 'Case Study: Solving for different banking needs of fintech stakeholder groups',
-  category: 'CLIENT WORK',
+  category: 'client work',
   tags: ['CLIENT: REMAGINE, CLIENT WORK, UI/UX DESIGN'],
   year: '2021',
   color: '#259918',

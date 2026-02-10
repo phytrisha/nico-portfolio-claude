@@ -5,7 +5,7 @@ export const taxfix: Project = {
   slug: 'taxfix',
   title: 'Case Study: Crafting a no-code tax logic editor that enables flexibility while managing complexity',
   shortTitle: 'Case Study: No-code tax logic editor that enables flexibility while managing complexity',
-  category: 'CLIENT WORK',
+  category: 'client work',
   tags: ['CLIENT: TAXFIX, CLIENT WORK, RESEARCH & DESIGN'],
   year: '2021',
   color: '#259918',

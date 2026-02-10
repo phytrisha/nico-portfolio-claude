@@ -194,7 +194,7 @@ export interface Project {
   slug: string;
   title: string;
   shortTitle: string;
-  category: 'strategic-design' | 'philosophy' | 'freelance';
+  category: 'strategic-design' | 'philosophy' | 'client work';
   tags: string[];
   year?: string; // Optional year field for projects
   color: string;
