@@ -125,6 +125,7 @@ export const collection: Project = {
             {
             type: 'hero-image',
             src: '/images/projects/collection/cover zasta.jpg',
+            darkSrc: '/images/projects/collection/cover zasta_dark.jpg',
             alt: 'Beneficial AI Framework Model',
           }, 
           {
