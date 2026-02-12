@@ -1,7 +1,7 @@
 import type { Project } from '../types';
 
 export const zalando: Project = {
-  id: 8,
+  id: 9,
   slug: 'zalando',
   title: 'Case Study: Designing for trust and engagement around sensitive personal data',
   shortTitle: 'Case Study: Designing for trust and engagement around sensitive personal data',

@@ -1,7 +1,7 @@
 import type { Project } from '../types';
 
 export const BT: Project = {
-  id: 20,
+  id: 4,
   slug: 'BT',
   title: 'Case Study: Crafting a high fidelity design system for consistency & scaling',
   shortTitle: 'Case Study: Crafting a high fidelity design system for consistency & scaling',

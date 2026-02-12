@@ -1,7 +1,7 @@
 import type { Project } from '../types';
 
 export const conceptLearning: Project = {
-  id: 4,
+  id: 5,
   slug: 'concept-learning',
   title: 'Approaching mechanisms of concept learning in the context of transforming ideologies',
   shortTitle: 'Approaching mechanisms of concept learning in the context of transforming ideologies',

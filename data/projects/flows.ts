@@ -1,7 +1,7 @@
 import type { Project } from '../types';
 
 export const flows: Project = {
-  id: 7,
+  id: 8,
   slug: 'flows',
   title: 'Flows – Rethinking the development of user interfaces',
   shortTitle: 'Flows – Rethinking the development of user interfaces',

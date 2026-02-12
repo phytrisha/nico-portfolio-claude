@@ -1,7 +1,7 @@
 import type { Project } from '../types';
 
 export const taxfix: Project = {
-  id: 5,
+  id: 6,
   slug: 'taxfix',
   title: 'Case Study: Crafting a no-code tax logic editor that enables flexibility while managing complexity',
   shortTitle: 'Case Study: No-code tax logic editor that enables flexibility while managing complexity',

@@ -1,7 +1,7 @@
 import type { Project } from '../types';
 
 export const darwinproject: Project = {
-  id: 6,
+  id: 7,
   slug: 'darwinproject',
   title: 'The Darwin Project: A Speculative Design Vision for Sustainable, Individualized Consumption',
   shortTitle: 'The Darwin Project',

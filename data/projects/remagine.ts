@@ -1,7 +1,7 @@
 import type { Project } from '../types';
 
 export const remagine: Project = {
-  id: 9,
+  id: 10,
   slug: 'remagine',
   title: 'Case Study: Solving for different banking needs of fintech stakeholder groups',
   shortTitle: 'Case Study: Solving for different banking needs of fintech stakeholder groups',

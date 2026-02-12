@@ -1,7 +1,7 @@
 import type { Project } from '../types';
 
 export const transformativeExperiences: Project = {
-  id: 10,
+  id: 11,
   slug: 'transformative-experiences',
   title: 'On the admissibility of will based commitment facing transformative experiences',
   shortTitle: 'On the admissibility of will based commitment facing transformative experiences',

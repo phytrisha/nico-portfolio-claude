@@ -1,7 +1,7 @@
 import type { Project } from '../types';
 
 export const collection: Project = {
-  id: 11,
+  id: 12,
   slug: 'collection',
   title: 'A couple more things...',
   shortTitle: 'A couple more things...',
