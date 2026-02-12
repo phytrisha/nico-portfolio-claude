@@ -64,7 +64,7 @@ export const collection: Project = {
         components: [
           {
             type: 'hero-image',
-            src: '/images/projects/collection/Selfapy.jpg',
+            src: '/images/projects/collection/Selfapycover.jpg',
             alt: 'Cover Selfapy',
           },
           {
