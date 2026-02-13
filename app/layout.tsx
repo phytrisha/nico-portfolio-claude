@@ -34,7 +34,7 @@ export default function RootLayout({
 
         {/* Fixed email button */}
         <a
-          href="mailto:hello@nico.com"
+          href="mailto:helloiamnico@icloud.com"
           className="fixed bottom-0 right-17 z-50 px-6 py-4" style={{ backgroundColor: 'var(--externallink-bg)' }}
         >
           <span className="text-[24px]">👋</span>
