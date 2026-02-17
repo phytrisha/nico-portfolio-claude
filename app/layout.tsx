@@ -35,9 +35,9 @@ export default function RootLayout({
         {/* Fixed email button */}
         <a
           href="mailto:helloiamnico@icloud.com"
-          className="fixed bottom-0 right-18 z-50 px-5 py-5" style={{ backgroundColor: 'var(--externallink-bg)' }}
+          className="fixed bottom-0 right-18 z-50 px-5 py-4.5" style={{ backgroundColor: 'var(--externallink-bg)' }}
         >
-          <img src="/mail.png" alt="Wave" className="w-8 h-8" />
+          <img src="/mail.png" alt="Wave" className="w-9 h-9" />
         </a>
           <ThemeToggle />
         </ThemeProvider>
