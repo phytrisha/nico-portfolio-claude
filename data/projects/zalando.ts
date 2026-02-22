@@ -6,7 +6,7 @@ export const zalando: Project = {
   title: 'Case Study: Designing for trust and engagement around sensitive personal data',
   shortTitle: 'Case Study: Designing for trust and engagement around sensitive personal data',
   category: 'client work',
-  tags: ['CLIENT: ZALANDO, CLIENT WORK, RESEARCH & CONCEPT'],
+  tags: ['CLIENT WORK, CLIENT: ZALANDO, RESEARCH & CONCEPT'],
   year: '2018',
   color: '#259918',
 

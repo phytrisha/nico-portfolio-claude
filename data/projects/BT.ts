@@ -6,7 +6,7 @@ export const BT: Project = {
   title: 'Case Study: Crafting a high fidelity design system for consistency & scaling',
   shortTitle: 'Case Study: Crafting a high fidelity design system for consistency & scaling',
   category: 'client work',
-  tags: ['CLIENT: CONFIDENTIAL, CLIENT WORK, RESEARCH & CONCEPT'],
+  tags: ['CLIENT WORK, CLIENT: CONFIDENTIAL, DESIGN SYSTEM & UX'],
   year: '2026',
   color: '#259918',
 
