@@ -15,8 +15,8 @@ export const BT: Project = {
   // Use [text](url) syntax for inline links
   metadata: {
     entries: [
-      'CLIENT: Confidential (Banking Sector) · Client work · DEC 2025 - JAN 2026',
-      'involvement: DESIGN SYSTEM BUILDING, ui design, PROTOTYPING · TEAM: INTERNAL CLIENT team, henri thomee'
+      'CLIENT: Confidential (Banking Sector) · Client work · NOV 2025 - DEC 2025',
+      'involvement: DESIGN SYSTEM BUILDING, ui design, PROTOTYPING · TEAM: External consulting, INTERNAL CLIENT '
     ]
   },
 

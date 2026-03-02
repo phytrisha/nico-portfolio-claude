@@ -6,7 +6,7 @@ export const taxfix: Project = {
   title: 'Case Study: Crafting a no-code tax logic editor that enables flexibility while managing complexity',
   shortTitle: 'Case Study: No-code tax logic editor that enables flexibility while managing complexity',
   category: 'client work',
-  tags: ['CLIENT WORK, CLIENT: TAXFIX, RESEARCH & DESIGN'],
+  tags: ['CLIENT WORK, CLIENT: CONFIDENTIAL, RESEARCH & DESIGN'],
   year: '2021',
   color: '#259918',
 
@@ -16,14 +16,14 @@ export const taxfix: Project = {
   // Use [text](url) syntax for inline links
   metadata: {
     entries: [
-      'CLIENT: TAXFIX · Freelance work · Feb - OCT 2022, BERLIN',
-      'Role / involvement: USER RESEARCH, UX CONCEPT & TESTING · TEAM: Internal taxfix team, henri thomee'
+      'CLIENT: CONFIDENTIAL · Freelance work · Feb - OCT 2022, BERLIN',
+      'Role / involvement: USER RESEARCH, UX CONCEPT & TESTING · TEAM: Internal client team, henri thomee'
     ]
   },
 
 
 
-  description: 'Taxfix offers an online tax assistance platform designed to simplify tax declarations to end users via a dynamic questionnaire to fully automate communication with the user and accommodate fiscal differences across countries, enabling private individuals to get back their tax refunds. In order for the user-facing application to work internal tooling needed to be devised to enable Taxfix`s tax experts to define tax logic independently from developers and without the need to code themselves. Based on an extensive research and synthesis phase, understanding tax experts workflows and needs, a no-code editor was conceptualized, wireframed, and tested across multiple ideation rounds. For this functional outline a design language was crafted, focussed on bringing visual structure and clarity to a tool that enables high-complexity workflows within dense information structures.',
+  description: 'The client offers an online tax assistance platform designed to simplify tax declarations to end users via a dynamic questionnaire to fully automate communication with the user and accommodate fiscal differences across countries, enabling private individuals to get back their tax refunds. In order for the user-facing application to work internal tooling needed to be devised to enable the clients internal tax experts to define tax logic independently from developers and without the need to code themselves. Based on an extensive research and synthesis phase, understanding tax experts workflows and needs, a no-code editor was conceptualized, wireframed, and tested across multiple ideation rounds. For this functional outline a design language was crafted, focussed on bringing visual structure and clarity to a tool that enables high-complexity workflows within dense information structures.',
 
 
 
@@ -48,7 +48,7 @@ export const taxfix: Project = {
           },
           {
             type: 'intro-text',
-            content: 'Taxfix offers an online tax assistance platform designed to simplify tax declarations to end users via a dynamic questionnaire to fully automate communication with the user and accommodate fiscal differences across countries, enabling private individuals to get back their tax refunds. In order for the user-facing application to work internal tooling needed to be devised to enable Taxfix`s tax experts to define tax logic independently from developers and without the need to code themselves. Based on an extensive research and synthesis phase, understanding tax experts workflows and needs, a no-code editor was conceptualized, wireframed, and tested across multiple ideation rounds. For this functional outline a design language was crafted, focussed on bringing visual structure and clarity to a tool that enables high-complexity workflows within dense information structures.',
+            content: 'The client offers an online tax assistance platform designed to simplify tax declarations to end users via a dynamic questionnaire to fully automate communication with the user and accommodate fiscal differences across countries, enabling private individuals to get back their tax refunds. In order for the user-facing application to work internal tooling needed to be devised to enable the clients internal tax experts to define tax logic independently from developers and without the need to code themselves. Based on an extensive research and synthesis phase, understanding tax experts workflows and needs, a no-code editor was conceptualized, wireframed, and tested across multiple ideation rounds. For this functional outline a design language was crafted, focussed on bringing visual structure and clarity to a tool that enables high-complexity workflows within dense information structures.',
             py: 'pt-10 pb-10',          
           },
 
@@ -65,7 +65,7 @@ export const taxfix: Project = {
         components: [
           {
             type: 'paragraph',
-            content: 'Our research process combined multiple methods to build a comprehensive understanding of user needs and business context. Qualitative interviews, competitor analysis, stakeholder workshops, and workflow testing provided diverse perspectives on current challenges and opportunities. These inputs were then synthesized through affinity mapping, user journey visualization, and persona development, translating raw data into actionable insights that defined the problem space and established clear goals for the design phase of the no-code editor.',
+            content: 'The research process combined multiple methods to build a comprehensive understanding of user needs and business context. Qualitative interviews, competitor analysis, stakeholder workshops, and workflow testing provided diverse perspectives on current challenges and opportunities. These inputs were then synthesized through affinity mapping, user journey visualization, and persona development, translating raw data into actionable insights that defined the problem space and established clear goals for the design phase of the no-code editor.',
             py: 'pt-8 pb-2',
           
           },
@@ -164,7 +164,7 @@ export const taxfix: Project = {
           {
             type: 'feature-block',
             skyline: 'Question Flow Editor',
-            description: 'To define the questions end-users will be shown in the Taxfix app, we build a dedicated authoring environment where tax experts define the questions end users encounter in different languages. Each question is linked to underlying data entities and attributes, with support for conditional display logic, multilingual content, and answer type configuration. The hierarchical sidebar reveals how questions relate to one another.',
+            description: 'To define the questions end-users will be shown in the consumer facing app, we build a dedicated authoring environment where tax experts define the questions end users encounter in different languages. Each question is linked to underlying data entities and attributes, with support for conditional display logic, multilingual content, and answer type configuration. The hierarchical sidebar reveals how questions relate to one another.',
             py: 'pt-3 pb-12',
           }, 
         ]
