@@ -21,6 +21,7 @@ export default function ProjectRowHeader({
   return (
     <div
       className="w-full"
+      data-magnetic-row="true"
       style={{
         backgroundColor: isExpanded ? project.color : 'var(--bg-primary)'
       }}
