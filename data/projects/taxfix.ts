@@ -9,6 +9,7 @@ export const taxfix: Project = {
   tags: ['CLIENT WORK, CLIENT: CONFIDENTIAL, RESEARCH & DESIGN'],
   year: '2021',
   color: '#259918',
+  protected: true,
 
 
 

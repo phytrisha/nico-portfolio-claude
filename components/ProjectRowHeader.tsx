@@ -20,7 +20,7 @@ export default function ProjectRowHeader({
 
   return (
     <div
-      className="cursor-pointer w-full"
+      className="w-full"
       style={{
         backgroundColor: isExpanded ? project.color : 'var(--bg-primary)'
       }}

@@ -204,4 +204,5 @@ export interface Project {
   contentSections?: ContentSection[]; // Legacy structure
   externalLinks?: ExternalLink[];
   externalUrl?: string; // If provided, arrow button links to external URL instead of detail page
+  protected?: boolean; // If true, requires password to view project detail
 }

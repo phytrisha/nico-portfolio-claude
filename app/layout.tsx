@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import CustomCursor from "@/components/CustomCursor";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -40,6 +41,7 @@ export default function RootLayout({
           <img src="/mail.png" alt="Wave" className="w-8 h-8" />
         </a>
           <ThemeToggle />
+          <CustomCursor />
         </ThemeProvider>
       </body>
     </html>

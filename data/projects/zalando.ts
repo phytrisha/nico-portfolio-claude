@@ -9,6 +9,7 @@ export const zalando: Project = {
   tags: ['CLIENT WORK, CLIENT: ZALANDO, RESEARCH & CONCEPT'],
   year: '2018',
   color: '#259918',
+  protected: true,
 
 
   // New metadata structure - each entry is one row

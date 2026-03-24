@@ -9,6 +9,7 @@ export const BT: Project = {
   tags: ['CLIENT WORK, CLIENT: CONFIDENTIAL, DESIGN SYSTEM & UX'],
   year: '2026',
   color: '#259918',
+  protected: true,
 
 
   // New metadata structure - each entry is one row

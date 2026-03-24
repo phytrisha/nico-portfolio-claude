@@ -9,6 +9,7 @@ export const remagine: Project = {
   tags: ['CLIENT WORK, CLIENT: REMAGINE, UI/UX DESIGN'],
   year: '2021',
   color: '#259918',
+  protected: true,
 
     // New metadata structure - each entry is one row
   // Use [text](url) syntax for inline links
