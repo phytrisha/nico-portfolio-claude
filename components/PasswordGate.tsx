@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-const PASSWORD = 'nico2024';
+const PASSWORD = 'oh-hi_there';
 const STORAGE_KEY = 'portfolio-unlocked';
 
 interface PasswordGateProps {
