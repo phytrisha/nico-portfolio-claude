@@ -53,9 +53,9 @@ export default function ProjectRowContent({
             rel={project.externalUrl ? 'noopener noreferrer' : undefined}
             className="block w-full lg:w-auto"
           >
-            <div className="p-10 lg:p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
+            <div className="p-10 md:py-[46px] lg:p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
               <svg
-                className="w-12 h-12 lg:w-[100px] lg:h-[100px]"
+                className="w-12 h-12 md:w-[72px] md:h-[72px] lg:w-[100px] lg:h-[100px]"
                 viewBox="0 0 80 80"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
