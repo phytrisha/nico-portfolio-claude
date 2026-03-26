@@ -10,20 +10,34 @@ interface ProjectRowContentProps {
   project: Project;
   animationDuration: number;
   ease: number[];
+  scrollIntoView?: boolean;
 }
 
 export default function ProjectRowContent({
   project,
   animationDuration,
-  ease
+  ease,
+  scrollIntoView,
 }: ProjectRowContentProps) {
+  const ref = React.useRef<HTMLDivElement>(null);
+
   return (
     <motion.div
+      ref={ref}
       style={{ color: 'var(--text-projectpreview)' }}
       initial={{ height: 0, backgroundColor: 'transparent' }}
       animate={{ height: 'auto', backgroundColor: project.color }}
       exit={{ height: 0, backgroundColor: 'transparent' }}
       transition={{ type: 'spring', stiffness: 300, damping: 30, mass: 0.8 }}
+      onUpdate={() => {
+        if (scrollIntoView && ref.current) {
+          const rect = ref.current.getBoundingClientRect();
+          const overshoot = rect.bottom - window.innerHeight;
+          if (overshoot > 0) {
+            window.scrollBy({ top: overshoot, behavior: 'auto' });
+          }
+        }
+      }}
     >
       <div className="pl-0 pt-0 grid grid-cols-3 gap-12">
         {/* Left column - Title and metadata */}

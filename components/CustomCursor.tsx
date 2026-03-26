@@ -193,8 +193,8 @@ export default function CustomCursor() {
         pointerEvents: 'none',
         zIndex: 9999,
         opacity: isVisible ? 1 : 0,
-        backdropFilter: 'invert(1) grayscale(1) contrast(20)',
-        WebkitBackdropFilter: 'invert(1) grayscale(1) contrast(20)',
+        backgroundColor: 'var(--cursor-color, #fff)',
+        mixBlendMode: 'difference',
       }}
     >
       <style jsx global>{`
