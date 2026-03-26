@@ -19,8 +19,8 @@ export default function CustomCursor() {
   const CLICKABLE_SELECTOR = 'a, button, [role="button"], input[type="submit"], [data-clickable], .cursor-pointer';
   const DOT_SIZE = 16;
   const DOT_SIZE_HOVER = 40;
-  const MAGNET_DISTANCE = 120;
-  const MAGNET_STRENGTH = 0.45;
+  const MAGNET_DISTANCE = 160;
+  const MAGNET_STRENGTH = 0.65;
   const ROW_MAGNET_STRENGTH = 0.3;
   const SMOOTH_FACTOR = 0.15;
   const MAX_ROW_SCALE = DOT_SIZE_HOVER / DOT_SIZE; // same max as hover

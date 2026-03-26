@@ -41,30 +41,21 @@ export default function ProjectRowContent({
     >
       <div className="pl-0 pt-0 grid grid-cols-3 gap-12">
         {/* Left column - Title and metadata */}
-        <div className='col-span-3 md:col-span-2 pb-2 md:pb-12'>
+        <div className='col-span-3 lg:col-span-2 pb-2 lg:pb-12'>
             <div className="text-5xl leading-normal">{renderDescription(project.description)}</div>
-
-          {/*<div style={{ border: '0px solid black' }}>
-           <div className="p-6" style={{ borderBottom: '1px solid black' }}>
-              <p className="text-sm font-medium">{project.metadata.type}</p>
-            </div>
-            <div className="p-6" style={{ borderBottom: '1px solid black' }}>
-              <p className="text-sm font-medium">{project.metadata.topics}</p>
-            </div>
-          </div>*/}
         </div>
 
         {/* Right column - Action button */}
-        <div className="mx-[calc(50%-50vw)] md:mx-0 w-screen md:w-auto flex items-end justify-center md:justify-end col-span-3 md:col-span-1">
+        <div className="mx-[calc(50%-50vw)] lg:mx-0 w-screen lg:w-auto flex items-end justify-center lg:justify-end col-span-3 lg:col-span-1">
           <Link
             href={project.externalUrl || `/project/${project.slug}`}
             target={project.externalUrl ? '_blank' : undefined}
             rel={project.externalUrl ? 'noopener noreferrer' : undefined}
-            className="block w-full md:w-auto"
+            className="block w-full lg:w-auto"
           >
-            <div className="p-10 md:p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
+            <div className="p-10 lg:p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
               <svg
-                className="w-12 h-12 md:w-[100px] md:h-[100px]"
+                className="w-12 h-12 lg:w-[100px] lg:h-[100px]"
                 viewBox="0 0 80 80"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
