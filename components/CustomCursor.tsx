@@ -7,6 +7,7 @@ export default function CustomCursor() {
   const position = useRef({ x: 0, y: 0 });
   const targetPosition = useRef({ x: 0, y: 0 });
   const isHovering = useRef(false);
+  const isHidden = useRef(false);
   const magnetTarget = useRef<{ x: number; y: number } | null>(null);
   const rowMagnetTarget = useRef<{ x: number; y: number; maxDistX: number; maxDistY: number } | null>(null);
   const lastRowRect = useRef<{ top: number; bottom: number; centerX: number; centerY: number; maxDistX: number; maxDistY: number } | null>(null);
@@ -81,6 +82,7 @@ export default function CustomCursor() {
     dot.style.width = `${size}px`;
     dot.style.height = `${size}px`;
     dot.style.transform = `translate(${position.current.x - size / 2}px, ${position.current.y - size / 2}px)`;
+    dot.style.opacity = isHidden.current ? '0' : '';
 
     animationFrame.current = requestAnimationFrame(animate);
   }, []);
@@ -100,6 +102,9 @@ export default function CustomCursor() {
       if (!isVisible) setIsVisible(true);
 
       const el = e.target as Element;
+
+      // Hide cursor when over elements that provide their own cursor (e.g. magnifier)
+      isHidden.current = !!el?.closest?.('[data-hide-cursor]');
 
       // Check if cursor is over a collapsed project row
       const collapsedRow = el?.closest?.('[data-magnetic-row]');

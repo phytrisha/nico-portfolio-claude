@@ -15,11 +15,12 @@ export default function ProjectsAccordion({ expandedId, setExpandedId }: Project
 
   return (
     <div className="w-full flex flex-col bg-nico-cream">
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <ProjectRow
           key={project.id}
           project={project}
           isExpanded={expandedId === project.id}
+          isLast={index === projects.length - 1}
           onClick={() => handleRowClick(project.id)}
         />
       ))}

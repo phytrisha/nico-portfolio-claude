@@ -1,15 +1,22 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
+import { DM_Serif_Text } from 'next/font/google';
 
-const MAGNIFIER_RADIUS = 98; // 140 * 0.7
-const CURSOR_RADIUS = 8; // matches CustomCursor DOT_SIZE / 2
-const SMOOTH_FACTOR = 0.12; // kinetic easing
-const RADIUS_SMOOTH = 0.08; // slower radius transition for fluid scaling
+const dmSerif = DM_Serif_Text({
+  subsets: ['latin'],
+  weight: '400',
+  style: 'italic',
+});
+
+const MAGNIFIER_RADIUS = 98;
+const CURSOR_RADIUS = 8;
+const SMOOTH_FACTOR = 0.12;
+const RADIUS_SMOOTH = 0.08;
 const TEXT = 'projects & writings';
 const LINE_COLOR = 'rgba(255, 255, 255, 0.3125)';
 const LINE_WIDTH = 0.5;
-
+const FONT_STYLE = 'italic';
 
 interface TypoMetrics {
   baseline: number;
@@ -41,9 +48,8 @@ export default function MagnifierRevealText() {
     svgTextRef.current = node;
     if (!node || !containerRef.current) return;
 
-    const computedStyle = window.getComputedStyle(containerRef.current!);
-    const fontSize = parseFloat(computedStyle.fontSize);
-    const fontStr = `${computedStyle.fontWeight} ${fontSize}px ${computedStyle.fontFamily}`;
+    const fontSize = parseFloat(window.getComputedStyle(containerRef.current).fontSize);
+    const fontStr = `${FONT_STYLE} 400 ${fontSize}px ${dmSerif.style.fontFamily}`;
 
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d')!;
@@ -78,16 +84,13 @@ export default function MagnifierRevealText() {
       const container = containerRef.current;
       if (!container) return;
 
-      const computedStyle = window.getComputedStyle(container);
-      const fontSize = parseFloat(computedStyle.fontSize);
-      const fontWeight = computedStyle.fontWeight;
-      const fontFamily = computedStyle.fontFamily;
+      const fontSize = parseFloat(window.getComputedStyle(container).fontSize);
 
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
 
-      ctx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
+      ctx.font = `${FONT_STYLE} 400 ${fontSize}px ${dmSerif.style.fontFamily}`;
       const metrics = ctx.measureText(TEXT);
       const width = metrics.width;
       const ascent = metrics.fontBoundingBoxAscent || metrics.actualBoundingBoxAscent || fontSize * 0.78;
@@ -111,19 +114,16 @@ export default function MagnifierRevealText() {
     const ring = ringRef.current;
 
     if (clipCircle && ring && maskCircle) {
-      // Lerp position for kinetic feel
       smoothPos.current.x += (mousePos.current.x - smoothPos.current.x) * SMOOTH_FACTOR;
       smoothPos.current.y += (mousePos.current.y - smoothPos.current.y) * SMOOTH_FACTOR;
 
       const x = smoothPos.current.x;
       const y = smoothPos.current.y;
 
-      // Animate radius: cursor dot → magnifier circle (or back, faster)
       const targetRadius = isHovering.current ? MAGNIFIER_RADIUS : 0;
       const radiusSpeed = isHovering.current ? RADIUS_SMOOTH : 0.25;
       currentRadius.current += (targetRadius - currentRadius.current) * radiusSpeed;
 
-      // Snap to 0 when very small to fully hide
       const r = currentRadius.current < 0.5 ? 0 : currentRadius.current;
 
       clipCircle.setAttribute('cx', String(x));
@@ -156,7 +156,6 @@ export default function MagnifierRevealText() {
 
     const handleMouseEnter = () => {
       isHovering.current = true;
-      // Initialize smooth position to current mouse to avoid lerp from origin
       smoothPos.current = { ...mousePos.current };
     };
     const handleMouseLeave = () => { isHovering.current = false; };
@@ -180,8 +179,9 @@ export default function MagnifierRevealText() {
     y: svgBaseline,
     style: {
       fontSize: 'inherit' as const,
-      fontWeight: 'inherit' as const,
-      fontFamily: 'inherit' as const,
+      fontFamily: dmSerif.style.fontFamily,
+      fontStyle: FONT_STYLE,
+      fontWeight: 400,
     },
   };
 
@@ -197,6 +197,9 @@ export default function MagnifierRevealText() {
       style={{
         position: 'relative',
         cursor: 'none',
+        fontFamily: dmSerif.style.fontFamily,
+        fontStyle: FONT_STYLE,
+        fontWeight: 400,
       }}
     >
       {/* Invisible extended hit area */}
@@ -227,13 +230,8 @@ export default function MagnifierRevealText() {
             <clipPath id="magnifier-clip">
               <circle ref={clipCircleRef} cx="0" cy="0" r="0" />
             </clipPath>
-            <clipPath id="text-clip">
-              <text {...textProps}>{TEXT}</text>
-            </clipPath>
-            <pattern id="gradient-pattern" patternUnits="objectBoundingBox" width="1" height="1">
-              <image href="/gradient-texture.png" width={dimensions.width} height={dimensions.height} preserveAspectRatio="xMidYMid slice" />
-            </pattern>
-            <mask id="lines-mask">
+            {/* Mask to hide filled text inside magnifier */}
+            <mask id="fill-mask">
               <rect x="-50" y="-50" width={dimensions.width + 100} height={dimensions.height + 100} fill="white" />
               <circle ref={maskCircleRef} cx="0" cy="0" r="0" fill="black" />
             </mask>
@@ -243,62 +241,68 @@ export default function MagnifierRevealText() {
             </filter>
           </defs>
 
-          {/* Layer 1: Typographic guide lines */}
-          {typoMetrics && (
-            <g mask="url(#lines-mask)">
-              {[typoMetrics.capHeight, typoMetrics.xHeight, typoMetrics.baseline, typoMetrics.descender].map((y, i) => (
-                <line
-                  key={`h-${i}`}
-                  x1={-overshoot}
-                  y1={y}
-                  x2={dimensions.width + overshoot}
-                  y2={y}
-                  stroke={LINE_COLOR}
-                  strokeWidth={LINE_WIDTH}
-                />
-              ))}
-              {typoMetrics.charBoundaries.map((x, i) => (
-                <line
-                  key={`v-${i}`}
-                  x1={x}
-                  y1={typoMetrics.capHeight - overshoot}
-                  x2={x}
-                  y2={typoMetrics.descender + overshoot}
-                  stroke={LINE_COLOR}
-                  strokeWidth={LINE_WIDTH}
-                />
-              ))}
-            </g>
-          )}
-
-          {/* Layer 2: Outer outline via morphology filter */}
+          {/* Layer 1: Filled text (masked out where magnifier is) */}
           <text
             ref={svgTextCallbackRef}
             {...textProps}
-            fill="white"
+            fill="var(--text-hero)"
             stroke="none"
-            filter="url(#outline-filter)"
+            mask="url(#fill-mask)"
           >
             {TEXT}
           </text>
 
-          {/* Layer 3: Gradient image fill (clipped by magnifier + text shape) */}
+          {/* Layer 2: Magnifier reveal — outline + guide lines */}
           <g clipPath="url(#magnifier-clip)">
-            <g clipPath="url(#text-clip)">
-              <g className="gradient-drift">
-                <image
-                  href="/gradient-texture.png"
-                  x={-dimensions.width * 0.1}
-                  y={-dimensions.height * 0.1}
-                  width={dimensions.width * 1.2}
-                  height={dimensions.height * 1.2}
-                  preserveAspectRatio="xMidYMid slice"
-                />
+            {/* Guide lines */}
+            {typoMetrics && (
+              <g>
+                {[typoMetrics.capHeight, typoMetrics.xHeight, typoMetrics.baseline, typoMetrics.descender].map((y, i) => (
+                  <line
+                    key={`h-${i}`}
+                    x1={-overshoot}
+                    y1={y}
+                    x2={dimensions.width + overshoot}
+                    y2={y}
+                    stroke={LINE_COLOR}
+                    strokeWidth={LINE_WIDTH}
+                  />
+                ))}
+                {typoMetrics.charBoundaries.map((x, i) => {
+                  // Tilt vertical lines to match italic slant (~12°)
+                  const italicAngle = 12 * (Math.PI / 180);
+                  const topY = typoMetrics.capHeight - overshoot;
+                  const bottomY = typoMetrics.descender + overshoot;
+                  const midY = (topY + bottomY) / 2;
+                  const shiftTop = Math.tan(italicAngle) * (midY - topY);
+                  const shiftBottom = Math.tan(italicAngle) * (midY - bottomY);
+                  return (
+                    <line
+                      key={`v-${i}`}
+                      x1={x + shiftTop}
+                      y1={topY}
+                      x2={x + shiftBottom}
+                      y2={bottomY}
+                      stroke={LINE_COLOR}
+                      strokeWidth={LINE_WIDTH}
+                    />
+                  );
+                })}
               </g>
-            </g>
+            )}
+
+            {/* Outline text */}
+            <text
+              {...textProps}
+              fill="white"
+              stroke="none"
+              filter="url(#outline-filter)"
+            >
+              {TEXT}
+            </text>
           </g>
 
-          {/* Layer 4: Magnifier ring */}
+          {/* Layer 3: Magnifier ring */}
           <circle
             ref={ringRef}
             cx="0"
@@ -313,19 +317,6 @@ export default function MagnifierRevealText() {
       )}
 
       <span style={{ visibility: 'hidden', whiteSpace: 'nowrap' }}>{TEXT}</span>
-      <style>{`
-        @keyframes gradient-drift {
-          0% { transform: translate(0%, 0%) scale(1) rotate(0deg); }
-          25% { transform: translate(3%, -2%) scale(1.03) rotate(0.5deg); }
-          50% { transform: translate(-2%, 3%) scale(1.01) rotate(-0.3deg); }
-          75% { transform: translate(-3%, -1%) scale(1.04) rotate(0.2deg); }
-          100% { transform: translate(0%, 0%) scale(1) rotate(0deg); }
-        }
-        .gradient-drift {
-          animation: gradient-drift 8s ease-in-out infinite;
-          transform-origin: center center;
-        }
-      `}</style>
     </span>
   );
 }

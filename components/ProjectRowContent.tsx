@@ -23,7 +23,7 @@ export default function ProjectRowContent({
       initial={{ height: 0, backgroundColor: 'transparent' }}
       animate={{ height: 'auto', backgroundColor: project.color }}
       exit={{ height: 0, backgroundColor: 'transparent' }}
-      transition={{ duration: animationDuration, ease: ease as [number, number, number, number] }}
+      transition={{ type: 'spring', stiffness: 300, damping: 30, mass: 0.8 }}
     >
       <div className="pl-0 pt-0 grid grid-cols-3 gap-12">
         {/* Left column - Title and metadata */}

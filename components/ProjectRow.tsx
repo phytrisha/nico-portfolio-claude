@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import type { Project } from '@/data/projects';
 import ProjectRowHeader from './ProjectRowHeader';
@@ -9,15 +9,25 @@ import ProjectRowContent from './ProjectRowContent';
 interface ProjectRowProps {
   project: Project;
   isExpanded: boolean;
+  isLast?: boolean;
   onClick: () => void;
 }
 
 const ANIMATION_DURATION = 0.5;
 const EASE = [0.4, 0, 0.2, 1];
 
-export default function ProjectRow({ project, isExpanded, onClick }: ProjectRowProps) {
+export default function ProjectRow({ project, isExpanded, isLast, onClick }: ProjectRowProps) {
+  const rowRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isExpanded && isLast && rowRef.current) {
+      rowRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }
+  }, [isExpanded, isLast]);
+
   return (
     <div
+      ref={rowRef}
       className="w-full"
       style={{
         backgroundColor: isExpanded ? project.color : 'var(--bg-primary)',

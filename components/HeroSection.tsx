@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
+import MagnifierRevealText from './MagnifierRevealText';
 
 export default function HeroSection() {
   const [displayedText, setDisplayedText] = useState('');
@@ -102,7 +103,7 @@ export default function HeroSection() {
             }}
             transition={{ duration: 0.5 }}
           >
-            <div className="mt-32 leading-relaxed">
+            <div className="mt-16 md:mt-32 leading-relaxed">
               With a polyoriginal <br /> lens informed by <br /> design & philosophy <br /> I specialize in <br /> translating abstract <br /> ideas into tangible <br  /> product designs.
             </div>
           </motion.div>
@@ -118,8 +119,8 @@ export default function HeroSection() {
             }}
             transition={{ duration: 0.5 }}
           >
-            <div className="mt-32 mb-32 leading-relaxed">
-              Explore some<br /><span className="bg-gradient-to-r from-[#683D20] via-[#A278A7] to-[#285122] bg-clip-text text-transparent">projects & writings</span><br />dear to my heart...
+            <div className="mt-16 md:mt-32 mb-16 md:mb-32 leading-relaxed">
+              Explore some<br /><MagnifierRevealText /><br />dear to my heart...
             </div>
           </motion.div>
         </h1>
