@@ -9,7 +9,7 @@ const dmSerif = DM_Serif_Text({
   style: 'italic',
 });
 
-const MAGNIFIER_RADIUS = 98;
+const MAGNIFIER_RATIO = 98 / 86; // radius relative to font size at max (86px)
 const CURSOR_RADIUS = 8;
 const SMOOTH_FACTOR = 0.12;
 const RADIUS_SMOOTH = 0.08;
@@ -40,6 +40,7 @@ export default function MagnifierRevealText() {
   const frameId = useRef<number>(0);
 
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const magnifierRadius = useRef(98);
   const [svgBaseline, setSvgBaseline] = useState(0);
   const [typoMetrics, setTypoMetrics] = useState<TypoMetrics | null>(null);
 
@@ -98,6 +99,7 @@ export default function MagnifierRevealText() {
       const height = ascent + descent;
 
       setDimensions({ width, height });
+      magnifierRadius.current = fontSize * MAGNIFIER_RATIO;
       setSvgBaseline(ascent);
     };
 
@@ -120,7 +122,7 @@ export default function MagnifierRevealText() {
       const x = smoothPos.current.x;
       const y = smoothPos.current.y;
 
-      const targetRadius = isHovering.current ? MAGNIFIER_RADIUS : 0;
+      const targetRadius = isHovering.current ? magnifierRadius.current : 0;
       const radiusSpeed = isHovering.current ? RADIUS_SMOOTH : 0.25;
       currentRadius.current += (targetRadius - currentRadius.current) * radiusSpeed;
 
@@ -307,7 +309,7 @@ export default function MagnifierRevealText() {
             ref={ringRef}
             cx="0"
             cy="0"
-            r={MAGNIFIER_RADIUS}
+            r={magnifierRadius.current}
             fill="none"
             stroke="rgba(255,255,255,0.8)"
             strokeWidth={2}

@@ -64,7 +64,7 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen flex items-center justify-center" style={{ backgroundColor: 'var(--bg-hero)' }}>
       <div className="w-[80%] mt-64">
-        <h1 className="text-[30px] md:text-[76px] lg:text-[86px] font-bold leading-tight">
+        <h1 className="font-bold leading-tight" style={{ fontSize: 'clamp(30px, 6.7vw, 86px)' }}>
           <div className="text-white mb-24 min-h-[1.2em]">{displayedText}</div>
 
           <motion.div
