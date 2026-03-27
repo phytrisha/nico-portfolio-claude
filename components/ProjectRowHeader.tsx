@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import type { Project } from '@/data/projects';
 
@@ -17,6 +17,53 @@ export default function ProjectRowHeader({
 }: ProjectRowHeaderProps) {
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === 'dark';
+  const marqueeRef = useRef<HTMLDivElement>(null);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+  const [expandedDelayDone, setExpandedDelayDone] = useState(false);
+
+  useEffect(() => {
+    const el = marqueeRef.current;
+    if (!el) return;
+
+    const checkProximity = () => {
+      const rect = el.getBoundingClientRect();
+      const vpCenter = window.innerHeight / 2;
+      // Trigger only when the element's top has scrolled past the viewport center
+      const pastCenter = rect.top < vpCenter;
+
+      if (pastCenter) {
+        const currentActive = document.querySelector('[data-marquee-active]');
+        if (currentActive && currentActive !== el) {
+          currentActive.removeAttribute('data-marquee-active');
+          currentActive.dispatchEvent(new CustomEvent('marquee-stop'));
+        }
+        el.setAttribute('data-marquee-active', '');
+        setShouldAnimate(true);
+      } else if (el.hasAttribute('data-marquee-active')) {
+        el.removeAttribute('data-marquee-active');
+        setShouldAnimate(false);
+      }
+    };
+
+    const handleStop = () => setShouldAnimate(false);
+    el.addEventListener('marquee-stop', handleStop);
+    window.addEventListener('scroll', checkProximity, { passive: true });
+    checkProximity();
+
+    return () => {
+      window.removeEventListener('scroll', checkProximity);
+      el.removeEventListener('marquee-stop', handleStop);
+      el.removeAttribute('data-marquee-active');
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isExpanded) {
+      const timer = setTimeout(() => setExpandedDelayDone(true), 3000);
+      return () => clearTimeout(timer);
+    }
+    setExpandedDelayDone(false);
+  }, [isExpanded]);
 
   return (
     <div
@@ -27,17 +74,16 @@ export default function ProjectRowHeader({
       }}
       onClick={onClick}
     >
-      <div className="flex flex-col justify-center font-sans px-0 py-8" style={{ color: isExpanded && isDark ? '#000000' : 'var(--text-primary)' }}>
+      <div className="flex flex-col justify-center font-sans px-0 pt-6 pb-5 md:py-10" style={{ color: isExpanded && isDark ? '#000000' : 'var(--text-primary)' }}>
 
         {/* First line - Title and expand button */}
-        <div className="flex items-center justify-between mb-6">
-          <div data-magnetic-title className="text-[22px] md:text-[28px] lg:text-[28px] font-medium">{project.shortTitle}</div>
-          <div className="text-3xl font-extralight pl-3">{isExpanded ? '−' : '+'}</div>
+        <div className="mb-6 md:mb-7">
+          <div data-magnetic-title className="text-[22px] md:text-[28px] lg:text-[28px] font-medium leading-[1.4]">{project.shortTitle}</div>
         </div>
 
         {/* Second line - Table format with ID, Tags, and Year */}
         <div
-          className="flex items-center gap-0 text-xs font-mono mb-2 leading-[1.5]"
+          className="flex items-center gap-0 text-xs font-mono mb-3 leading-[1.5]"
           style={{ border: `1px solid ${isExpanded && isDark ? '#000000' : 'var(--border-color)'}` }}
         >
           <div
@@ -53,15 +99,14 @@ export default function ProjectRowHeader({
               {project.year}
             </div>
           )}
-          {project.tags.map((tag, i) => (
-            <div
-              key={i}
-              className="px-4 py-2"
-              //style={{ borderRight: '1px solid var(--border-color)' }}
-            >
-              {tag}
+          <div ref={marqueeRef} className="overflow-hidden flex-1 relative px-4 py-2">
+            <div className={`whitespace-nowrap md:whitespace-normal ${shouldAnimate || expandedDelayDone ? 'marquee-container' : ''}`}>
+              <span className="marquee-content">{project.tags.join(',\u00A0\u00A0').toUpperCase()}{(shouldAnimate || expandedDelayDone) && <span className="md:hidden">&nbsp;&nbsp;—&nbsp;&nbsp;</span>}</span>
+              {(shouldAnimate || expandedDelayDone) && (
+                <span className="marquee-content md:hidden" aria-hidden>{project.tags.join(',\u00A0\u00A0').toUpperCase()}&nbsp;&nbsp;—&nbsp;&nbsp;</span>
+              )}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </div>
