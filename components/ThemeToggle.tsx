@@ -75,6 +75,7 @@ export function ThemeToggle() {
   return (
     <button
       ref={buttonRef}
+      data-press-light={theme === 'dark' ? '' : undefined}
       onClick={handleToggle}
       className="fixed bottom-0 right-0 z-50 p-5 rounded-none"
       style={{

@@ -1,5 +1,32 @@
 @import "tailwindcss";
 
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Marquee for overflowing tags on mobile */
+@media (max-width: 639px) {
+  .marquee-container {
+    display: inline-flex;
+    width: max-content;
+    animation: marquee 17s linear infinite;
+  }
+  .marquee-content {
+    flex-shrink: 0;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  70% { transform: translateX(-50%); }
+  100% { transform: translateX(-50%); }
+}
+
 @theme {
   --breakpoint-sm: 480px;
   --breakpoint-md: 640px;
@@ -21,6 +48,7 @@
   --externallink-bg: #000000;
   --email-btn-icon: #EDEBE3;
   --close-btn-icon: #EDEBE3;
+  --pill-bg: #1A1A1A;
 }
 
 .dark {
@@ -36,6 +64,7 @@
   --externallink-bg: #1A1918;
   --email-btn-icon: #000000;
   --close-btn-icon: #EDEBE3;
+  --pill-bg: #EDEBE3;
 }
 
 *,
@@ -120,6 +149,34 @@ body {
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+/* Button press effect — lighten dark bg on press */
+button,
+[data-clickable],
+[data-press] {
+  transition: filter 0.1s ease;
+}
+
+button:active,
+[data-clickable]:active,
+[data-press]:active {
+  filter: brightness(1.3);
+}
+
+/* Buttons with light bg (theme toggle in dark mode) — darken instead */
+[data-press-light]:active {
+  filter: brightness(0.85);
+}
+
+/* Scale inner icons/images on press */
+button:active img,
+button:active svg,
+[data-clickable]:active svg,
+[data-press]:active img,
+[data-press]:active svg {
+  transform: scale(0.85);
+  transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Smooth scroll behavior */

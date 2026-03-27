@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, DM_Serif_Text } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import FloatingPill from "@/components/FloatingPill";
 import CustomCursor from "@/components/CustomCursor";
 
 const inter = Inter({
@@ -40,14 +40,7 @@ export default function RootLayout({
           {children}
           {modal}
 
-        {/* Fixed email button */}
-        <a
-          href="mailto:helloiamnico@icloud.com"
-          className="fixed bottom-0 right-18 z-50 px-5 py-5" style={{ backgroundColor: 'var(--externallink-bg)' }}
-        >
-          <img src="/mail.png" alt="Wave" className="w-8 h-8" />
-        </a>
-          <ThemeToggle />
+          <FloatingPill />
           <CustomCursor />
         </ThemeProvider>
       </body>

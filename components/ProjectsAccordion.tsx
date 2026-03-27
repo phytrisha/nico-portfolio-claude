@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import ProjectRow from './ProjectRow';
 import { projects } from '@/data/projects';
 
@@ -9,6 +10,13 @@ interface ProjectsAccordionProps {
 }
 
 export default function ProjectsAccordion({ expandedId, setExpandedId }: ProjectsAccordionProps) {
+  useEffect(() => {
+    if (expandedId !== null) {
+      document.body.setAttribute('data-project-expanded', '');
+    } else {
+      document.body.removeAttribute('data-project-expanded');
+    }
+  }, [expandedId]);
   const handleRowClick = (id: number) => {
     setExpandedId(expandedId === id ? null : id);
   };

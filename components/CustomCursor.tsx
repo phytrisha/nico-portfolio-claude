@@ -22,7 +22,9 @@ export default function CustomCursor() {
   const MAGNET_DISTANCE = 160;
   const MAGNET_STRENGTH = 0.65;
   const ROW_MAGNET_STRENGTH = 0.3;
-  const SMOOTH_FACTOR = 0.15;
+  const SMOOTH_MIN = 0.15;  // smoothing when close (kinetic deceleration)
+  const SMOOTH_MAX = 0.6;   // smoothing when far (snappy response)
+  const SMOOTH_DIST = 100;  // distance at which max smoothing kicks in
   const MAX_ROW_SCALE = DOT_SIZE_HOVER / DOT_SIZE; // same max as hover
 
   const animate = useCallback(() => {
@@ -44,21 +46,24 @@ export default function CustomCursor() {
       ty += (magnetTarget.current.y - ty) * MAGNET_STRENGTH;
     }
 
-    position.current.x += (tx - position.current.x) * SMOOTH_FACTOR;
-    position.current.y += (ty - position.current.y) * SMOOTH_FACTOR;
+    // Variable smoothing: snappy when far, smooth when close
+    const dx = tx - position.current.x;
+    const dy = ty - position.current.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    const t = Math.min(dist / SMOOTH_DIST, 1);
+    const smoothFactor = SMOOTH_MIN + t * (SMOOTH_MAX - SMOOTH_MIN);
+
+    position.current.x += dx * smoothFactor;
+    position.current.y += dy * smoothFactor;
 
     // Calculate scale based on row proximity or hover state
     let targetScale = 1;
     if (isHovering.current) {
       targetScale = MAX_ROW_SCALE;
     } else if (rowMagnetTarget.current) {
-      // Scale based on separate X/Y proximity, with Y weighted 2x
-      const dx = Math.abs(targetPosition.current.x - rowMagnetTarget.current.x);
+      // Scale based on Y proximity only (horizontal axis through headline)
       const dy = Math.abs(targetPosition.current.y - rowMagnetTarget.current.y);
-      const proxX = 1 - Math.min(dx / rowMagnetTarget.current.maxDistX, 1);
-      const proxY = 1 - Math.min(dy / rowMagnetTarget.current.maxDistY, 1);
-      // Combine: Y has 3x weight, then average
-      const proximity = Math.min((proxX + proxY * 3) / 4, 1);
+      const proximity = 1 - Math.min(dy / rowMagnetTarget.current.maxDistY, 1);
       targetScale = 1 + proximity * (MAX_ROW_SCALE - 1);
     } else if (lastRowRect.current) {
       // Gradually scale down based on distance from last row
@@ -76,7 +81,7 @@ export default function CustomCursor() {
     }
 
     // Smooth scale transition
-    currentScale.current += (targetScale - currentScale.current) * SMOOTH_FACTOR;
+    currentScale.current += (targetScale - currentScale.current) * SMOOTH_MIN;
 
     const size = DOT_SIZE * currentScale.current;
     dot.style.width = `${size}px`;
@@ -110,10 +115,12 @@ export default function CustomCursor() {
       const collapsedRow = el?.closest?.('[data-magnetic-row]');
       if (collapsedRow) {
         const rect = collapsedRow.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        rowMagnetTarget.current = { x: centerX, y: centerY, maxDistX: rect.width / 2, maxDistY: rect.height / 2 };
-        lastRowRect.current = { top: rect.top, bottom: rect.bottom, centerX, centerY, maxDistX: rect.width / 2, maxDistY: rect.height / 2 };
+        // Use headline's vertical center for Y pull, no X pull
+        const title = collapsedRow.querySelector('[data-magnetic-title]');
+        const titleRect = title ? title.getBoundingClientRect() : rect;
+        const centerY = titleRect.top + titleRect.height / 2;
+        rowMagnetTarget.current = { x: e.clientX, y: centerY, maxDistX: rect.width / 2, maxDistY: rect.height / 2 };
+        lastRowRect.current = { top: rect.top, bottom: rect.bottom, centerX: e.clientX, centerY, maxDistX: rect.width / 2, maxDistY: rect.height / 2 };
       } else {
         rowMagnetTarget.current = null;
       }
