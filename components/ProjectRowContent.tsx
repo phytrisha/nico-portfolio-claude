@@ -11,6 +11,7 @@ interface ProjectRowContentProps {
   animationDuration: number;
   ease: number[];
   scrollIntoView?: boolean;
+  onAnimationComplete?: () => void;
 }
 
 export default function ProjectRowContent({
@@ -18,6 +19,7 @@ export default function ProjectRowContent({
   animationDuration,
   ease,
   scrollIntoView,
+  onAnimationComplete,
 }: ProjectRowContentProps) {
   const ref = React.useRef<HTMLDivElement>(null);
 
@@ -29,6 +31,7 @@ export default function ProjectRowContent({
       animate={{ height: 'auto', backgroundColor: project.color }}
       exit={{ height: 0, backgroundColor: 'transparent' }}
       transition={{ type: 'spring', stiffness: 300, damping: 30, mass: 0.8 }}
+      onAnimationComplete={() => onAnimationComplete?.()}
       onUpdate={() => {
         if (scrollIntoView && ref.current) {
           const rect = ref.current.getBoundingClientRect();
@@ -39,35 +42,44 @@ export default function ProjectRowContent({
         }
       }}
     >
-      <div className="pl-0 pt-0 grid grid-cols-3 gap-12">
-        {/* Left column - Title and metadata */}
-        <div className='col-span-3 lg:col-span-2 pb-2 lg:pb-12'>
+      {/* xl+ layout: side-by-side grid */}
+      <div className="hidden xl:grid pl-0 pt-0 grid-cols-3 gap-12">
+        <div className='col-span-2 pb-12'>
             <div className="text-5xl leading-normal">{renderDescription(project.description)}</div>
         </div>
-
-        {/* Right column - Action button */}
-        <div className="mx-[calc(50%-50vw)] lg:mx-0 w-screen lg:w-auto flex items-end justify-center lg:justify-end col-span-3 lg:col-span-1">
+        <div className="flex items-end justify-end col-span-1">
           <Link
             href={project.externalUrl || `/project/${project.slug}`}
             target={project.externalUrl ? '_blank' : undefined}
             rel={project.externalUrl ? 'noopener noreferrer' : undefined}
             data-press
-            className="block w-full lg:w-auto"
+            className="block"
           >
-            <div className="p-10 md:py-[46px] lg:p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
-              <svg
-                className="w-12 h-12 md:w-[72px] md:h-[72px] lg:w-[100px] lg:h-[100px]"
-                viewBox="0 0 80 80"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10 70L70 10M73 10H25M70 10V55"
-                  stroke="#EDEBE3"
-                  strokeWidth="6"
-                  strokeLinecap="butt"
-                  strokeLinejoin="miter"
-                />
+            <div className="p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
+              <svg className="w-[100px] h-[100px]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 70L70 10M73 10H25M70 10V55" stroke="#EDEBE3" strokeWidth="6" strokeLinecap="butt" strokeLinejoin="miter" />
+              </svg>
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      {/* Below xl: full-width text with sticky button */}
+      <div className="xl:hidden">
+        <div className="pb-2">
+          <div className="text-5xl leading-normal">{renderDescription(project.description)}</div>
+        </div>
+        <div className="sticky bottom-0 flex justify-end">
+          <Link
+            href={project.externalUrl || `/project/${project.slug}`}
+            target={project.externalUrl ? '_blank' : undefined}
+            rel={project.externalUrl ? 'noopener noreferrer' : undefined}
+            data-press
+            className="block"
+          >
+            <div className="p-10 md:py-[46px] flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
+              <svg className="w-12 h-12 md:w-[72px] md:h-[72px]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 70L70 10M73 10H25M70 10V55" stroke="#EDEBE3" strokeWidth="6" strokeLinecap="butt" strokeLinejoin="miter" />
               </svg>
             </div>
           </Link>
