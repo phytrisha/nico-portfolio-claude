@@ -51,6 +51,7 @@ export default function ProjectRowContent({
             href={project.externalUrl || `/project/${project.slug}`}
             target={project.externalUrl ? '_blank' : undefined}
             rel={project.externalUrl ? 'noopener noreferrer' : undefined}
+            data-press
             className="block w-full lg:w-auto"
           >
             <div className="p-10 md:py-[46px] lg:p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>

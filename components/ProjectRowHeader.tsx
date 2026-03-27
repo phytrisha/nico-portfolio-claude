@@ -31,7 +31,7 @@ export default function ProjectRowHeader({
 
         {/* First line - Title and expand button */}
         <div className="flex items-center justify-between mb-6">
-          <div className="text-[22px] md:text-[28px] lg:text-[28px] font-medium">{project.shortTitle}</div>
+          <div data-magnetic-title className="text-[22px] md:text-[28px] lg:text-[28px] font-medium">{project.shortTitle}</div>
           <div className="text-3xl font-extralight pl-3">{isExpanded ? '−' : '+'}</div>
         </div>
 

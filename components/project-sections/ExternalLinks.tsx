@@ -18,6 +18,7 @@ export default function ExternalLinks({ links, projectColor }: ExternalLinksProp
               target="_blank"
               rel="noopener noreferrer"
               className="group block"
+              data-press
             >
               {/* Black square with colored arrow */}
               <div className="w-full relative" style={{ paddingBottom: '100%', backgroundColor: 'var(--externallink-bg)' }}>

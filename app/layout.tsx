@@ -43,6 +43,7 @@ export default function RootLayout({
         {/* Fixed email button */}
         <a
           href="mailto:helloiamnico@icloud.com"
+          data-press
           className="fixed bottom-0 right-18 z-50 px-5 py-5" style={{ backgroundColor: 'var(--externallink-bg)' }}
         >
           <img src="/mail.png" alt="Wave" className="w-8 h-8" />
