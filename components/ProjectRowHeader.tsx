@@ -74,7 +74,7 @@ export default function ProjectRowHeader({
       }}
       onClick={onClick}
     >
-      <div className="flex flex-col justify-center font-sans px-0 pt-6 pb-5 md:py-10" style={{ color: isExpanded && isDark ? '#000000' : 'var(--text-primary)' }}>
+      <div className="flex flex-col justify-center font-sans px-0 pt-7 pb-10 md:py-10" style={{ color: isExpanded && isDark ? '#000000' : 'var(--text-primary)' }}>
 
         {/* First line - Title and expand button */}
         <div className="mb-6 md:mb-7">
@@ -83,7 +83,7 @@ export default function ProjectRowHeader({
 
         {/* Second line - Table format with ID, Tags, and Year */}
         <div
-          className="flex items-center gap-0 text-xs font-mono mb-3 leading-[1.5]"
+          className="flex items-center gap-0 text-xs font-mono mb-0 md:mb-3 leading-[1.5]"
           style={{ border: `1px solid ${isExpanded && isDark ? '#000000' : 'var(--border-color)'}` }}
         >
           <div
