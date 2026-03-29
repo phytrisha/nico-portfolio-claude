@@ -16,7 +16,7 @@ export default function SideBySide({ component }: SideBySideProps) {
   const pyClass = component.py || 'py-8';
 
   return (
-    <div className={`w-full flex gap-4 px-8 ${pyClass}`}>
+    <div className={`w-full flex gap-4 max-w-4xl mx-auto ${pyClass}`}>
       {/* Left Block */}
       <div className="w-1/2">
         {component.left.type === 'image' ? (

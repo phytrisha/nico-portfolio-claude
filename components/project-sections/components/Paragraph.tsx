@@ -8,7 +8,7 @@ export default function Paragraph({ component }: ParagraphProps) {
   const pyClass = component.py || 'py-8';
 
   return (
-    <p className={`text-base leading-relaxed px-8 ${pyClass} my-0 xs:text-base sm:text-base md:text-base lg:text-base`}>
+    <p className={`text-base lg:text-[17px] leading-relaxed ${pyClass} my-0 max-w-4xl mx-auto`}>
       {component.content}
     </p>
   );

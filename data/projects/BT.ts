@@ -73,24 +73,14 @@ export const BT: Project = {
             py: 'pt-6 pb-0',         
           },
           {
-            type: 'paragraph',
-            content: '- Enable consistency across iOS, Android, and web platforms',
-            py: 'pt-2 pb-0',         
-          },
-            {
-            type: 'paragraph',
-            content: '- Minimize component proliferation through intelligent, configurable architecture',
-            py: 'pt-2 pb-0',         
-          },
-            {
-            type: 'paragraph',
-            content: '- Provide clear guidance for the clients internal design team to maintain and extend the system independently',
-            py: 'pt-2 pb-0',         
-          },
-            {
-            type: 'paragraph',
-            content: '- Validate / iterate the system through real-world application in parallel UI design work',
-            py: 'pt-2 pb-0',         
+            type: 'bullet-list',
+            items: [
+              'Enable consistency across iOS, Android, and web platforms',
+              'Minimize component proliferation through intelligent, configurable architecture',
+              'Provide clear guidance for the clients internal design team to maintain and extend the system independently',
+              'Validate / iterate the system through real-world application in parallel UI design work',
+            ],
+            py: 'pt-2 pb-0',
           },
 
 
@@ -101,19 +91,13 @@ export const BT: Project = {
             py: 'pt-8 pb-0',         
           },
           {
-            type: 'paragraph',
-            content: '- Internal Design Team (Client): Feedback loops, handoff recipients',
-            py: 'pt-2 pb-0',         
-          },
-            {
-            type: 'paragraph',
-            content: '- External Consulting Team: Overseeing the strategic and visual direction of the reconceptualization and product strategy',
-            py: 'pt-2 pb-0',         
-          },
-            {
-            type: 'paragraph',
-            content: '- My Position: Specialist brought in for design systems expertise and structured UI/UX execution',
-            py: 'pt-2 pb-10',         
+            type: 'bullet-list',
+            items: [
+              'Internal Design Team (Client): Feedback loops, handoff recipients',
+              'External Consulting Team: Overseeing the strategic and visual direction of the reconceptualization and product strategy',
+              'My Position: Specialist brought in for design systems expertise and structured UI/UX execution',
+            ],
+            py: 'pt-2 pb-10',
           },
         ]
       },
@@ -136,67 +120,32 @@ export const BT: Project = {
             py: 'pt-2 pb-2',
           },
           {
-            type: 'paragraph',
-            content: 'Primitive tokens: Raw values with no semantic meaning (blue.500, space.4, radius.2). Primitives include for example:',
+            type: 'bullet-list',
+            headline: 'Primitive tokens',
+            copy: 'Raw values with no semantic meaning (blue.500, space.4, radius.2). Primitives include for example:',
+            items: [
+              'Color',
+              'Typography scales and styles',
+              'Spacing and sizing values',
+              'Elevation and effects',
+              'Border radii and stroke weights',
+            ],
             py: 'pt-0 pb-0',
           },
-          {
-            type: 'paragraph',
-            content: '- Color',
-            py: 'pt-2 pb-0',
-          },
-                    {
-            type: 'paragraph',
-            content: '- Typography scales and styles',
-            py: 'pt-2 pb-0',
-          },
-                    {
-            type: 'paragraph',
-            content: '- Spacing and sizing values',
-            py: 'pt-2 pb-0',
-          },
-                    {
-            type: 'paragraph',
-            content: '- Elevation and effects',
-            py: 'pt-2 pb-0',
-          },
-                    {
-            type: 'paragraph',
-            content: '- Border radii and stroke weights',
-            py: 'pt-2 pb-0',
-          },
 
 
           {
-            type: 'paragraph',
-            content: 'Semantic tokens: Purpose-mapped references to primitives (color.text.primary, spacing.md). These change between themes/modes; primitives do not. Semantic tokes include for example clusters for different states of: ',
-            py: 'pt-6 pb-0',
-          },
-
-          {
-            type: 'paragraph',
-            content: '- Surfaces',
-            py: 'pt-2 pb-0',
-          },
-                    {
-            type: 'paragraph',
-            content: '- Action items',
-            py: 'pt-2 pb-0',
-          },
-                    {
-            type: 'paragraph',
-            content: '- Status',
-            py: 'pt-2 pb-0',
-          },
-                    {
-            type: 'paragraph',
-            content: '- Data-visualizations',
-            py: 'pt-2 pb-0',
-          },
-                    {
-            type: 'paragraph',
-            content: '- Icons',
-            py: 'pt-2 pb-6',
+            type: 'bullet-list',
+            headline: 'Semantic tokens',
+            copy: 'Purpose-mapped references to primitives (color.text.primary, spacing.md). These change between themes/modes; primitives do not. Semantic tokens include for example clusters for different states of:',
+            items: [
+              'Surfaces',
+              'Action items',
+              'Status',
+              'Data-visualizations',
+              'Icons',
+            ],
+            py: 'pt-4 pb-6',
           },
 
            {
@@ -222,29 +171,15 @@ export const BT: Project = {
           },
 
           {
-            type: 'paragraph',
-            content: '- Boolean toggles for optional elements (icons, badges, secondary actions)',
+            type: 'bullet-list',
+            items: [
+              'Boolean toggles for optional elements (icons, badges, secondary actions)',
+              'Instance swapping for flexible content slots',
+              'Variant properties mapping to semantic states and sizes',
+              'Nested auto-layout ensuring responsiveness across contexts',
+              'Border radii and stroke weights',
+            ],
             py: 'pt-4 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Instance swapping for flexible content slots',
-            py: 'pt-2 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Variant properties mapping to semantic states and sizes',
-            py: 'pt-2 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Nested auto-layout ensuring responsiveness across contexts',
-            py: 'pt-2 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Border radii and stroke weights',
-            py: 'pt-2 pb-0',
           },
 
           {
@@ -275,19 +210,13 @@ export const BT: Project = {
           },
 
           {
-            type: 'paragraph',
-            content: '- Stress-testing the system against real UI requirements',
+            type: 'bullet-list',
+            items: [
+              'Stress-testing the system against real UI requirements',
+              'Demonstrating correct component usage as reference for the internal team',
+              'Supporting / moving along the need for a high quantity of screen designs and building prototypes',
+            ],
             py: 'pt-4 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Demonstrating correct component usage as reference for the internal team',
-            py: 'pt-2 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Supporting / moving along the need for a high quantity of screen designs and building prototypes',
-            py: 'pt-2 pb-0',
           },
 
           {
@@ -319,23 +248,13 @@ export const BT: Project = {
           },
 
           {
-            type: 'paragraph',
-            content: '- Intended use cases and when to select which variant',
-            py: 'pt-2 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Configuration options and their effects',
-            py: 'pt-2 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Do/dont guidance with visual examples',
-            py: 'pt-2 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Accessibility considerations',
+            type: 'bullet-list',
+            items: [
+              'Intended use cases and when to select which variant',
+              'Configuration options and their effects',
+              'Do/dont guidance with visual examples',
+              'Accessibility considerations',
+            ],
             py: 'pt-2 pb-10',
           },
         ]
@@ -354,23 +273,13 @@ export const BT: Project = {
           },
 
           {
-            type: 'paragraph',
-            content: '- Complete Figma component library built on variables and tokens',
-            py: 'pt-1 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Multi-platform support (iOS, Android, responsive web)',
-            py: 'pt-1 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Configurable components with comprehensive variant coverage',
-            py: 'pt-2 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Semantic token structure for theming and scalability',
+            type: 'bullet-list',
+            items: [
+              'Complete Figma component library built on variables and tokens',
+              'Multi-platform support (iOS, Android, responsive web)',
+              'Configurable components with comprehensive variant coverage',
+              'Semantic token structure for theming and scalability',
+            ],
             py: 'pt-1 pb-2',
           }, 
 
@@ -382,23 +291,13 @@ export const BT: Project = {
           },
 
           {
-            type: 'paragraph',
-            content: '- Key application screens demonstrating system application',
-            py: 'pt-2 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Interaction patterns and flow documentation',
-            py: 'pt-2 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Reference implementations for internal team',
-            py: 'pt-2 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- Figma prototypes of core user flows',
+            type: 'bullet-list',
+            items: [
+              'Key application screens demonstrating system application',
+              'Interaction patterns and flow documentation',
+              'Reference implementations for internal team',
+              'Figma prototypes of core user flows',
+            ],
             py: 'pt-2 pb-2',
           }, 
 
@@ -410,13 +309,11 @@ export const BT: Project = {
           },
 
           {
-            type: 'paragraph',
-            content: '- Component-level usage guidelines',
-            py: 'pt-2 pb-0',
-          },
-          {
-            type: 'paragraph',
-            content: '- System architecture overview',
+            type: 'bullet-list',
+            items: [
+              'Component-level usage guidelines',
+              'System architecture overview',
+            ],
             py: 'pt-2 pb-10',
           },
         ]

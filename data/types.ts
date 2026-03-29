@@ -104,6 +104,14 @@ export interface IntroTextComponent {
   py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
 }
 
+export interface BulletListComponent {
+  type: 'bullet-list';
+  headline?: string; // Optional headline (semi-bold, body size)
+  copy?: string; // Optional intro copy before the list
+  items: string[];
+  py?: string; // Optional padding-y override (e.g., 'py-4', 'py-12')
+}
+
 export type SubSectionComponent =
   | ParagraphComponent
   | InlineHeaderComponent
@@ -115,7 +123,8 @@ export type SubSectionComponent =
   | FullWidthVideoComponent
   | SideBySideComponent
   | SublinesComponent
-  | IntroTextComponent;
+  | IntroTextComponent
+  | BulletListComponent;
 
 export interface SubSection {
   header?: string; // optional section header

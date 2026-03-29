@@ -56,15 +56,15 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                       </svg>
                     </button>
 
-                    <div className="max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[76%] xl:max-w-[62%] mx-auto">
-                      <h1 className="text-4xl md:text-5xl lg:text-[60px] font-bold mb-18 mt-28 leading-tight">
+                    <div style={{ '--detail-px': 'clamp(18px, 4vw, 60px)', paddingLeft: 'var(--detail-px)', paddingRight: 'var(--detail-px)' } as React.CSSProperties}>
+                      <h1 className="text-4xl md:text-5xl lg:text-[60px] font-bold mb-18 mt-28 leading-tight max-w-4xl mx-auto">
                         {project.title}
                       </h1>
                       <div className="-mb-[1px]">
                         <Metadata projectId={project.id} metadata={project.metadata} />
                       </div>
                       {project.projectSection && (
-                        <div className="mb-16" style={{ border: '1px solid var(--border-projectdetail)' }}>
+                        <div className="mb-16">
                           <ProjectSection projectSection={project.projectSection} />
                         </div>
                       )}
@@ -88,15 +88,15 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                     </svg>
                   </button>
 
-                  <div className="max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[76%] xl:max-w-[62%] mx-auto">
-                    <h1 className="text-4xl md:text-5xl lg:text-[60px] font-bold mb-18 mt-28 leading-tight">
+                  <div style={{ '--detail-px': 'clamp(18px, 4vw, 60px)', paddingLeft: 'var(--detail-px)', paddingRight: 'var(--detail-px)' } as React.CSSProperties}>
+                    <h1 className="text-4xl md:text-5xl lg:text-[60px] font-bold mb-18 mt-28 leading-tight max-w-4xl mx-auto">
                       {project.title}
                     </h1>
                     <div className="-mb-[1px]">
                       <Metadata projectId={project.id} metadata={project.metadata} />
                     </div>
                     {project.projectSection && (
-                      <div className="mb-16" style={{ border: '1px solid var(--border-projectdetail)' }}>
+                      <div className="mb-16">
                         <ProjectSection projectSection={project.projectSection} />
                       </div>
                     )}

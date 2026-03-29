@@ -8,7 +8,7 @@ export default function FeatureBlock({ component }: FeatureBlockProps) {
   const pyClass = component.py || 'py-8';
 
   return (
-    <div className={`px-8 ${pyClass} my-0`}>
+    <div className={`${pyClass} my-0 max-w-4xl mx-auto`}>
       <div className="font-mono font-semibold text-xs whitespace-pre-wrap pb-3 tracking-wide text-transfrom: uppercase">
         {component.skyline}
       </div>
