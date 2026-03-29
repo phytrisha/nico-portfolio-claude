@@ -15,7 +15,7 @@ export default function FullWidthVideo({ component }: FullWidthVideoProps) {
   const pyClass = component.py || 'py-8';
 
   return (
-    <div className={`w-full px-8 ${pyClass}`}>
+    <div className={`w-full max-w-4xl mx-auto ${pyClass}`}>
       <video
         src={src}
         controls={component.controls !== false}

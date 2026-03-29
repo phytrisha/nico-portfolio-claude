@@ -15,7 +15,7 @@ export default function HeroImage({ component }: HeroImageProps) {
   const pyClass = component.py || 'my-0';
 
   return (
-    <div className={`w-full ${pyClass}`}>
+    <div className={`w-auto ${pyClass}`} style={{ marginLeft: 'calc(-1 * var(--detail-px))', marginRight: 'calc(-1 * var(--detail-px))' }}>
       <Image
         src={src}
         alt={component.alt || ''}

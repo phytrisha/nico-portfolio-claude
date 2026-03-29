@@ -15,7 +15,7 @@ export default function FullWidthImage({ component }: FullWidthImageProps) {
   const pyClass = component.py || 'py-8';
 
   return (
-    <div className={`w-full px-8 ${pyClass}`}>
+    <div className={`w-full max-w-4xl mx-auto ${pyClass}`}>
       <Image
         src={src}
         alt={component.alt || ''}

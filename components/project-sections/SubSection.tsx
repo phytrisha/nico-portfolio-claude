@@ -10,6 +10,7 @@ import FullWidthVideo from './components/FullWidthVideo';
 import SideBySide from './components/SideBySide';
 import Sublines from './components/Sublines';
 import IntroText from './components/IntroText';
+import BulletList from './components/BulletList';
 
 interface SubSectionProps {
   subSection: SubSectionType;
@@ -40,6 +41,8 @@ export default function SubSection({ subSection }: SubSectionProps) {
         return <Sublines key={index} component={component} />;
       case 'intro-text':
         return <IntroText key={index} component={component} />;
+      case 'bullet-list':
+        return <BulletList key={index} component={component} />;
       default:
         return null;
     }
@@ -48,7 +51,7 @@ export default function SubSection({ subSection }: SubSectionProps) {
   return (
     <div>
       {subSection.header && (
-        <div className="py-4 px-8 flex justify-between items-center" style={{ backgroundColor: 'var(--email-btn-bg)' }}>
+        <div className="py-4 px-8 flex justify-between items-center" style={{ backgroundColor: 'var(--email-btn-bg)', marginLeft: 'calc(-1 * var(--detail-px))', marginRight: 'calc(-1 * var(--detail-px))' }}>
           <h2 className="text-xs font-medium font-mono tracking-wider text-transform: uppercase" style={{ color: 'var(--email-btn-icon)' }}>
             {subSection.header}
           </h2>
@@ -59,7 +62,7 @@ export default function SubSection({ subSection }: SubSectionProps) {
           )}
         </div>
       )}
-      <div>
+      <div className={subSection.header && subSection.components[0]?.type !== 'hero-image' && subSection.components[0]?.type !== 'hero-video' && subSection.components[0]?.type !== 'full-width-image' && subSection.components[0]?.type !== 'full-width-video' && subSection.components[0]?.type !== 'side-by-side' ? 'lg:mt-2' : ''}>
         {subSection.components.map((component, index) =>
           renderComponent(component, index)
         )}
