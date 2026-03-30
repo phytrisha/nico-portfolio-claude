@@ -90,7 +90,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                     </button>
 
                     <div style={{ '--detail-px': 'clamp(18px, 4vw, 60px)', paddingLeft: 'var(--detail-px)', paddingRight: 'var(--detail-px)' } as React.CSSProperties}>
-                      <h1 className="font-bold mb-18 mt-28 leading-[1.35] max-w-4xl whitespace-pre-line" style={{ fontSize: 'clamp(30px, 6.7vw, 86px)' }}>
+                      <h1 className="font-bold mb-18 mt-28 leading-[1.35] max-w-4xl xl:max-w-6xl whitespace-pre-line" style={{ fontSize: 'clamp(30px, 6.7vw, 86px)' }}>
                         {project.title}
                       </h1>
                       <div className="-mb-[1px]">
@@ -122,7 +122,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                   </button>
 
                   <div style={{ '--detail-px': 'clamp(18px, 4vw, 60px)', paddingLeft: 'var(--detail-px)', paddingRight: 'var(--detail-px)' } as React.CSSProperties}>
-                    <h1 className="font-bold mb-18 mt-28 leading-[1.35] max-w-4xl whitespace-pre-line origin-left" style={{ fontSize: 'clamp(30px, 6.7vw, 86px)', transform: `scale(${scale}) translateY(${translateY}px)` }}>
+                    <h1 className="font-bold mb-18 mt-28 leading-[1.35] max-w-4xl xl:max-w-6xl whitespace-pre-line origin-left" style={{ fontSize: 'clamp(30px, 6.7vw, 86px)', transform: `scale(${scale}) translateY(${translateY}px)` }}>
                       {project.title}
                     </h1>
                     <div className="-mb-[1px]">
