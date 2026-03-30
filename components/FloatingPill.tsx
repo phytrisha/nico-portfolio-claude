@@ -80,7 +80,7 @@ export default function FloatingPill() {
 
       lastScrollY.current = currentY;
 
-      clearTimeout(scrollTimeout.current);
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
       scrollTimeout.current = setTimeout(() => {
         setVisible(true);
       }, 1500);
@@ -100,7 +100,7 @@ export default function FloatingPill() {
       window.removeEventListener('wheel', clearUserScroll);
       window.removeEventListener('touchend', clearUserScroll);
       window.removeEventListener('scroll', handleScroll);
-      clearTimeout(scrollTimeout.current);
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
     };
   }, []);
 
