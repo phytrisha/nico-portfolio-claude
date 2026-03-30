@@ -21,7 +21,7 @@ export const darwinproject: Project = {
   },
 
  
-  description: 'The Darwin Project is a speculative design thesis that confronts the environmental and social consequences of mass consumption by imagining alternative futures where products are deeply individualized, sustainably produced, and emotionally meaningful. Darwin project projects current technological developments and consumption trends across three progressive phases, culminating in a provocative lighthouse scenario that challenges fundamental assumptions about product ownership, brand identity, and material consumption.',
+  description: 'The project is a speculative design thesis that confronts the environmental and social consequences of mass consumption by imagining alternative futures where products are deeply individualized, sustainably produced, and emotionally meaningful. Darwin project projects current technological developments and consumption trends across three progressive phases, culminating in a provocative lighthouse scenario that challenges fundamental assumptions about product ownership, brand identity, and material consumption.',
 
 
 
@@ -43,8 +43,8 @@ export const darwinproject: Project = {
           },
           {
             type: 'intro-text',
-            content: 'The Darwin Project is a speculative design thesis that confronts the environmental and social consequences of mass consumption by imagining alternative futures where products are deeply individualized, sustainably produced, and emotionally meaningful. Developed in a course of the masters programs second semester at HfG Schwäbisch Gmünd, the work projects current technological developments and consumption trends across three progressive phases, culminating in a provocative "lighthouse scenario" that challenges fundamental assumptions about product ownership, brand identity, and material consumption.',
-            py: 'pt-12 pb-10',
+            content: 'The project is a speculative design thesis that confronts the environmental and social consequences of mass consumption by imagining alternative futures where products are deeply individualized, sustainably produced, and emotionally meaningful. Developed in a course of the masters programs second semester at HfG Schwäbisch Gmünd, the work projects current technological developments and consumption trends across three progressive phases, culminating in a provocative "lighthouse scenario" that challenges fundamental assumptions about product ownership, brand identity, and material consumption.',
+            py: 'pt-12 pb-12',
           },           
         ]
       },
@@ -59,7 +59,7 @@ export const darwinproject: Project = {
           {
             type: 'paragraph',
             content: 'The project opens with a critique of contemporary consumer society, drawing on Neil Gaimans observation that modern culture has spawned "new gods" of credit cards, internet, and plastic – symbols we worship with the same fervor as ancient deities. The designers argue that we live in an overflow society characterized by senseless hyper-consumption, where products are discarded long before their functional end-of-life, driven by planned obsolescence and manufactured desire. Key sustainability challenges identified include:',
-            py: 'pt-8 pb-0',
+            py: 'pt-10 pb-4',
           },
           {
             type: 'feature-block',
@@ -81,7 +81,7 @@ export const darwinproject: Project = {
           {
             type: 'paragraph',
             content: 'The project proposes reorientation: away from hyperconsumption toward conscious, sustainable consumption, buying what one truly needs, meeting personal requirements without compromise.',
-            py: 'pt-0 pb-8',
+            py: 'pt-0 pb-12',
           },
         ]
       },
@@ -99,7 +99,7 @@ export const darwinproject: Project = {
           {
             type: 'paragraph',
             content: 'The Darwin Project`s central thesis might seem counterintuitive: Radical individualization can serve sustainability. When products are precisely tailored to user needs, functionally, ergonomically, and aesthetically, they create emotional bonds that discourage disposal and replacement. The project draws biological inspiration from slime molds (Mycetozoa), organisms that demonstrate remarkable collective intelligence without central control. In 2010, researchers at Hokkaido University demonstrated that slime molds could replicate Tokyo`s rail network with equal or superior efficiency. This biological model informs the project`s vision of intelligent, adaptive material systems. Three levels of individualization are explored:',
-            py: 'pt-8 pb-2',
+            py: 'pt-10 pb-4',
           },
           {
             type: 'feature-block',
@@ -117,7 +117,7 @@ export const darwinproject: Project = {
             type: 'feature-block',
             skyline: 'Evolutionary adaptation',
             description: 'Products that improve over successive generations based on usage data.',
-            py: 'pt-8 pb-10',
+            py: 'pt-8 pb-12',
           },
         ]
       },
@@ -133,20 +133,20 @@ export const darwinproject: Project = {
             type: 'feature-block',
             skyline: 'Phase 1 (2019-2025): Foundation Building',
             description: 'Establishes research capabilities across four areas: an Eco-Score app tracking sustainable purchasing behavior, additive manufacturing facilities, recyclable filament research, and sentient (sensor-embedded) filament development. This phase builds technological foundations while generating revenue to minimize risk.',
-            py: 'pt-8 pb-12',          
+            py: 'pt-10 pb-12',          
           },       
         
           {
             type: 'feature-block',
             skyline: 'Phase 2 (2025-2034): Product X – Individualized Products',
             description: 'Introduces iwa ("I want..."), a conversational AI guiding users through product creation. The project includes extensive research into iwas communication architecture, developing detailed conversation flows, question typologies, and response frameworks. User personas with distinct characteristics (from perfectionists to extroverts to professional athletes) informed nuanced dialogue design, ensuring iwa adapts tone and approach to individual users while maintaining consistent values. The research addresses how iwa handles edge cases, refuses inappropriate requests, and maintains transparency about data usage. Products enter an evolutionary cycle: when damaged or suboptimal, they`re returned, recycled, and evolved into improved versions. Material from previous products incorporates into successors, creating environmental benefits and emotional continuity.',
-            py: 'pt-0 pb-8'
+            py: 'pt-0 pb-6'
           },
           {
             type: 'full-width-video',
             src: '/images/projects/darwinproject/the darwin project_SG1_SS18_720p.mp4',
             alt: 'Research methodology overview',
-            py: 'pt-4 pb-10',
+            py: 'pt-4 pb-7',
           },
         
           {
@@ -184,7 +184,7 @@ export const darwinproject: Project = {
           {
             type: 'paragraph',
             content: 'Research on product attachment grounds the approach. Neurological research indicates 95% of consumer behavior is emotional rather than rational. Products become irreplaceable when they facilitate individuation, integration, and temporal orientation. The project engineers these bonds deliberately. By designing for attachment, sustainability becomes a byproduct of satisfaction rather than sacrifice.',
-            py: 'pt-8 pb-0',
+            py: 'pt-10 pb-4',
           },
           {
             type: 'feature-block',
@@ -204,7 +204,7 @@ export const darwinproject: Project = {
             type: 'feature-block',
             skyline: 'BONDS THROUGH Temporal orientation',
             description: 'Can evolutionary product cycles maintain emotional connection across generations, as materials from previous iterations carry forward into successors?',
-            py: 'pt-8 pb-10',
+            py: 'pt-8 pb-12',
           },
         ]
       },
@@ -222,7 +222,7 @@ export const darwinproject: Project = {
             type: 'feature-block',
             skyline: 'For designers',
             description: 'The profession shifts from operative execution to strategic curation, establishing rules and constraints for AI systems rather than crafting individual products.',
-            py: 'pt-8 pb-0',
+            py: 'pt-10 pb-0',
           }, 
           {
             type: 'feature-block',
@@ -239,13 +239,13 @@ export const darwinproject: Project = {
           {
             type: 'paragraph',
             content: 'The Darwin Project offers a critical design space for examining assumptions about consumption and sustainability. By imagining radical individualization as environmental strategy, it inverts conventional wisdom that mass production serves efficiency. By projecting intelligent materials, it questions whether the product category itself remains meaningful. Most significantly, the project demonstrates designs capacity for speculative inquiry, using disciplinary tools not to solve problems but to imagine alternative futures that reframe the present.',
-            py: 'pt-8 pb-6',
+            py: 'pt-12 pb-6',
           },
           {
             type: 'full-width-image',
             src: '/images/projects/darwinproject/20180626_133514_A1.jpg',
             alt: 'Research methodology overview',
-            py: 'pt-3 pb-8',
+            py: 'pt-6 pb-8',
           },
 
         ]

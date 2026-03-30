@@ -45,7 +45,7 @@ export const beneficialAI: Project = {
           {
             type: 'intro-text',
             content: 'This master thesis is concerned with the topic of beneficial artificial intelligence. Broadly "beneficial", in this context, means that AI systems act in a way that is desired by humans. There are great chances for AI to positively influence many areas of our life, but also numerous risks with potentially extremely negative outcome. It is therefore essential to design those systems to act in a beneficial way: now and looking forward. To approach beneficial behavior of such systems two models are outlined: the first suggests a classification for aspects of beneficiality in artificially intelligent systems. The second one explores methods to capture and counter ethical problem spaces. The defined models were explored in three speculative use cases to exemplify and refine them. Establishing ethics as an integral part of design, economics, engineering and development takes time and lots of dedicated work. Work that has to start long before artificial super-intelligence has been attained.',
-            py: 'pt-12 pb-10',          
+            py: 'pt-12 pb-12',          
           },
 
         ]
@@ -59,6 +59,7 @@ export const beneficialAI: Project = {
           {
             type: 'paragraph',
             content: 'Technology & ethics have to be established as a singular vision to enable beneficial artificial outcomes. We believe, that future development of AI must serve an overall purpose. It must preserve and enhance human life, as well as preserve and enhance the planet and its eco-system. There are great chances for AI to do so, but there are also numerous risks where AI could lead to an extremely negative outcome. It is of utmost importance to focus our efforts on the positive chances AI can enable us and to specifically target the risks that might occur so that they can be avoided. We do not believe it is a viable option to consider reversing or degenerating the develop-ment of AI, as the pace of development is already fairly high. This unavoidable development strengthens our focus and the overall relevance on working towards the beneficial use of AI.',
+            py: 'pt-10 pb-10',          
           },
           
         ]
@@ -77,7 +78,7 @@ export const beneficialAI: Project = {
           {
             type: 'inline-header',
             content: 'Crafting around beneficiality is a transdiciplinary, iterative process',
-            py: 'pt-8 pb-4',
+            py: 'pt-10 pb-3',
           },
           {
             type: 'paragraph',
@@ -129,7 +130,7 @@ export const beneficialAI: Project = {
            {
              type: 'paragraph',
              content: 'The debate about how a “common beneficial” should be defined takes place on multiple layers across many disciplines and spans a long timeframe. Though general rough understanding of what is beneficial exists in many cases (e.g., no human should come to harm from an action), it is important to note that actions that are considered beneficial by an individual are not necessarily the most ethical actions. It can be assumed that there is no such thing as an “absolute perfect beneficial” for all affected parties in a situation, consequently a lot of consideration has to be placed on defining the agent’s value system to guide the process of finding a sufficient beneficial for its actions. Furthermore ensuring beneficial behaviour is a recursive endeavour, not a linear process. All of the pillars have to be regularly revisited as circumstances change (e.g. an agent’s level of intelligence increases). In order to successfully transition from the debate about super-intelligent agents to more concrete ethical questions, we suggest a model for beneficial AI. This model consists of a foundation and three pillars that must be satisfied in order to achieve “beneficial AI”. The foundation describes essential prerequisites that have to be addressed beforehand, whereas the pillars describe aspects of a system that must be approached in order for the system to be beneficial. These three pillars address defining, implementing and ensuring beneficiality in artificial agents.',            
-            py: 'pt-6 pb-10'
+            py: 'pt-6 pb-12'
             },
         ]
       },
@@ -148,7 +149,7 @@ export const beneficialAI: Project = {
           {
             type: 'inline-header',
             content: 'Problem space are complex ethical issues in the way of beneficial AI', 
-            py: 'pt-8 pb-4',
+            py: 'pt-8 pb-3',
           },
           {
             type: 'paragraph',

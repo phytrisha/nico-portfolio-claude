@@ -65,12 +65,12 @@ export const BT: Project = {
           {
             type: 'paragraph',
             content: 'Timeline: One month to deliver a production-ready, multi-platform design system that the internal team could maintain and extend independently in the future.',
-            py: 'pt-8 pb-0',         
+            py: 'pt-10 pb-0',         
           },
           {
             type: 'paragraph',
             content: 'Core requirements:',
-            py: 'pt-6 pb-0',         
+            py: 'pt-8 pb-0',         
           },
           {
             type: 'bullet-list',
@@ -88,7 +88,7 @@ export const BT: Project = {
           {
             type: 'paragraph',
             content: 'I operated as a freelance contractor embedded within a layered project structure:',
-            py: 'pt-8 pb-0',         
+            py: 'pt-10 pb-0',         
           },
           {
             type: 'bullet-list',
@@ -97,7 +97,7 @@ export const BT: Project = {
               'External Consulting Team: Overseeing the strategic and visual direction of the reconceptualization and product strategy',
               'My Position: Specialist brought in for design systems expertise and structured UI/UX execution',
             ],
-            py: 'pt-2 pb-10',
+            py: 'pt-2 pb-12',
           },
         ]
       },
@@ -111,13 +111,13 @@ export const BT: Project = {
           {
             type: 'inline-header',
             content: 'Token-First Foundation',
-            py: 'pt-8 pb-0',
+            py: 'pt-10 pb-0',
           },
 
           {
             type: 'paragraph',
             content: 'The system was built on a two-tier token architecture in Figma:',
-            py: 'pt-2 pb-2',
+            py: 'pt-0 pb-6',
           },
           {
             type: 'bullet-list',
@@ -145,7 +145,7 @@ export const BT: Project = {
               'Data-visualizations',
               'Icons',
             ],
-            py: 'pt-4 pb-6',
+            py: 'pt-6 pb-6',
           },
 
            {
@@ -255,7 +255,7 @@ export const BT: Project = {
               'Do/dont guidance with visual examples',
               'Accessibility considerations',
             ],
-            py: 'pt-2 pb-10',
+            py: 'pt-2 pb-12',
           },
         ]
       },
@@ -269,7 +269,7 @@ export const BT: Project = {
          {
             type: 'inline-header',
             content: 'Design System Library',
-            py: 'pt-8 pb-0',
+            py: 'pt-10 pb-0',
           },
 
           {
@@ -280,7 +280,7 @@ export const BT: Project = {
               'Configurable components with comprehensive variant coverage',
               'Semantic token structure for theming and scalability',
             ],
-            py: 'pt-1 pb-2',
+            py: 'pt-2 pb-4',
           }, 
 
 
@@ -298,7 +298,7 @@ export const BT: Project = {
               'Reference implementations for internal team',
               'Figma prototypes of core user flows',
             ],
-            py: 'pt-2 pb-2',
+            py: 'pt-2 pb-4',
           }, 
 
 
@@ -314,7 +314,7 @@ export const BT: Project = {
               'Component-level usage guidelines',
               'System architecture overview',
             ],
-            py: 'pt-2 pb-10',
+            py: 'pt-2 pb-12',
           },
         ]
       },
@@ -325,36 +325,28 @@ export const BT: Project = {
         header: 'Outcome',
         number: '05',
         components: [
-           
           {
-            type: 'paragraph',
-            content: 'The project achieved its primary objectives:',
+            type: 'bullet-list',
+            headline: 'The project achieved its primary objectives:',
+            items: [
+            ],
             py: 'pt-8 pb-0',
           },
+
           {
-            type: 'paragraph',
-            content: '1. Reduced Design Time: The configurable component architecture eliminated redundant design work, enabling faster screen production.',
-            py: 'pt-6 pb-2',
-          },
-          {
-            type: 'paragraph',
-            content: '2. Structural Consistency: A single source of truth across platforms ensured visual and behavioral coherence throughout the application.',
-            py: 'pt-2 pb-2',
-          },
-          {
-            type: 'paragraph',
-            content: '3. Team Enablement: The internal design team received a system they could understand, maintain, and extend – with documentation that anticipated their questions.',
-            py: 'pt-2 pb-2',
-          }, 
-          {
-            type: 'paragraph',
-            content: '4. Positive Reception: The handoff was met with strong positive feedback from both the clients internal team and project stakeholders.',
-            py: 'pt-2 pb-0',
+            type: 'bullet-list',
+            items: [
+              'Reduced Design Time: The configurable component architecture eliminated redundant design work, enabling faster screen production.',
+              'Structural Consistency: A single source of truth across platforms ensured visual and behavioral coherence throughout the application.',
+              'Team Enablement: The internal design team received a system they could understand, maintain, and extend – with documentation that anticipated their questions.',
+              'Positive Reception: The handoff was met with strong positive feedback from both the clients internal team and project stakeholders.',
+            ],
+            py: 'pt-6 pb-0',
           }, 
           {
             type: 'paragraph',
             content: 'Design systems succeed or fail based on adoption. The best architecture means nothing if the team cant use it. This project reinforced that documentation, clear naming, and intuitive structure matter as much as the components themselves. The one-month timeline forced hard prioritization: every component had to earn its place, every property had to justify its existence. The result was a lean system built for the people who would inherit it.',
-            py: 'pt-6 pb-10',
+            py: 'pt-10 pb-10',
           }, 
         ]
       },  

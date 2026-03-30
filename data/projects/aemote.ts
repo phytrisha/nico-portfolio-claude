@@ -48,7 +48,7 @@ export const aemote: Project = {
           {
             type: 'intro-text',
             content: 'æ:mote is a concept, designed to train people on the autistic spectrum disorder (ASD) in recognizing and understanding emotions. Developed in cooperation with the Paulinenpflege Winnenden, an institution that prepares young adults on the ASD for work, æ:mote can be seen as a first step in order to enable parents, as well as professional therapists to better support people on the ASD and to simplify their everyday life a bit. æ:mote combines a smartphone application used in face to face training sessions with the participant on the ASD with analog communication cards that are supposed to trigger guided conversations around certain topics that likely evoke specific emotions. The digital component can be placed in a cardboard stand on the table so the phone does not become a distracting part of the conversation. As soon as the software detects a certain emotion in the face of the conversation partner the autistic student is promted to make a guess about type of emotion he just witnessed in his counterpart and is presented with additional information or hints in case he / she has trouble identifying the facial expression correctly.',
-            py: 'pt-12 pb-10',          
+            py: 'pt-12 pb-12',          
           },          
         ]
       },
@@ -62,6 +62,7 @@ export const aemote: Project = {
           {
             type: 'paragraph',
             content: 'When talking about autism, it is common to refer the disorder as a spectrum, due to the variety of types it may occur. This was apparent after an initial visit at the Paulinenpflege Winnenden. As Dr. Stephen Shore says, "If you have met one person with autism, youve met one person with autism."[1] Generalized solutions are therefore difficult to build. Nevertheless, we wanted to create a tool, which could help at least some of the participants at Paulinenpflege.',
+            py: 'py-10',          
           },
           
         ]
@@ -79,7 +80,7 @@ export const aemote: Project = {
           {
             type: 'inline-header',
             content: 'After an initial desk research and on site observation, we considered three opportunity areas, which we could tackle.',
-            py: 'pt-8 pb-0',
+            py: 'pt-10 pb-0',
           },
         ]
       },
@@ -143,7 +144,7 @@ export const aemote: Project = {
           {
             type: 'inline-header',
             content: 'To tackle the challenge of improving communication we outlined three different strategies of how we might approach our goal of inclusion.', 
-            py: 'pt-8 pb-2',
+            py: 'pt-10 pb-2',
           },
           {
             type: 'feature-block',
@@ -177,7 +178,7 @@ export const aemote: Project = {
             type: 'feature-block',
             skyline: 'STRATEGY 3: SOCIAL / POLITICAL APPROACH',
             description: 'A completely different strategy on the other hand would be to not design a product in the traditional sense – which in its core simply approaches solving a problem, which is already present – but rather to look into how people with ASD could be assisted, if there was more awareness in society, as well as in politics. This approach could consist of different types of awareness campaigns, which include multiple milestones that are based on top of each other.',
-            py: 'py-0',
+            py: 'pt-0 pb-3',
           },
           {
             type: 'full-width-image',
@@ -201,7 +202,7 @@ export const aemote: Project = {
           {
             type: 'paragraph',
             content: 'For us as designers, we concluded, that the strategy, that could have the most real impact, was the first one, the rapid tech approach. We went on to develop a concept, which is based on three low fidelity components, which can be easily assembled, so that they do not inevitably have to be bought but could very well also be assembled in a makerspace or similar. The overall concept is to enable assistance for people with ASD in everyday life by giving them the opportunity to use an app to identify the emotions people are expressing in certain situations. Additionally, this recognition can be explicitly trained with a set of components, which are briefly described in the following.',
-           py: 'pt-8 pb-8',           
+           py: 'pt-10 pb-8',           
           },
           {
             type: 'feature-block',
@@ -236,7 +237,7 @@ export const aemote: Project = {
             type: 'full-width-image',
             src: '/images/projects/aemote/S5.png',
             alt: 'Research methodology overview',
-            py: 'pt-4 pb-8',
+            py: 'pt-4 pb-12',
           },         
         ]
       },
@@ -252,7 +253,7 @@ export const aemote: Project = {
           {
             type: 'paragraph',
             content: 'The current state of the application only provides some basic functionality, which could be further extended in the future. Here are some of our core ideas:',
-            py: 'pt-8 pb-8',
+            py: 'pt-10 pb-8',
           },
           {
             type: 'feature-block',

@@ -58,6 +58,7 @@ export const remagine: Project = {
           {
             type: 'paragraph',
             content: 'How might we design a unified financial platform that demystifies revenue-based financing for impact-driven companies while seamlessly integrating the complexity of loan applications, repayment tracking, and team banking operations into a single, intuitive interface? High-growth companies seeking alternatives to traditional financing faced a fragmented financial landscape: separate systems for loan management and corporate banking, opaque application processes, and disconnected tools for managing employee financial access. Remagine`s design challenge centered on consolidating two financial workflows, financing operations and corporate banking, into one cohesive experience. The platform needed to transform complex revenue-based financing applications into clear, trackable processes while simultaneously functioning as a daily banking hub where companies control employee card access and account permissions. This required balancing variable repayment structures with the operational simplicity needed for routine banking tasks, ensuring clients could manage both their funding lifecycle and team finances without switching between multiple platforms or losing visibility into their financial position.',
+            py: 'pt-10 pb-12',
           },
           
         ]
@@ -74,11 +75,11 @@ export const remagine: Project = {
             src: '/images/projects/remagine/S1.png',
             darkSrc: '/images/projects/remagine/S1_dark.png',
             alt: 'Research methodology overview',
-            py: 'pt-8 pb-6',
+            py: 'pt-12 pb-4',
           }, 
           {
             type: 'sublines',
-            content: 'spending analytics overview (all data anonymized)',
+            content: 'spending analytics overview',
             py: 'pt-2 pb-6',
           }, 
           {
@@ -86,11 +87,11 @@ export const remagine: Project = {
             src: '/images/projects/remagine/S2.png',
             darkSrc: '/images/projects/remagine/S2_dark.png',
             alt: 'Research methodology overview',
-            py: 'pt-8 pb-6',
+            py: 'pt-8 pb-4',
           }, 
           {
             type: 'sublines',
-            content: 'financing overview with repayment details (all data anonymized)',
+            content: 'financing overview with repayment details',
             py: 'pt-2 pb-6',
           }, 
           {
@@ -98,11 +99,11 @@ export const remagine: Project = {
             src: '/images/projects/remagine/S3.png',
             darkSrc: '/images/projects/remagine/S3_dark.png',
             alt: 'Research methodology overview',
-            py: 'pt-8 pb-6',
+            py: 'pt-8 pb-4',
           }, 
           {
             type: 'sublines',
-            content: 'transaction overview (all data anonymized)',
+            content: 'transaction overview',
             py: 'pt-2 pb-14',
           }, 
         ]
