@@ -11,7 +11,7 @@ export default function FloatingPill() {
   const [isMobile, setIsMobile] = useState(false);
   const [overDarkBg, setOverDarkBg] = useState(true);
   const lastScrollY = useRef(0);
-  const scrollTimeout = useRef<NodeJS.Timeout>();
+  const scrollTimeout = useRef<NodeJS.Timeout>(null);
   const themeButtonRef = useRef<HTMLButtonElement>(null);
   const pillRef = useRef<HTMLDivElement>(null);
 
