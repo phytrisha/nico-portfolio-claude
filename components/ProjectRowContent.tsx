@@ -72,32 +72,12 @@ export default function ProjectRowContent({
         }
       }}
     >
-      {/* xl+ layout: side-by-side grid */}
-      <div className="hidden xl:grid pl-0 pt-0 grid-cols-3 gap-12">
-        <div className='col-span-2 pb-12'>
+      <div className="relative">
+        {/* Description: side-by-side on xl+, full-width below */}
+        <div className="xl:grid xl:grid-cols-3 xl:gap-12">
+          <div className="xl:col-span-2 pb-10 xl:pb-12">
             <div className="text-5xl leading-normal">{renderDescription(project.description)}</div>
-        </div>
-        <div className="flex items-end justify-end col-span-1">
-          <Link
-            href={project.externalUrl || `/project/${project.slug}`}
-            target={project.externalUrl ? '_blank' : undefined}
-            rel={project.externalUrl ? 'noopener noreferrer' : undefined}
-            data-press
-            className="block"
-          >
-            <div className="p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
-              <svg className="w-[100px] h-[100px]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 70L70 10M73 10H25M70 10V55" stroke="#EDEBE3" strokeWidth="6" strokeLinecap="butt" strokeLinejoin="miter" />
-              </svg>
-            </div>
-          </Link>
-        </div>
-      </div>
-
-      {/* Below xl: full-width text with sticky button when offscreen */}
-      <div className="xl:hidden relative">
-        <div className="pt-0 pb-10">
-          <div className="text-5xl leading-normal">{renderDescription(project.description)}</div>
+          </div>
         </div>
 
         {/* Sticky duplicate — only shown when original button is offscreen and expand is done */}
@@ -111,8 +91,8 @@ export default function ProjectRowContent({
               data-press
               className="block"
             >
-              <div className="p-10 md:py-[46px] flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
-                <svg className="w-12 h-12 md:w-[72px] md:h-[72px]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div className="p-10 md:py-[46px] xl:p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
+                <svg className="w-12 h-12 md:w-[72px] md:h-[72px] xl:w-[100px] xl:h-[100px]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10 70L70 10M73 10H25M70 10V55" stroke="#EDEBE3" strokeWidth="6" strokeLinecap="butt" strokeLinejoin="miter" />
                 </svg>
               </div>
@@ -130,8 +110,8 @@ export default function ProjectRowContent({
             data-press
             className="block"
           >
-            <div className="p-10 md:py-[46px] flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
-              <svg className="w-12 h-12 md:w-[72px] md:h-[72px]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="p-10 md:py-[46px] xl:p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
+              <svg className="w-12 h-12 md:w-[72px] md:h-[72px] xl:w-[100px] xl:h-[100px]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 70L70 10M73 10H25M70 10V55" stroke="#EDEBE3" strokeWidth="6" strokeLinecap="butt" strokeLinejoin="miter" />
               </svg>
             </div>
