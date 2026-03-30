@@ -91,8 +91,8 @@ export default function ProjectRowContent({
               data-press
               className="block"
             >
-              <div className="p-10 md:py-[46px] xl:p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
-                <svg className="w-12 h-12 md:w-[72px] md:h-[72px] xl:w-[100px] xl:h-[100px]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div className="w-[128px] h-[128px] md:w-[164px] md:h-[164px] p-6 md:p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
+                <svg className="w-full h-full" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10 70L70 10M73 10H25M70 10V55" stroke="#EDEBE3" strokeWidth="6" strokeLinecap="butt" strokeLinejoin="miter" />
                 </svg>
               </div>
@@ -110,8 +110,8 @@ export default function ProjectRowContent({
             data-press
             className="block"
           >
-            <div className="p-10 md:py-[46px] xl:p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
-              <svg className="w-12 h-12 md:w-[72px] md:h-[72px] xl:w-[100px] xl:h-[100px]" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="w-[128px] h-[128px] md:w-[164px] md:h-[164px] p-6 md:p-8 flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
+              <svg className="w-full h-full" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 70L70 10M73 10H25M70 10V55" stroke="#EDEBE3" strokeWidth="6" strokeLinecap="butt" strokeLinejoin="miter" />
               </svg>
             </div>
