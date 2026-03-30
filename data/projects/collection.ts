@@ -9,7 +9,7 @@ export const collection: Project = {
   tags: ['INTERACTION DESIGN & FREELANCE WORK'],
   year: '2014 – 2025',
   color: '#E6E2D8',
-
+  protected: true,
 
   // New metadata structure
   metadata: {

@@ -12,7 +12,7 @@ export default function FeatureBlock({ component }: FeatureBlockProps) {
       <div className="font-mono font-semibold text-xs whitespace-pre-wrap pb-3 tracking-wide text-transfrom: uppercase">
         {component.skyline}
       </div>
-      <p className="text-sm leading-relaxed sm:text-base md:text-base lg:text-base">
+      <p className="text-sm leading-relaxed sm:text-base md:text-base lg:text-base" style={{ textWrap: 'pretty' }}>
         {component.description}
       </p>
     </div>

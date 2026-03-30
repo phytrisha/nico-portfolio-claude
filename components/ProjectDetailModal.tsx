@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Project } from '@/data/types';
 import Metadata from './project-sections/Metadata';
@@ -13,7 +14,39 @@ interface ProjectDetailModalProps {
   onClose: () => void;
 }
 
+function useScrollShrink(scrollContainerRef: React.RefObject<HTMLDivElement | null>) {
+  const [vals, setVals] = React.useState({ scale: 1, translateY: 0 });
+
+  React.useEffect(() => {
+    const el = scrollContainerRef.current;
+    if (!el) return;
+
+    const handleScroll = () => {
+      const scrollY = el.scrollTop;
+      const shrinkEnd = 200;
+      const minScale = 0.95;
+      const maxTranslate = -15; // px, moves up slightly faster
+
+      const linear = Math.min(scrollY / shrinkEnd, 1);
+      // Ease-out curve: fast at first, then slows
+      const progress = 1 - Math.pow(1 - linear, 3);
+      setVals({
+        scale: 1 - progress * (1 - minScale),
+        translateY: progress * maxTranslate,
+      });
+    };
+
+    el.addEventListener('scroll', handleScroll, { passive: true });
+    return () => el.removeEventListener('scroll', handleScroll);
+  }, [scrollContainerRef]);
+
+  return vals;
+}
+
 export default function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailModalProps) {
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+  const { scale, translateY } = useScrollShrink(scrollRef);
+
   const handleClose = () => {
     onClose();
   };
@@ -57,7 +90,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                     </button>
 
                     <div style={{ '--detail-px': 'clamp(18px, 4vw, 60px)', paddingLeft: 'var(--detail-px)', paddingRight: 'var(--detail-px)' } as React.CSSProperties}>
-                      <h1 className="text-4xl md:text-5xl lg:text-[60px] font-bold mb-18 mt-28 leading-tight max-w-4xl mx-auto">
+                      <h1 className="font-bold mb-18 mt-28 leading-[1.35] max-w-4xl whitespace-pre-line" style={{ fontSize: 'clamp(30px, 6.7vw, 86px)' }}>
                         {project.title}
                       </h1>
                       <div className="-mb-[1px]">
@@ -76,7 +109,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
             ) : (
               <div className="w-full h-full flex flex-col md:flex-row">
                 {/* Main content area */}
-                <div className="flex-1 relative overflow-y-auto" style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
+                <div ref={scrollRef} className="flex-1 relative overflow-y-auto" style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
                   {/* Close button */}
                   <button
                     onClick={handleClose}
@@ -89,7 +122,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Project
                   </button>
 
                   <div style={{ '--detail-px': 'clamp(18px, 4vw, 60px)', paddingLeft: 'var(--detail-px)', paddingRight: 'var(--detail-px)' } as React.CSSProperties}>
-                    <h1 className="text-4xl md:text-5xl lg:text-[60px] font-bold mb-18 mt-28 leading-tight max-w-4xl mx-auto">
+                    <h1 className="font-bold mb-18 mt-28 leading-[1.35] max-w-4xl whitespace-pre-line origin-left" style={{ fontSize: 'clamp(30px, 6.7vw, 86px)', transform: `scale(${scale}) translateY(${translateY}px)` }}>
                       {project.title}
                     </h1>
                     <div className="-mb-[1px]">

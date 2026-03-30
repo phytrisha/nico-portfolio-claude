@@ -3,8 +3,8 @@ import type { Project } from '../types';
 export const darwinproject: Project = {
   id: 7,
   slug: 'darwinproject',
-  title: 'The Darwin Project: A Speculative Design Vision for Sustainable, Individualized Consumption',
-  shortTitle: 'The Darwin Project',
+  title: 'A Speculative Design Vision for Sustainable, Individualized Artifacts',
+  shortTitle: 'A speculative design vision for sustainable, individualized artifacts',
   category: 'strategic-design',
   tags: ['STRATEGIC DESIGN, SPECULATIVE DESIGN, CRITICAL DESIGN'],
   year: '2019',

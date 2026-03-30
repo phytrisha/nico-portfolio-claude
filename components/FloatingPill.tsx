@@ -9,9 +9,11 @@ export default function FloatingPill() {
   const [visible, setVisible] = useState(true);
   const [projectExpanded, setProjectExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [overDarkBg, setOverDarkBg] = useState(true);
   const lastScrollY = useRef(0);
   const scrollTimeout = useRef<NodeJS.Timeout>();
   const themeButtonRef = useRef<HTMLButtonElement>(null);
+  const pillRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -20,6 +22,27 @@ export default function FloatingPill() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  // Detect if pill overlaps the dark hero section (only matters in light mode)
+  useEffect(() => {
+    if (theme === 'dark') { setOverDarkBg(false); return; }
+
+    const checkOverlap = () => {
+      const hero = document.querySelector('section');
+      if (!hero || !pillRef.current) return;
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      const pillTop = pillRef.current.getBoundingClientRect().top;
+      setOverDarkBg(pillTop < heroBottom);
+    };
+
+    checkOverlap();
+    window.addEventListener('scroll', checkOverlap, { passive: true });
+    window.addEventListener('resize', checkOverlap, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', checkOverlap);
+      window.removeEventListener('resize', checkOverlap);
+    };
+  }, [theme]);
 
   // On mobile, hide pill when a project is expanded
   useEffect(() => {
@@ -91,7 +114,7 @@ export default function FloatingPill() {
     const rect = button.getBoundingClientRect();
     const x = rect.left + rect.width / 2;
     const y = rect.top + rect.height / 2;
-    const maxRadius = Math.hypot(
+    const maxDist = Math.max(
       Math.max(x, window.innerWidth - x),
       Math.max(y, window.innerHeight - y)
     );
@@ -110,8 +133,8 @@ export default function FloatingPill() {
     document.documentElement.animate(
       {
         clipPath: [
-          `circle(0px at ${x}px ${y}px)`,
-          `circle(${maxRadius}px at ${x}px ${y}px)`,
+          `inset(${y}px ${window.innerWidth - x}px ${window.innerHeight - y}px ${x}px)`,
+          `inset(${y - maxDist}px ${window.innerWidth - x - maxDist}px ${window.innerHeight - y - maxDist}px ${x - maxDist}px)`,
         ],
       },
       {
@@ -124,13 +147,19 @@ export default function FloatingPill() {
 
   if (!mounted) return null;
 
+  // Use dark styling when in dark mode OR when light mode pill is over the dark hero
+  const useDarkStyle = theme === 'dark' || overDarkBg;
+  const iconFilter = useDarkStyle ? 'none' : 'invert(1)';
+
   return (
     <div
-      className="fixed bottom-4 right-4 z-50 flex items-center gap-0 overflow-hidden rounded-full"
+      ref={pillRef}
+      className="fixed bottom-4 right-4 z-50 flex items-center gap-0 overflow-hidden"
       style={{
-        backgroundColor: 'var(--pill-bg)',
+        backgroundColor: useDarkStyle ? '#000000' : 'var(--bg-primary)',
+        border: `1px solid ${useDarkStyle ? '#EDEBE3' : 'var(--text-primary)'}`,
         transform: visible && !(projectExpanded && isMobile) ? 'translateY(0)' : 'translateY(calc(100% + 2rem))',
-        transition: 'transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
+        transition: 'transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s, border-color 0.3s',
       }}
     >
       <a
@@ -139,7 +168,7 @@ export default function FloatingPill() {
         className="pl-4 py-4 pr-[14px]"
         aria-label="Send email"
       >
-        <img src="/mail.png" alt="Email" className="w-6 h-6" style={{ filter: theme === 'dark' ? 'invert(1)' : 'none' }} />
+        <img src="/mail.png" alt="Email" className="w-6 h-6" style={{ filter: iconFilter, transition: 'filter 0.3s' }} />
       </a>
       <button
         ref={themeButtonRef}
@@ -149,9 +178,9 @@ export default function FloatingPill() {
         aria-label="Toggle theme"
       >
         {theme === 'dark' ? (
-          <img src="/lightmode.png" alt="Light mode" className="w-6 h-6" />
+          <img src="/lightmode.png" alt="Light mode" className="w-6 h-6" style={{ filter: 'invert(1)' }} />
         ) : (
-          <img src="/darkmode.png" alt="Dark mode" className="w-6 h-6" />
+          <img src="/darkmode.png" alt="Dark mode" className="w-6 h-6" style={{ filter: iconFilter, transition: 'filter 0.3s' }} />
         )}
       </button>
     </div>
