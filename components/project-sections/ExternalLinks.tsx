@@ -9,7 +9,7 @@ export default function ExternalLinks({ links, projectColor }: ExternalLinksProp
   if (!links || links.length === 0) return null;
 
   return (
-    <div className="mt-16 mb-16 w-full">
+    <div className="mt-16 mb-16 w-full max-w-4xl mx-auto">
       <div className="grid grid-cols-3 gap-3 md:gap-6">
         {links.map((link, index) => (
           <div key={index} className="w-full">
@@ -22,7 +22,7 @@ export default function ExternalLinks({ links, projectColor }: ExternalLinksProp
             >
               {/* Black square with colored arrow */}
               <div className="w-full relative" style={{ paddingBottom: '100%', backgroundColor: 'var(--externallink-bg)' }}>
-                <div className="absolute inset-0 flex items-center justify-center p-[25%]">
+                <div className="absolute inset-0 flex items-center justify-center p-[30%]">
                   <svg
                     className="w-full h-full"
                     viewBox="0 0 80 80"
