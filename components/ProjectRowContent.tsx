@@ -55,7 +55,7 @@ export default function ProjectRowContent({
       animate={{ height: 'auto', backgroundColor: project.color }}
       exit={{ height: 0, backgroundColor: 'transparent' }}
       transition={{ type: 'spring', stiffness: 300, damping: 30, mass: 0.8 }}
-      onAnimationStart={(definition: any) => {
+      onAnimationStart={(definition: Record<string, unknown>) => {
         if (definition?.height === 0) setCollapsing(true);
       }}
       onAnimationComplete={() => {
