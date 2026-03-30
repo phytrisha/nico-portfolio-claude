@@ -63,7 +63,7 @@ export default function PasswordGate({ children, onClose }: PasswordGateProps) {
         }}
       >
         <p className="text-sm font-mono" style={{ color: 'var(--text-primary)' }}>
-          This project is protected under NDA.
+          This project contains confidential information. All data has been anonymized.
         </p>
         <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
           <input
