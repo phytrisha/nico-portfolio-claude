@@ -3,8 +3,8 @@ import type { Project } from '../types';
 export const zalando: Project = {
   id: 9,
   slug: 'zalando',
-  title: 'Case Study: Designing for trust and engagement around sensitive personal data',
-  shortTitle: 'Case Study: Designing for trust and engagement around sensitive personal data',
+  title: 'Case Study: Designing for trust and engagement around sensitive data',
+  shortTitle: 'Case Study: Designing for trust and engagement around sensitive data',
   category: 'client work',
   tags: ['CLIENT WORK, RESEARCH & CONCEPT'],
   year: '2018',
@@ -23,7 +23,7 @@ export const zalando: Project = {
 
 
 
-  description: 'Zalando sought to build a custom in-house HR tool where evaluations, promotions, salary adjustments, and developmental feedback, both peer-to-peer and from leadership, as well as mentoring relationships could be managed and maintained through a single internal portal. Used by over 15,000 employees, team leads, and management, this tool serves as the digital backbone of Zalando`s workforce operations. Given the sensitive nature of the relationships maintained on this platform, an extensive user-research-driven UX strategy and a carefully crafted UI design approach were essential to the tools conception and development.',
+  description: 'The client sought to build a custom in-house HR tool where evaluations, promotions, salary adjustments, and developmental feedback, both peer-to-peer and from leadership, as well as mentoring relationships could be managed and maintained through a single internal portal. Used by over 15,000 employees, team leads, and management, this tool serves as the digital backbone of the client`s workforce operations. Given the sensitive nature of the relationships maintained on this platform, an extensive user-research-driven UX strategy and a carefully crafted UI design approach were essential to the tools conception and development.',
 
 
 
