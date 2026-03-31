@@ -51,7 +51,7 @@ export default function SubSection({ subSection }: SubSectionProps) {
   return (
     <div>
       {subSection.header && (
-        <div className="py-4 px-8 flex justify-between items-center" style={{ backgroundColor: 'var(--email-btn-bg)', marginLeft: 'calc(-1 * var(--detail-px))', marginRight: 'calc(-1 * var(--detail-px))' }}>
+        <div className="py-4 flex justify-between items-center" style={{ backgroundColor: 'var(--email-btn-bg)', marginLeft: 'calc(-1 * var(--detail-px))', marginRight: 'calc(-1 * var(--detail-px))', paddingLeft: 'var(--detail-px)', paddingRight: 'var(--detail-px)' }}>
           <h2 className="text-xs font-medium font-mono tracking-wider text-transform: uppercase" style={{ color: 'var(--email-btn-icon)' }}>
             {subSection.header}
           </h2>

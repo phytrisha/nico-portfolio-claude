@@ -77,7 +77,7 @@ export default function Metadata({ metadata }: MetadataProps) {
       {entries.map((entry, index) => (
         <div key={index}>
           {index > 0 && <div style={{ borderTop: '1px solid var(--border-projectdetail)' }} />}
-          <div className="px-8 py-4 font-medium">
+          <div className="py-4 font-medium" style={{ paddingLeft: 'var(--detail-px)', paddingRight: 'var(--detail-px)' }}>
             {parseTextWithLinks(entry)}
           </div>
         </div>
