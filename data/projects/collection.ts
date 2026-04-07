@@ -14,7 +14,7 @@ export const collection: Project = {
   // New metadata structure
   metadata: {
     entries: [
-      'A LOOSE COLLECTION OF SOME MORE FREELANCE & UNIVERSITY PROJECTS – IN GERMAN IN ENGLISH'
+      'A LOOSE COLLECTION OF SOME MORE FREELANCE & UNIVERSITY PROJECTS'
     ]
   },
 
@@ -41,7 +41,7 @@ export const collection: Project = {
           {
             type: 'inline-header',
             content: 'Terra',
-            py: 'pt-8 pb-0',
+            py: 'pt-12 pb-0',
           },
           {
             type: 'paragraph',
@@ -51,7 +51,7 @@ export const collection: Project = {
           {
             type: 'sublines',
             content: 'WITH: MARK MEYER, BERNADETTE KREHBIEHL · SUPERVISION: ROGER WALK',
-            py: 'pt-0 pb-10'
+            py: 'pt-0 pb-24'
           },
 
         ]
@@ -70,7 +70,7 @@ export const collection: Project = {
           {
             type: 'inline-header',
             content: 'Selfapy - Prescription-based online therapy',
-            py: 'pt-8 pb-0',
+            py: 'pt-12 pb-0',
           },
           {
             type: 'paragraph',
@@ -80,7 +80,7 @@ export const collection: Project = {
           {
             type: 'sublines',
             content: 'CLIENT: SELFAPY · INVOLVEMENT: DESIGN RESEARCH, UX CONCEPT, UI / UX DESIGN',
-            py: 'pt-0 pb-10'
+            py: 'pt-0 pb-24'
           },  
           
         ]
@@ -100,7 +100,7 @@ export const collection: Project = {
           {
             type: 'inline-header',
             content: 'Fantium',
-            py: 'pt-8 pb-0',
+            py: 'pt-12 pb-0',
           },
           {
             type: 'paragraph',
@@ -110,7 +110,7 @@ export const collection: Project = {
           {
             type: 'sublines',
             content: 'CLIENT: FANITUM · INVOLVEMENT: DESIGN RESEARCH, UX CONCEPT, UI / UX DESIGN',
-            py: 'pt-0 pb-10'
+            py: 'pt-0 pb-24'
           }, 
           
         ]
@@ -131,7 +131,7 @@ export const collection: Project = {
           {
             type: 'inline-header',
             content: 'Zasta',
-            py: 'pt-8 pb-0',
+            py: 'pt-12 pb-0',
           },
           {
             type: 'paragraph',
@@ -141,7 +141,7 @@ export const collection: Project = {
           {
             type: 'sublines',
             content: 'CLIENT: ZASTA · INVOLVEMENT: UX CONCEPT, DESIGN SYSTEM, UI / UX DESIGN',
-            py: 'pt-0 pb-10'
+            py: 'pt-0 pb-24'
           }, 
         ]
       },
@@ -154,13 +154,13 @@ export const collection: Project = {
         components: [
           {
             type: 'hero-image',
-            src: '/images/projects/collection/Assure.jpg',
+            src: '/images/projects/collection/cover_assure.jpg',
             alt: 'Beneficial AI Framework Model',
           }, 
           {
             type: 'inline-header',
             content: 'AssureCare Admin Console',
-            py: 'pt-8 pb-0',
+            py: 'pt-12 pb-0',
           },
           {
             type: 'paragraph',
@@ -170,7 +170,7 @@ export const collection: Project = {
           {
             type: 'sublines',
             content: 'CLIENT: ASSURECARE · INVOLVEMENT: DESIGN RESEARCH, UX CONCEPT, UI / UX DESIGN',
-            py: 'pt-0 pb-10'
+            py: 'pt-0 pb-24'
           },      
         ],
       },
