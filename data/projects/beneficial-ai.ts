@@ -37,8 +37,8 @@ export const beneficialAI: Project = {
         components: [
           {
             type: 'hero-image',
-            src: '/images/projects/beneficial-ai/Model1.jpg',
-            darkSrc: '/images/projects/beneficial-ai/Model1_dark.jpg',
+            src: '/images/projects/beneficial-ai/cover_BAI_light.jpg',
+            darkSrc: '/images/projects/beneficial-ai/cover_BAI_dark.jpg',
             alt: 'Beneficial AI Framework Model',
             py: 'pb-0'
           },

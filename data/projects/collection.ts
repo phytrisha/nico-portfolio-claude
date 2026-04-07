@@ -64,7 +64,7 @@ export const collection: Project = {
         components: [
           {
             type: 'hero-image',
-            src: '/images/projects/collection/Selfapycover.jpg',
+            src: '/images/projects/collection/cover_selfapy.jpg',
             alt: 'Cover Selfapy',
           },
           {
@@ -94,7 +94,7 @@ export const collection: Project = {
         components: [
           {
             type: 'hero-image',
-            src: '/images/projects/collection/fantium.jpg',
+            src: '/images/projects/collection/cover_fantium.jpg',
             alt: 'Beneficial AI Framework Model',
           }, 
           {
@@ -124,8 +124,8 @@ export const collection: Project = {
         components: [
             {
             type: 'hero-image',
-            src: '/images/projects/collection/cover zasta.jpg',
-            darkSrc: '/images/projects/collection/cover zasta_dark.jpg',
+            src: '/images/projects/collection/cover_zasta_light.jpg',
+            darkSrc: '/images/projects/collection/cover_zasta_dark.jpg',
             alt: 'Beneficial AI Framework Model',
           }, 
           {

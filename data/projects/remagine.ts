@@ -35,7 +35,7 @@ export const remagine: Project = {
         components: [
                {
             type: 'hero-image',
-            src: '/images/projects/remagine/cover.jpg',
+            src: '/images/projects/remagine/cover_remagine.jpg',
             alt: 'Beneficial AI Framework Model',
             py: 'pb-0'
           },

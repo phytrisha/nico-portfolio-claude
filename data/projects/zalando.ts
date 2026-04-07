@@ -41,7 +41,7 @@ export const zalando: Project = {
         components: [
                     {
             type: 'hero-image',
-            src: '/images/projects/zalando/cover.jpg',
+            src: '/images/projects/zalando/cover_zalando.jpg',
             alt: 'Beneficial AI Framework Model',
             py: 'pb-0'
           },

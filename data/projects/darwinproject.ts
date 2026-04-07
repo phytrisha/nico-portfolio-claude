@@ -38,7 +38,7 @@ export const darwinproject: Project = {
         components: [
             {
             type: 'hero-image',
-            src: '/images/projects/darwinproject/coverdarwin.jpg',
+            src: '/images/projects/darwinproject/cover_darwin.jpg',
             alt: 'Research methodology overview',
           },
           {

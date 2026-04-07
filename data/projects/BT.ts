@@ -41,7 +41,7 @@ export const BT: Project = {
         components: [
                     {
             type: 'hero-image',
-            src: '/images/projects/BT/BTcover.jpg',
+            src: '/images/projects/BT/cover_BT.jpg',
             alt: 'cover',
             py: 'pb-0'
           },

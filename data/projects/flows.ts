@@ -33,7 +33,7 @@ export const flows: Project = {
         components: [
           {
             type: 'hero-image',
-            src: '/images/projects/flows/cover7.jpg',
+            src: '/images/projects/flows/cover_flows.jpg',
             alt: 'Beneficial AI Framework Model',
           },
           {

@@ -42,8 +42,8 @@ export const taxfix: Project = {
         components: [
           {
             type: 'hero-image',
-            src: '/images/projects/taxfix/cover.jpg',
-            darkSrc: '/images/projects/taxfix/cover_dark.jpg',
+            src: '/images/projects/taxfix/cover_taxfix_light.jpg',
+            darkSrc: '/images/projects/taxfix/cover_taxfix_dark.jpg',
             alt: 'Beneficial AI Framework Model',
             py: 'pb-0'
           },
