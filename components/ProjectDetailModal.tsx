@@ -23,7 +23,7 @@ function useScrollShrink(el: HTMLDivElement | null) {
     const handleScroll = () => {
       const scrollY = el.scrollTop;
       const shrinkEnd = 200;
-      const minScale = 0.95;
+      const minScale = 0.98;
       const maxTranslate = -15;
 
       const linear = Math.min(scrollY / shrinkEnd, 1);
